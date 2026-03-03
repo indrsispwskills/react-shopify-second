@@ -64,6 +64,22 @@
     },
     "comparison_table": {
       "type": "comparison-table",
+      "blocks": {
+        "row_9pUHGd": {
+          "type": "row",
+          "settings": {
+            "feature": "Price",
+            "value_2": "$49",
+            "value_5": "$89",
+            "total_row": false,
+            "style_2": "normal",
+            "style_5": "normal"
+          }
+        }
+      },
+      "block_order": [
+        "row_9pUHGd"
+      ],
       "settings": {
         "title": "Side-by-Side Comparison",
         "col_1": "2.0 Handheld",
