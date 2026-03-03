@@ -65,6 +65,17 @@
     "comparison_table": {
       "type": "comparison-table",
       "blocks": {
+        "row_Hbih7F": {
+          "type": "row",
+          "settings": {
+            "feature": "Filter Life",
+            "value_2": "3 months",
+            "value_5": "6 months",
+            "total_row": false,
+            "style_2": "normal",
+            "style_5": "normal"
+          }
+        },
         "row_GzcNUD": {
           "type": "row",
           "settings": {
@@ -166,6 +177,7 @@
         }
       },
       "block_order": [
+        "row_Hbih7F",
         "row_GzcNUD",
         "row_FyLBQb",
         "row_nHhWQf",
