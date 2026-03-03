@@ -372,9 +372,9 @@ section{padding:var(--section-pad) 0}
 .guarantee-tiers{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}
 .g-tier{padding:20px;border-radius:var(--r-md);background:#fff;transition:transform .2s}
 .g-tier:hover{transform:translateY(-2px)}
-.g-tier-tag{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;color:var(--ink);font-family:var(--fb)}
-.g-tier h4{font-family:var(--fh);font-size:46px;font-weight:700;color:var(--ink);line-height:1.05}
-.g-tier p{font-size:15px;color:var(--ink2);margin-top:8px;line-height:1.6}
+.g-tier-tag{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.g-tier h4{font-family:var(--fh);font-size:28px;font-weight:700;color:var(--ink)}
+.g-tier p{font-size:14px;color:var(--mut);margin-top:4px}
 
 /* ══════════════════════════════════════════════════════════
    FINAL CTA
