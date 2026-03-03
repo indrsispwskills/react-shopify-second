@@ -4,7 +4,7 @@
     <div class="guarantee-top"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg><h3>{{ section.settings.title }}</h3></div>
     <p>{{ section.settings.description }}</p>
     <div class="guarantee-tiers">
-      {% for block in section.blocks %}{% if block.type == 'tier' %}<div class="g-tier" {{ block.shopify_attributes }}><div class="g-tier-tag" style="color:{% if block.settings.tone == 'gold' %}var(--gold){% else %}var(--sage){% endif %}">{{ block.settings.tag }}</div><h4>{{ block.settings.days }}</h4><p>{{ block.settings.desc }}</p></div>{% endif %}{% endfor %}
+      {% for block in section.blocks %}{% if block.type == 'tier' %}<div class="g-tier" {{ block.shopify_attributes }}><div class="g-tier-tag">{{ block.settings.tag }}</div><h4>{{ block.settings.days }}</h4><p>{{ block.settings.desc }}</p></div>{% endif %}{% endfor %}
     </div>
     <p style="font-size:15px;color:var(--mut);font-style:italic">{{ section.settings.note }}</p>
   </div>
