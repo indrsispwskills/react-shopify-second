@@ -1,20 +1,62 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "comparison_nav": {
       "type": "comparison-nav",
-      "settings": {}
+      "settings": {
+        "skip_text": "Skip to main content",
+        "brand_text": "Shower",
+        "brand_text_accent": "Envy",
+        "nav_products": "Products",
+        "nav_pressure": "Pressure",
+        "nav_installation": "Installation",
+        "nav_timeline": "Timeline",
+        "nav_science": "Science",
+        "nav_reviews": "Reviews",
+        "nav_faq": "FAQ",
+        "shop_now_text": "Shop Now"
+      }
     },
     "comparison_hero": {
       "type": "comparison-hero",
-      "settings": {}
+      "settings": {
+        "hero_badge": "FOR WOMEN 45+ WITH HORMONAL HAIR & SKIN CHANGES",
+        "title_prefix": "Your Products Aren't Failing.",
+        "title_accent": "Your Water Is.",
+        "description": "Chlorine and hard water minerals strip the oils your skin and hair are already losing to hormonal changes. Every shower compounds the damage. Our filtered showerheads remove the external attack — so everything else you're doing actually works.",
+        "primary_text": "Shop Filtered Showerheads",
+        "secondary_url": "",
+        "secondary_text": "Take the Water Quiz →"
+      }
     },
     "comparison_overview": {
       "type": "comparison-overview",
-      "settings": {}
+      "settings": {
+        "tag": "THE SCIENCE",
+        "title": "You're Fighting on Two Fronts",
+        "subtitle": "Hormonal changes thin your hair and dry your skin from the inside. Unfiltered water accelerates the damage from the outside. You need to control what you can.",
+        "quote": "You can't reverse menopause. But you can stop your shower from making it worse — and that's where most women see the fastest improvement.",
+        "cite": "— Board-certified dermatologist recommendation"
+      }
     },
     "comparison_science": {
       "type": "comparison-science",
-      "settings": {}
+      "settings": {
+        "tag": "THE RESEARCH",
+        "title": "The Science Is Clear: Your Water Matters More Now",
+        "desc_1": "Peer-reviewed research shows women lose up to 30% of skin collagen in the first 5 years post-menopause, with ongoing losses of 2.1% per year. Skin thickness decreases 1.1% annually. Your body's ability to recover from chlorine exposure fundamentally changes.",
+        "desc_2": "We've compiled the research — hair growth cycle biology, skin barrier science, the compounding effect, dermatologist perspectives — into an honest resource. No marketing fluff.",
+        "button_text": "Read the Full Science →",
+        "button_url": ""
+      }
     },
     "comparison_products": {
       "type": "comparison-products",
@@ -22,7 +64,12 @@
     },
     "comparison_table": {
       "type": "comparison-table",
-      "settings": {}
+      "settings": {
+        "title": "Side-by-Side Comparison",
+        "col_1": "2.0 Handheld",
+        "col_2": "5.0 Stationary",
+        "note": "Only $20 more over 3 years for 5× the filtration depth and half the filter changes."
+      }
     },
     "comparison_pressure": {
       "type": "comparison-pressure",
@@ -38,23 +85,86 @@
     },
     "comparison_reviews": {
       "type": "comparison-reviews",
-      "settings": {}
+      "settings": {
+        "title": "Real Women, Real Results"
+      }
     },
     "comparison_faq": {
       "type": "comparison-faq",
-      "settings": {}
+      "blocks": {
+        "faq_KiDPLe": {
+          "type": "faq",
+          "settings": {
+            "q": "Will this really help hormonal hair thinning?",
+            "a": "Hormones may be the root cause, but harsh water adds a second layer."
+          }
+        },
+        "faq_XM3UA3": {
+          "type": "faq",
+          "settings": {
+            "q": "Will this really help hormonal hair thinning?",
+            "a": "Hormones may be the root cause, but harsh water adds a second layer."
+          }
+        }
+      },
+      "block_order": [
+        "faq_KiDPLe",
+        "faq_XM3UA3"
+      ],
+      "settings": {
+        "title": "Questions Women Ask Before Buying"
+      }
     },
     "comparison_guarantee": {
       "type": "comparison-guarantee",
-      "settings": {}
+      "settings": {
+        "title": "Our Guarantee Is Built Around Your Biology",
+        "description": "Most brands give you 30 days. That's not enough to see real hair changes during hormonal transitions. Hair growth cycles take 8–12 weeks. We designed our guarantee around that science.",
+        "note": "Full refund. No restocking fee. No hoops. We'll even pay for return shipping."
+      }
     },
     "comparison_cta": {
       "type": "comparison-cta",
-      "settings": {}
+      "settings": {
+        "title_1": "Stop Fighting Your Water.",
+        "title_2": "Start Working With It.",
+        "description": "You've already invested in the serums, the supplements, the salon visits. A filtered showerhead is the one thing that makes all of it work better.",
+        "btn_1": "Shop the 2.0 — $49",
+        "url_1": "",
+        "btn_2": "Shop the 5.0 — $89",
+        "url_2": ""
+      }
     },
     "comparison_footer": {
       "type": "comparison-footer",
-      "settings": {}
+      "settings": {
+        "brand_text": "Shower",
+        "brand_text_accent": "Envy",
+        "brand_description": "Filtered showerheads designed for women navigating hormonal changes. Because your water should help — not hurt.",
+        "shop_title": "Shop",
+        "shop_link_1": "2.0 Handheld",
+        "shop_link_2": "5.0 Stationary",
+        "shop_link_3": "Replacement Filters",
+        "shop_link_4": "Bundles",
+        "shop_link_5": "Gift Cards",
+        "learn_title": "Learn",
+        "learn_link_1": "Our Science",
+        "learn_link_2": "Water Quality Map",
+        "learn_link_3": "Results Timeline",
+        "learn_link_4": "Blog",
+        "learn_link_5": "Reviews",
+        "support_title": "Support",
+        "support_link_1": "FAQ",
+        "support_link_2": "Shipping & Returns",
+        "support_link_3": "Guarantee",
+        "support_link_4": "Contact Us",
+        "support_link_5": "Installation Help",
+        "copyright_text": "© 2026 ShowerEnvy. All rights reserved.",
+        "privacy_text": "Privacy",
+        "terms_text": "Terms",
+        "accessibility_text": "Accessibility",
+        "back_to_top_label": "Back to top"
+      }
     }
   },
   "order": [
