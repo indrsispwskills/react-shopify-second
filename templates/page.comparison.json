@@ -50,6 +50,22 @@
     "comparison_science": {
       "type": "comparison-science",
       "blocks": {
+        "stat_EWEV4b": {
+          "type": "stat",
+          "settings": {
+            "value": "30%",
+            "label": "Collagen lost in first 5 years post-menopause",
+            "color": "var(--rose)"
+          }
+        },
+        "stat_mx7Bwr": {
+          "type": "stat",
+          "settings": {
+            "value": "30%",
+            "label": "Collagen lost in first 5 years post-menopause",
+            "color": "var(--rose)"
+          }
+        },
         "stat_pQjmqm": {
           "type": "stat",
           "settings": {
@@ -68,6 +84,8 @@
         }
       },
       "block_order": [
+        "stat_EWEV4b",
+        "stat_mx7Bwr",
         "stat_pQjmqm",
         "stat_GL6NnH"
       ],
