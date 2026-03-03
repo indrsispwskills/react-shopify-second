@@ -201,6 +201,30 @@
     },
     "comparison_guarantee": {
       "type": "comparison-guarantee",
+      "blocks": {
+        "tier_CbL9jC": {
+          "type": "tier",
+          "settings": {
+            "tag": "2.0 HANDHELD",
+            "days": "60 Days",
+            "desc": "Skin & softness results come fast with basic filtration",
+            "tone": "sage"
+          }
+        },
+        "tier_AN9wmW": {
+          "type": "tier",
+          "settings": {
+            "tag": "2.0 HANDHELD",
+            "days": "60 Days",
+            "desc": "Skin & softness results come fast with basic filtration",
+            "tone": "sage"
+          }
+        }
+      },
+      "block_order": [
+        "tier_CbL9jC",
+        "tier_AN9wmW"
+      ],
       "settings": {
         "title": "Our Guarantee Is Built Around Your Biology",
         "description": "Most brands give you 30 days. That's not enough to see real hair changes during hormonal transitions. Hair growth cycles take 8–12 weeks. We designed our guarantee around that science.",
