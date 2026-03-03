@@ -1,0 +1,76 @@
+{
+  "sections": {
+    "comparison_nav": {
+      "type": "comparison-nav",
+      "settings": {}
+    },
+    "comparison_hero": {
+      "type": "comparison-hero",
+      "settings": {}
+    },
+    "comparison_overview": {
+      "type": "comparison-overview",
+      "settings": {}
+    },
+    "comparison_science": {
+      "type": "comparison-science",
+      "settings": {}
+    },
+    "comparison_products": {
+      "type": "comparison-products",
+      "settings": {}
+    },
+    "comparison_table": {
+      "type": "comparison-table",
+      "settings": {}
+    },
+    "comparison_pressure": {
+      "type": "comparison-pressure",
+      "settings": {}
+    },
+    "comparison_installation": {
+      "type": "comparison-installation",
+      "settings": {}
+    },
+    "comparison_timeline": {
+      "type": "comparison-timeline",
+      "settings": {}
+    },
+    "comparison_reviews": {
+      "type": "comparison-reviews",
+      "settings": {}
+    },
+    "comparison_faq": {
+      "type": "comparison-faq",
+      "settings": {}
+    },
+    "comparison_guarantee": {
+      "type": "comparison-guarantee",
+      "settings": {}
+    },
+    "comparison_cta": {
+      "type": "comparison-cta",
+      "settings": {}
+    },
+    "comparison_footer": {
+      "type": "comparison-footer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "comparison_nav",
+    "comparison_hero",
+    "comparison_overview",
+    "comparison_science",
+    "comparison_products",
+    "comparison_table",
+    "comparison_pressure",
+    "comparison_installation",
+    "comparison_timeline",
+    "comparison_reviews",
+    "comparison_faq",
+    "comparison_guarantee",
+    "comparison_cta",
+    "comparison_footer"
+  ]
+}
