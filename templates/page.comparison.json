@@ -49,6 +49,28 @@
     },
     "comparison_science": {
       "type": "comparison-science",
+      "blocks": {
+        "stat_pQjmqm": {
+          "type": "stat",
+          "settings": {
+            "value": "30%",
+            "label": "Collagen lost in first 5 years post-menopause",
+            "color": "var(--rose)"
+          }
+        },
+        "stat_GL6NnH": {
+          "type": "stat",
+          "settings": {
+            "value": "30%",
+            "label": "Collagen lost in first 5 years post-menopause",
+            "color": "var(--rose)"
+          }
+        }
+      },
+      "block_order": [
+        "stat_pQjmqm",
+        "stat_GL6NnH"
+      ],
       "settings": {
         "tag": "THE RESEARCH",
         "title": "The Science Is Clear: Your Water Matters More Now",
