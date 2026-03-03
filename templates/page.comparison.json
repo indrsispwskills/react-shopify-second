@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "comparison_nav": {
+      "type": "comparison-nav",
+      "settings": {}
+    },
+    "comparison_main": {
+      "type": "comparison-main",
+      "settings": {}
+    },
+    "comparison_footer": {
+      "type": "comparison-footer",
+      "settings": {}
+    }
+  },
+  "order": ["comparison_nav", "comparison_main", "comparison_footer"]
+}
