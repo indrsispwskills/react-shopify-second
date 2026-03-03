@@ -85,6 +85,26 @@
     },
     "comparison_reviews": {
       "type": "comparison-reviews",
+      "blocks": {
+        "review_qbMHk6": {
+          "type": "review",
+          "settings": {
+            "quote": "My hair finally stopped feeling like straw.",
+            "meta": "— Sarah, 52 · 5.0 user"
+          }
+        },
+        "review_PbMqqU": {
+          "type": "review",
+          "settings": {
+            "quote": "My hair finally stopped feeling like straw.",
+            "meta": "— Sarah, 52 · 5.0 user"
+          }
+        }
+      },
+      "block_order": [
+        "review_qbMHk6",
+        "review_PbMqqU"
+      ],
       "settings": {
         "title": "Real Women, Real Results"
       }
