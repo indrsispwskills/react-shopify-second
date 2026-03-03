@@ -86,6 +86,34 @@
     "comparison_reviews": {
       "type": "comparison-reviews",
       "blocks": {
+        "review_b8tD7R": {
+          "type": "review",
+          "settings": {
+            "quote": "My hair finally stopped feeling like straw.",
+            "meta": "— Sarah, 52 · 5.0 user"
+          }
+        },
+        "review_iKCK7p": {
+          "type": "review",
+          "settings": {
+            "quote": "My hair finally stopped feeling like straw.",
+            "meta": "— Sarah, 52 · 5.0 user"
+          }
+        },
+        "review_9PyjRg": {
+          "type": "review",
+          "settings": {
+            "quote": "My hair finally stopped feeling like straw.",
+            "meta": "— Sarah, 52 · 5.0 user"
+          }
+        },
+        "review_JjzJ66": {
+          "type": "review",
+          "settings": {
+            "quote": "My hair finally stopped feeling like straw.",
+            "meta": "— Sarah, 52 · 5.0 user"
+          }
+        },
         "review_qbMHk6": {
           "type": "review",
           "settings": {
@@ -102,6 +130,10 @@
         }
       },
       "block_order": [
+        "review_b8tD7R",
+        "review_iKCK7p",
+        "review_9PyjRg",
+        "review_JjzJ66",
         "review_qbMHk6",
         "review_PbMqqU"
       ],
