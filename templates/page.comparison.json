@@ -92,6 +92,34 @@
     "comparison_faq": {
       "type": "comparison-faq",
       "blocks": {
+        "faq_qGQpxn": {
+          "type": "faq",
+          "settings": {
+            "q": "Will this really help hormonal hair thinning?",
+            "a": "Hormones may be the root cause, but harsh water adds a second layer."
+          }
+        },
+        "faq_GUirGw": {
+          "type": "faq",
+          "settings": {
+            "q": "Will this really help hormonal hair thinning?",
+            "a": "Hormones may be the root cause, but harsh water adds a second layer."
+          }
+        },
+        "faq_cTdU6h": {
+          "type": "faq",
+          "settings": {
+            "q": "Will this really help hormonal hair thinning?",
+            "a": "Hormones may be the root cause, but harsh water adds a second layer."
+          }
+        },
+        "faq_W8Ygrz": {
+          "type": "faq",
+          "settings": {
+            "q": "Will this really help hormonal hair thinning?",
+            "a": "Hormones may be the root cause, but harsh water adds a second layer."
+          }
+        },
         "faq_KiDPLe": {
           "type": "faq",
           "settings": {
@@ -108,6 +136,10 @@
         }
       },
       "block_order": [
+        "faq_qGQpxn",
+        "faq_GUirGw",
+        "faq_cTdU6h",
+        "faq_W8Ygrz",
         "faq_KiDPLe",
         "faq_XM3UA3"
       ],
