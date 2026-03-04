@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "privacy_policy_header": {
+      "type": "privacy-policy-header",
+      "settings": {}
+    },
+    "privacy_policy_content": {
+      "type": "privacy-policy-content",
+      "settings": {}
+    },
+    "privacy_policy_footer": {
+      "type": "privacy-policy-footer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "privacy_policy_header",
+    "privacy_policy_content",
+    "privacy_policy_footer"
+  ]
+}
