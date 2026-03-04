@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2714%27 fill=%27%235E8A6A%27/%3E%3Cpath d=%27M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3%27 stroke=%27%23fff%27 stroke-width=%272%27 stroke-linecap=%27round%27 fill=%27none%27/%3E%3Ccircle cx=%2716%27 cy=%2724%27 r=%271.2%27 fill=%27%23fff%27/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms &amp; Conditions — ShowerEnvy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1F1D1A;--ink-deep:#141210;--sage:#5E8A6A;--sage-light:#EBF2ED;--sage-mid:#C4D9CA;--saged:#4A7254;--cream:#FAF6F0;--warm:#FEFCF8;--gold:#B08642;--gold-light:#F5EDE3;--gold-dark:#8A6A34;--rose:#C25D4E;--ink2:#4A4743;--mut:#8A857D;--light:#A8A29E;--bdr:#E8E3DA;--success:#16A34A;--red:#DC2626;--shadow-sm:0 2px 8px rgba(31,29,26,.06);--shadow-md:0 8px 32px rgba(31,29,26,.08)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'DM Sans',sans-serif;background:var(--warm);color:var(--ink2);font-size:16px;line-height:1.8}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;color:var(--ink);line-height:1.25}
+a{color:var(--sage);text-decoration:none;font-weight:500;transition:color .2s}
+a:hover{color:var(--saged)}
+button{font-family:'DM Sans',sans-serif;cursor:pointer;border:none}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.vis{opacity:1;transform:none}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+.page{max-width:1200px;margin:0 auto;padding:0 32px}
+.content{max-width:800px;margin:0 auto}
+
+/* Nav */
+.topnav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--bdr)}
+.logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:500;letter-spacing:-.01em;color:var(--ink)}
+.logo span{color:var(--sage);font-weight:700;font-style:italic}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:14px;color:var(--mut);font-weight:500}
+.nav-links a:hover{color:var(--sage)}
+.cart-btn{background:linear-gradient(135deg,var(--sage),var(--saged));color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:700;box-shadow:0 2px 12px rgba(94,138,106,.25);transition:transform .2s}
+.cart-btn:hover{transform:translateY(-2px)}
+
+/* Hero */
+.policy-hero{padding:64px 0 48px;text-align:center}
+.policy-hero .badge{display:inline-block;padding:6px 18px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}
+.policy-hero h1{font-size:44px;margin-bottom:16px}
+.policy-hero-sub{font-size:18px;color:var(--mut);max-width:640px;margin:0 auto 32px;line-height:1.7}
+.updated{font-size:14px;color:var(--light);font-weight:500}
+
+/* Quick-nav strip */
+.quick-nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:48px}
+.qn-pill{padding:10px 20px;border-radius:20px;font-size:14px;font-weight:600;color:var(--mut);background:#fff;border:1px solid var(--bdr);transition:all .25s;box-shadow:var(--shadow-sm)}
+.qn-pill:hover{color:var(--sage);border-color:var(--sage);background:var(--sage-light);transform:translateY(-2px)}
+
+/* Friendly intro banner */
+.friendly-banner{background:linear-gradient(135deg,var(--cream),var(--gold-light));border-radius:20px;padding:36px 40px;margin-bottom:48px;border:1px solid rgba(196,154,108,.12);display:flex;gap:24px;align-items:flex-start}
+.friendly-banner-icon{font-size:40px;flex-shrink:0;margin-top:2px}
+.friendly-banner h3{font-size:20px;margin-bottom:8px}
+.friendly-banner p{font-size:15px;color:var(--mut);line-height:1.7;margin:0}
+
+/* Section cards */
+.policy-section{background:#fff;border-radius:20px;padding:36px 40px;margin-bottom:24px;border:1px solid var(--bdr);box-shadow:var(--shadow-sm);transition:box-shadow .3s}
+.policy-section:hover{box-shadow:var(--shadow-md)}
+.section-header{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.section-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.section-header h2{font-size:24px}
+.section-header p{font-size:14px;color:var(--mut);margin-top:2px}
+
+.policy-section p{font-size:15px;line-height:1.8;color:var(--ink2);margin-bottom:14px}
+.policy-section p:last-child{margin-bottom:0}
+
+.highlight-box{background:var(--cream);border-radius:12px;padding:20px 24px;margin:16px 0;border-left:4px solid var(--sage)}
+.highlight-box.gold{border-left-color:var(--gold);background:var(--gold-light)}
+.highlight-box.red{border-left-color:var(--red);background:#FEF2F2}
+.highlight-box.ink{border-left-color:var(--ink);background:rgba(31,29,26,.04)}
+.highlight-box p{margin-bottom:0;font-size:14px;line-height:1.7}
+.highlight-box strong{color:var(--ink)}
+
+.plain-list{list-style:none;padding:0;margin:12px 0}
+.plain-list li{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.7;margin-bottom:10px}
+.plain-list li::before{content:'';width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:8px}
+.sage-dots li::before{background:var(--sage-mid)}
+.gold-dots li::before{background:var(--gold)}
+.red-dots li::before{background:#FECACA}
+
+/* Product comparison mini-cards */
+.product-diff{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.pd-card{border-radius:14px;padding:20px 24px;border:1px solid var(--bdr)}
+.pd-card.sage-accent{background:rgba(94,138,106,.03);border-color:rgba(94,138,106,.12)}
+.pd-card.gold-accent{background:rgba(196,154,108,.03);border-color:rgba(196,154,108,.12)}
+.pd-badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+.pd-badge.sage{color:var(--sage);background:var(--sage-light)}
+.pd-badge.gold{color:var(--gold);background:var(--gold-light)}
+.pd-card h4{font-size:16px;margin-bottom:8px}
+.pd-card p{font-size:14px;line-height:1.6;color:var(--mut);margin:0}
+
+/* TOC sidebar */
+.toc{position:sticky;top:100px}
+.toc-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--light);margin-bottom:12px}
+.toc a{display:block;font-size:14px;color:var(--mut);padding:5px 0;border-left:2px solid transparent;padding-left:14px;transition:all .2s;font-weight:500}
+.toc a:hover,.toc a.active{color:var(--sage);border-left-color:var(--sage)}
+
+.policy-layout{display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:start}
+@media(max-width:900px){
+  .policy-layout{grid-template-columns:1fr}
+  .toc{display:none}
+  .product-diff{grid-template-columns:1fr}
+  .friendly-banner{flex-direction:column;gap:16px}
+  .quick-nav{gap:8px}
+}
+
+/* Contact card */
+.contact-card{background:linear-gradient(135deg,var(--ink-deep),var(--ink),#2A2825);border-radius:24px;padding:48px;text-align:center;color:#fff;position:relative;overflow:hidden;margin-top:48px}
+.contact-card::before{content:'';position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:48px 48px}
+.contact-card>*{position:relative;z-index:1}
+.contact-card h2{color:#fff;font-size:28px;margin-bottom:12px}
+.contact-card p{color:rgba(255,255,255,.65);font-size:16px;margin-bottom:28px}
+.contact-methods{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.contact-method{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px 28px;text-align:center;min-width:200px;transition:background .3s}
+.contact-method:hover{background:rgba(255,255,255,.12)}
+.contact-method .cm-icon{font-size:28px;margin-bottom:8px}
+.contact-method .cm-label{font-size:12px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:4px}
+.contact-method .cm-value{font-size:16px;color:#fff;font-weight:700}
+.contact-method .cm-note{font-size:12px;color:rgba(255,255,255,.4);margin-top:4px}
+
+/* Footer */
+.footer{padding:40px 0 48px;border-top:1px solid var(--bdr);margin-top:48px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}
+.footer-links a{color:var(--mut)}.footer-links a:hover{color:var(--sage)}
+.footer-copy{font-size:12px;color:var(--light)}
+
+.scroll-top{position:fixed;bottom:32px;right:32px;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--sage),var(--saged));color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(94,138,106,.3);opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;z-index:200;font-size:20px}
+.scroll-top.show{opacity:1;transform:none}
+.scroll-top:hover{transform:translateY(-3px)}
+
+/* ═══ MOBILE RESPONSIVE ═══ */
+@media(max-width:768px){
+  .page{padding:0 18px}
+  .topnav{padding:16px 0}
+  .nav-links{display:none}
+  .ham{display:flex!important}
+  .policy-hero{padding:40px 0 32px}
+  .policy-hero h1{font-size:32px}
+  .policy-hero-sub{font-size:16px}
+  .promise-box{padding:24px 20px;border-radius:16px}
+  .promise-grid{grid-template-columns:1fr}
+  .policy-section{padding:24px 20px;border-radius:16px}
+  .section-header h2{font-size:20px}
+  .section-icon{width:40px;height:40px;border-radius:12px;font-size:20px}
+  .contact-card{padding:32px 20px;border-radius:18px}
+  .contact-card h2{font-size:22px}
+  .contact-methods{flex-direction:column;align-items:stretch}
+  .contact-method{min-width:auto}
+  .footer-inner{flex-direction:column;text-align:center;gap:14px}
+  .footer-links{flex-wrap:wrap;justify-content:center;gap:14px}
+  .scroll-top{bottom:20px;right:20px;width:44px;height:44px}
+  .highlight-box{padding:16px 18px}
+  .cart-btn{padding:10px 18px;font-size:14px}
+  .topnav>.cart-btn{display:none}
+  .product-diff{grid-template-columns:1fr}
+  .pd-card{padding:20px 16px}
+  .friendly-banner{flex-direction:column;gap:16px;padding:24px 20px;border-radius:16px}
+  .quick-nav{gap:8px}
+  .quick-nav a{font-size:12px;padding:6px 12px}
+}
+@media(max-width:480px){
+  .page{padding:0 14px}
+  .policy-hero h1{font-size:28px}
+  .policy-section{padding:20px 16px}
+  .promise-box{padding:20px 16px}
+  .contact-card{padding:28px 16px}
+}
+/* Hamburger */
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.ham span{display:block;width:22px;height:2px;background:var(--ink);border-radius:1px;transition:all .3s}
+
+/* Mobile nav overlay + drawer */
+.mob-overlay{position:fixed;inset:0;background:rgba(31,29,26,.4);z-index:998;opacity:0;pointer-events:none;transition:opacity .3s;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.mob-overlay.open{opacity:1;pointer-events:auto}
+.mob-menu{position:fixed;top:0;right:-300px;width:280px;height:100%;background:var(--warm,#FEFCF8);z-index:999;padding:24px;box-shadow:-4px 0 24px rgba(31,29,26,.1);transition:right .35s cubic-bezier(.16,1,.3,1);overflow-y:auto;-webkit-overflow-scrolling:touch}
+.mob-menu.open{right:0}
+.mob-link{display:block;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:500;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--bdr);text-decoration:none;transition:color .2s}
+.mob-link:hover{color:var(--sage)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<nav class="topnav">
+  <div style="display:flex;align-items:center;gap:24px">
+    <div class="logo"><svg class="brand-mark" width="24" height="24" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:6px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></div>
+    <div class="nav-links">
+      <a href="#">Home</a><a href="#">2.0 Handheld</a><a href="#">5.0 Stationary</a><a href="#">Science</a><a href="#">Reviews</a>
+    </div>
+  </div>
+  <button class="cart-btn">Shop Now</button>
+  <button class="ham" aria-label="Menu" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE NAV OVERLAY -->
+<div class="mob-overlay" id="mobOverlay" onclick="toggleMobileNav()"></div>
+<div class="mob-menu" id="mobMenu">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+    <div class="logo" style="font-size:22px"><svg width="20" height="20" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:5px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></div>
+    <button onclick="toggleMobileNav()" style="background:none;border:none;font-size:24px;color:var(--ink);cursor:pointer;padding:4px">✕</button>
+  </div>
+  <a href="#" class="mob-link">Home</a>
+  <a href="#" class="mob-link">2.0 Handheld</a>
+  <a href="#" class="mob-link">5.0 Stationary</a>
+  <a href="#" class="mob-link">Science</a>
+  <a href="#" class="mob-link">Reviews</a>
+  <a href="#" class="mob-link">Filters</a>
+  <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--bdr)">
+    <button class="cart-btn" style="width:100%;text-align:center;padding:14px 0;font-size:15px;border-radius:12px">Shop Now</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="policy-hero rv">
+  <div class="badge" style="color:var(--ink);background:rgba(31,29,26,.08)">PLAIN ENGLISH · NO SURPRISES</div>
+  <h1>Terms &amp; Conditions</h1>
+  <p class="policy-hero-sub">We wrote these in the same way we'd explain things to a friend over coffee. Clear, honest, and without the legal gymnastics.</p>
+  <div class="updated">Last updated: February 15, 2026 · Effective immediately</div>
+  <div style="max-width:640px;margin:20px auto 0;padding:16px 20px;border-radius:12px;background:var(--cream);border:1px solid var(--bdr);text-align:left">
+    <p style="font-size:14px;line-height:1.6;color:var(--mut);margin:0">These Terms include a <a href="#disputes" style="font-weight:600">dispute resolution process</a> that we believe is fair to both sides. You may opt out within 30 days of your first purchase — see details below.</p>
+  </div>
+</section>
+
+<!-- QUICK NAV -->
+<div class="quick-nav rv rv-d1">
+  <a href="#agreement" class="qn-pill">The Agreement</a>
+  <a href="#products" class="qn-pill">Our Products</a>
+  <a href="#ordering" class="qn-pill">Ordering</a>
+  <a href="#pricing" class="qn-pill">Pricing</a>
+  <a href="#shipping" class="qn-pill">Shipping</a>
+  <a href="#warranty" class="qn-pill">Warranty</a>
+  <a href="#subscriptions" class="qn-pill">Auto-Ship</a>
+  <a href="#personal" class="qn-pill">Personal Use</a>
+  <a href="#website" class="qn-pill">Website Use</a>
+  <a href="#ip" class="qn-pill">Intellectual Property</a>
+  <a href="#warranties" class="qn-pill">Disclaimers</a>
+  <a href="#liability" class="qn-pill">Liability</a>
+  <a href="#disputes" class="qn-pill">Disputes</a>
+  <a href="#changes" class="qn-pill">Changes</a>
+</div>
+
+<!-- FRIENDLY INTRO -->
+<div class="friendly-banner rv rv-d2">
+  <div class="friendly-banner-icon">☕</div>
+  <div>
+    <h3>Before You Start Reading…</h3>
+    <p>We know Terms &amp; Conditions pages are usually the thing you scroll past. We get it. But we've worked hard to make ours different — every section has a "plain-English" summary so you always know what you're agreeing to. We're a real company, run by real women, and we believe trust starts with transparency. If anything below is confusing, email us at <a href="mailto:hello@showerenvy.com">hello@showerenvy.com</a> and we'll explain it in person.</p>
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="policy-layout">
+
+<aside>
+  <div class="toc">
+    <div class="toc-title">On this page</div>
+    <a href="#agreement">The Agreement</a>
+    <a href="#products">Our Products</a>
+    <a href="#ordering">Ordering</a>
+    <a href="#pricing">Pricing & Payment</a>
+    <a href="#shipping">Shipping</a>
+    <a href="#warranty">Warranty</a>
+    <a href="#subscriptions">Auto-Ship</a>
+    <a href="#personal">Personal Use</a>
+    <a href="#website">Website Use</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#ip">Intellectual Property</a>
+    <a href="#warranties">Disclaimers</a>
+    <a href="#liability">Liability</a>
+    <a href="#indemnification">Your Responsibility</a>
+    <a href="#electronic">Communications</a>
+    <a href="#disputes">Disputes</a>
+    <a href="#governing">Governing Law</a>
+    <a href="#severability">General</a>
+    <a href="#thirdparty">Third-Party Links</a>
+    <a href="#changes">Changes</a>
+    <a href="#contact">Contact</a>
+  </div>
+</aside>
+
+<div class="content">
+
+  <!-- THE AGREEMENT -->
+  <div class="policy-section rv" id="agreement">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">🤝</div>
+      <div><h2>The Agreement</h2><p>What you're agreeing to</p></div>
+    </div>
+    <p>By using our website (showerenvy.com) or purchasing our products, you agree to these Terms &amp; Conditions. This is a legal agreement between you and ShowerEnvy Technologies LLC ("ShowerEnvy," "we," "us," or "our").</p>
+    <p>If you don't agree with any part of these terms, please don't use our site or services. But if something feels unfair, please reach out first — we're always open to a conversation.</p>
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> Using our site or buying our products means you agree to these rules. They're designed to protect both you and us. Nothing sneaky, nothing hidden.</p>
+    </div>
+    <p><strong>Who we are:</strong></p>
+    <p>ShowerEnvy Technologies LLC<br>Cheyenne, Wyoming 82001, USA<br>📧 <a href="mailto:hello@showerenvy.com">hello@showerenvy.com</a><br>📞 <a href="tel:+18339240099">+1 (833) 924-0099</a> · Mon–Fri, 9 AM–5 PM EST</p>
+    <p>You must be at least 18 years old (or the age of legal majority in your jurisdiction) to make a purchase or create an account on our website.</p>
+  </div>
+
+  <!-- OUR PRODUCTS -->
+  <div class="policy-section rv" id="products">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">🚿</div>
+      <div><h2>Our Products</h2><p>What you're buying and what to expect</p></div>
+    </div>
+    <p>ShowerEnvy designs and sells filtered showerheads and replacement filters. Our current product line includes:</p>
+
+    <div class="product-diff">
+      <div class="pd-card sage-accent">
+        <div class="pd-badge sage">2.0 HANDHELD</div>
+        <h4>2.0 Handheld Showerhead</h4>
+        <p>3-stage filtration system. Designed for easy handheld use. Includes one pre-installed filter with approximately 6 months / 10,000 gallons of capacity. Compatible with standard ½" shower connections. Available in Chrome, Brushed Nickel, and Matte Black.</p>
+      </div>
+      <div class="pd-card gold-accent">
+        <div class="pd-badge gold">5.0 STATIONARY</div>
+        <h4>5.0 Stationary Showerhead</h4>
+        <p>Advanced 15-stage filtration system. Fixed-mount premium design for maximum filtration. Includes one pre-installed filter with approximately 6 months / 10,000 gallons of capacity. Compatible with standard ½" shower connections. Available in Chrome, Brushed Nickel, and Matte Black.</p>
+      </div>
+    </div>
+
+    <p><strong>Product descriptions:</strong> We make every effort to accurately describe our products, including materials, features, specifications, and expected results. Photographs on our website represent the actual product, though colors may vary slightly due to screen settings.</p>
+
+    <p><strong>Results disclaimer:</strong> Our products are designed to reduce chlorine, heavy metals, and hard water minerals from your shower water. Individual results regarding hair, skin, and scalp improvements vary based on your water quality, hormonal health, usage patterns, and other factors. The testimonials and reviews on our website reflect real customer experiences, but we cannot guarantee identical results for every individual.</p>
+
+    <div class="highlight-box gold">
+      <p><strong>What we can promise:</strong> Our filters are NSF/ANSI certified to remove 90%+ of free chlorine. That's a laboratory-tested fact, not a marketing claim. What that improved water quality does for your specific hair and skin depends on your unique situation — which is why we offer generous guarantee windows so you can judge for yourself.</p>
+    </div>
+  </div>
+
+  <!-- ORDERING -->
+  <div class="policy-section rv" id="ordering">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">🛒</div>
+      <div><h2>Ordering</h2><p>How purchases work</p></div>
+    </div>
+    <p><strong>Placing an order:</strong> When you place an order on showerenvy.com, you're making an offer to purchase our products. We'll send you an order confirmation email, but this doesn't mean we've accepted your order yet. Acceptance occurs when we ship the item and send you a shipping confirmation.</p>
+    <p><strong>Order accuracy:</strong> Please double-check your shipping address, product selection (2.0 Handheld vs. 5.0 Stationary), finish (Chrome, Brushed Nickel, or Matte Black), and contact information before completing your purchase. If you spot an error after ordering, contact us immediately — we can usually fix it before shipment.</p>
+    <p><strong>Order cancellation:</strong> You can cancel any order for free before it ships. Once shipped, the return policy applies (60 days for the 2.0 Handheld, 90 days for the 5.0 Stationary). Just email <a href="mailto:hello@showerenvy.com">hello@showerenvy.com</a> with your order number.</p>
+    <p><strong>Availability:</strong> We do our best to keep everything in stock, but occasionally products may be temporarily unavailable. If something you ordered is out of stock, we'll notify you within 24 hours and give you the option to wait or receive a full refund.</p>
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> Order online, we confirm it, we ship it. If something goes wrong, we fix it fast. You can cancel before we ship at no cost, and our generous return policies give you plenty of time after that.</p>
+    </div>
+  </div>
+
+  <!-- PRICING & PAYMENT -->
+  <div class="policy-section rv" id="pricing">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">💳</div>
+      <div><h2>Pricing &amp; Payment</h2><p>No hidden fees, no bait-and-switch</p></div>
+    </div>
+    <p><strong>Pricing:</strong> All prices on showerenvy.com are listed in US Dollars (USD). Prices include the product and standard packaging but do not include sales tax (where applicable) or shipping (unless your order qualifies for free shipping).</p>
+    <p><strong>Price changes:</strong> We reserve the right to change prices at any time. However, once you've placed an order, the price you paid is the price you pay — we'll never charge you more retroactively. If we lower a price within 14 days of your purchase, contact us and we'll refund the difference.</p>
+
+    <p><strong>Payment authorization:</strong> By submitting payment information to ShowerEnvy, you represent and warrant that: (i) you are fully authorized to use the payment card or account provided; (ii) all payment information you provide is complete and accurate; (iii) you will be responsible for any fees assessed by your bank or card issuer in connection with your payment; and (iv) sufficient funds or credit are available to cover the amount(s) due. All charges are in US Dollars.</p>
+
+    <p><strong>Payment methods:</strong> We accept major credit cards (Visa, Mastercard, American Express, Discover), PayPal, Apple Pay, and Google Pay. All payments are processed securely through Stripe with 256-bit SSL encryption. ShowerEnvy does not store your full credit card number on our servers.</p>
+
+    <p><strong>Payment disputes &amp; chargebacks:</strong> If your bank or credit card issuer reverses a charge, we reserve the right to bill you directly or seek payment by alternative means, including a mailed statement. We are not responsible for any fees your bank or card issuer may charge you in connection with payment processing. If you believe a charge is incorrect, please contact us at <a href="mailto:hello@showerenvy.com">hello@showerenvy.com</a> first — we resolve the vast majority of billing questions within 24 hours.</p>
+
+    <p><strong>Sales tax:</strong> We collect sales tax where required by law. Tax is calculated at checkout based on your shipping address.</p>
+    <p><strong>Promotional codes:</strong> Discount codes cannot be combined with other offers unless explicitly stated. We reserve the right to limit or void promotional codes that are being misused. Codes may have expiration dates and usage limits.</p>
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> The price you see is what you pay (plus tax where required). We use secure payment processing — we never see your full card number. If you think a charge is wrong, email us and we'll sort it out fast. If we lower a price right after you bought, we'll refund the difference.</p>
+    </div>
+  </div>
+
+  <!-- SHIPPING -->
+  <div class="policy-section rv" id="shipping">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">📦</div>
+      <div><h2>Shipping</h2><p>Getting your order to your door</p></div>
+    </div>
+    <p><strong>Processing time:</strong> Orders are typically processed within 1–2 business days (Monday through Friday, excluding federal holidays).</p>
+    <p><strong>Free shipping:</strong> All orders over $49 ship free within the contiguous United States. All subscription orders ship free regardless of amount. Orders under $49 incur a flat $5.95 shipping fee.</p>
+    <p><strong>Delivery times:</strong> Standard shipping within the US takes 3–7 business days after processing. Delivery to Alaska, Hawaii, and US territories may take 7–14 business days.</p>
+    <p><strong>International shipping:</strong> We currently ship within the United States only. We're working on expanding to Canada and other countries — sign up for our email list to be notified when we do.</p>
+    <p><strong>Tracking:</strong> Every order includes tracking. You'll receive an email with your tracking number as soon as your order ships.</p>
+    <p><strong>Risk of loss &amp; delivery confirmation:</strong> Once a package is delivered to the address you provided (as confirmed by carrier tracking), the risk of loss or theft transfers to you. Because many circumstances may occur at your delivery address that are beyond our control, you agree that any delivery confirmation provided by the shipping carrier (USPS, UPS, or FedEx) constitutes sufficient proof of delivery, even without a physical signature. If tracking shows "delivered" but you didn't receive it, contact us and we'll work with the carrier to investigate. In most cases, we reship at no cost to you.</p>
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> We ship fast, we ship free on orders over $49 (and always free for subscribers), and we give you a tracking number. If your package gets lost, we'll help — we're not going to leave you stranded.</p>
+    </div>
+  </div>
+
+  <!-- WARRANTY -->
+  <div class="policy-section rv" id="warranty">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">🛡️</div>
+      <div><h2>Warranty &amp; Guarantees</h2><p>Different products, different commitments</p></div>
+    </div>
+    <p>We stand behind every product we sell — but because our two products serve different needs and produce results on different timelines, their guarantee terms differ:</p>
+
+    <div class="product-diff">
+      <div class="pd-card sage-accent">
+        <div class="pd-badge sage">2.0 HANDHELD</div>
+        <h4>60-Day Money-Back Guarantee</h4>
+        <p>Full refund within 60 days of delivery. Used or unused — we accept both. Refund processed within 5–7 business days. Plus a 1-year manufacturer's warranty covering defects in materials and workmanship.</p>
+      </div>
+      <div class="pd-card gold-accent">
+        <div class="pd-badge gold">5.0 STATIONARY</div>
+        <h4>90-Day Money-Back Guarantee</h4>
+        <p>Full refund within 90 days of delivery — the longest in the industry. Used or unused. Refund processed within 5–7 business days. Plus a 2-year manufacturer's warranty covering defects in materials and workmanship.</p>
+      </div>
+    </div>
+
+    <p><strong>Why the 5.0 gets 90 days:</strong> The 5.0 Stationary's advanced 15-stage filtration produces cumulative benefits that build gradually over 8–12 weeks — especially for women experiencing hormonal hair and skin changes. We give you the full 90 days so you can experience the complete transformation.</p>
+
+    <p><strong>Manufacturer's warranty details:</strong> Our warranty covers defects in materials and manufacturing under normal household use. It does not cover damage from misuse, modification, use with incompatible plumbing, or normal wear from mineral deposits. If your product develops a defect during the warranty period, we'll repair or replace it free of charge.</p>
+
+    <p><strong>Replacement filters:</strong> Filters are consumable products and are not covered by the manufacturer's warranty. However, if a filter arrives damaged or defective, we'll replace it at no cost — just email us a photo. Unopened filters may be returned within 30 days.</p>
+
+    <p>For full details on returns and refunds, please see our <a href="#">Refund &amp; Return Policy</a>.</p>
+
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> The 2.0 Handheld has a 60-day guarantee and 1-year warranty. The 5.0 Stationary has a 90-day guarantee and 2-year warranty. If something breaks due to a manufacturing defect, we fix or replace it free. Filters are consumable, but defective ones get replaced instantly.</p>
+    </div>
+  </div>
+
+  <!-- SUBSCRIPTIONS, AUTOMATIC PAYMENT & CANCELLATION -->
+  <div class="policy-section rv" id="subscriptions">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">🔄</div>
+      <div><h2>Subscriptions, Automatic Payment &amp; Cancellation</h2><p>Complete transparency on recurring billing</p></div>
+    </div>
+
+    <p><strong>Enrollment:</strong> When you purchase a product on showerenvy.com, you may have the option of making a one-time purchase or enrolling in ShowerEnvy's subscription plan for automatic filter replacements. Subscription enrollment is always optional — it is never required to complete a purchase and is never pre-selected at checkout.</p>
+
+    <div class="highlight-box red" style="margin:20px 0">
+      <p><strong>⚠️ IMPORTANT — PLEASE READ CAREFULLY:</strong> BY ENROLLING IN THE SHOWERENVY SUBSCRIPTION PROGRAM AND PROVIDING A VALID CREDIT CARD, DEBIT CARD, OR OTHER PAYMENT METHOD, YOU EXPRESSLY AUTHORIZE SHOWERENVY TO AUTOMATICALLY CHARGE YOUR PAYMENT METHOD ON A RECURRING BASIS AT YOUR CHOSEN BILLING INTERVAL (EVERY 6 MONTHS FOR STANDARD SUBSCRIPTIONS, OR ANNUALLY FOR ANNUAL PREPAY PLANS) UNTIL YOU CANCEL. EACH RECURRING CHARGE WILL BE BILLED TO THE PAYMENT METHOD YOU PROVIDED AT THE TIME OF ENROLLMENT. YOU WILL RECEIVE AN EMAIL NOTIFICATION 7 DAYS BEFORE EACH RECURRING CHARGE IS PROCESSED.</p>
+    </div>
+
+    <p><strong>Billing intervals &amp; amounts:</strong></p>
+    <div class="product-diff">
+      <div class="pd-card sage-accent">
+        <div class="pd-badge sage">2.0 HANDHELD FILTERS</div>
+        <h4>3-Stage Replacement Filter</h4>
+        <p><strong>Standard subscription:</strong> $38 charged every 6 months (15% off the $45 one-time price). <strong>Annual prepay:</strong> $68 charged once per year for 2 filters (25% savings).</p>
+      </div>
+      <div class="pd-card gold-accent">
+        <div class="pd-badge gold">5.0 STATIONARY FILTERS</div>
+        <h4>15-Stage Replacement Filter</h4>
+        <p><strong>Standard subscription:</strong> $38 charged every 6 months (15% off the $45 one-time price). <strong>Annual prepay:</strong> $68 charged once per year for 2 filters (25% savings).</p>
+      </div>
+    </div>
+
+    <p><strong>7-day advance notification:</strong> We will always email you at the address on file at least 7 days before processing any recurring charge. This email will include the amount to be charged, the date of the upcoming charge, and clear instructions on how to skip, pause, or cancel before the charge is processed.</p>
+
+    <p><strong>Automatic payment method updates:</strong> We and our third-party payment service providers (Stripe) may request and receive updated credit or debit card information from your card issuer (such as updated card numbers or expiration dates) when your card has been reissued, expired, or otherwise changed. If updated information is provided by your card issuer, we will update your account accordingly and your next recurring charge will be billed to the updated payment information. Your card issuer may offer you the right to opt out of this automatic update service — contact your card issuer directly if you wish to opt out.</p>
+
+    <p><strong>Failed payments:</strong> If your payment method fails to process for a scheduled subscription shipment, you agree that ShowerEnvy may contact you at any email address or phone number you have provided in order to request alternate payment information. Your subscription will be paused (not cancelled) until the payment issue is resolved. If we are unable to collect payment after 30 days, your subscription may be cancelled. We will not send your account to collections for failed subscription payments — we'll simply pause or cancel the subscription.</p>
+
+    <p><strong>Cancellation — multiple easy methods:</strong> You may cancel your subscription at any time, for any reason, with no cancellation fee and no penalty. To cancel, use any of the following methods:</p>
+    <ul class="plain-list sage-dots">
+      <li><strong>Email:</strong> <a href="mailto:hello@showerenvy.com">hello@showerenvy.com</a> — include your name, email, and "Cancel Subscription" in the subject line</li>
+      <li><strong>Phone:</strong> <a href="tel:+18339240099">+1 (833) 924-0099</a> — Mon–Fri, 9 AM–5 PM EST</li>
+      <li><strong>Online:</strong> Log into your customer account at showerenvy.com and cancel through your subscription dashboard</li>
+    </ul>
+    <p>To avoid being charged for your next shipment, please cancel at least 48 hours before your next scheduled billing date (shown in your account dashboard and in the 7-day reminder email). Cancellations received after a charge has already been processed will apply to the following billing cycle. If you cancel after a charge but before the item ships, we will issue a full refund for that charge.</p>
+
+    <p><strong>Skip or pause:</strong> You can skip your next scheduled shipment or pause your subscription for up to 6 months through your account dashboard or by contacting us. Pausing retains your subscriber pricing. Your subscription will automatically resume at the end of the pause period unless you cancel.</p>
+
+    <p><strong>Subscription pricing &amp; changes:</strong> Your subscriber discount rate is locked in at the price displayed at the time you enrolled. We will not increase your subscription price without providing at least 30 days' written notice via email and giving you the option to cancel at your current rate before the increase takes effect. Price increases will never apply retroactively to charges already processed.</p>
+
+    <p><strong>Annual prepay refunds:</strong> If you enrolled in the Annual Prepay plan and wish to cancel before all filters have shipped, we will refund you on a prorated basis for any unshipped filters. For example, if you've received 1 of 2 filters, you will receive a 50% refund of your annual payment.</p>
+
+    <p><strong>No automatic re-enrollment:</strong> If you cancel your subscription, it stays cancelled. We will never re-enroll you in a subscription without your explicit, affirmative consent. You may re-subscribe at any time through the website if you choose.</p>
+
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> You're in control. Subscribing means we auto-charge your card on a schedule — but we always warn you 7 days before every charge, you can cancel anytime through email, phone, or your account, there are zero cancellation fees, and we never sneak a charge through. If your card is updated by your bank, we may use the new info — opt out through your card issuer if you prefer.</p>
+    </div>
+  </div>
+
+  <!-- WEBSITE USE -->
+  <div class="policy-section rv" id="website">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">🌐</div>
+      <div><h2>Website Use</h2><p>Playing nice on showerenvy.com</p></div>
+    </div>
+    <p>When using our website, you agree to:</p>
+    <ul class="plain-list sage-dots">
+      <li>Use the site for lawful purposes only</li>
+      <li>Provide accurate information when placing orders or creating an account</li>
+      <li>Keep your account credentials secure (if you create an account)</li>
+      <li>Not attempt to hack, disrupt, or interfere with the site's operation</li>
+      <li>Not use automated tools (bots, scrapers, etc.) to access the site without our permission</li>
+      <li>Not reproduce, distribute, or commercially exploit our content without written permission</li>
+    </ul>
+    <p>We reserve the right to suspend or terminate access for anyone who violates these terms, though we'll always try to resolve issues through communication first.</p>
+    <p><strong>Account responsibility:</strong> If you create an account, you're responsible for all activity under that account. If you suspect unauthorized access, contact us immediately.</p>
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> Use our website honestly and don't try to break it. If something goes wrong with your account, tell us right away.</p>
+    </div>
+  </div>
+
+  <!-- REVIEWS & USER CONTENT -->
+  <div class="policy-section rv" id="reviews">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">⭐</div>
+      <div><h2>Reviews &amp; User Content</h2><p>Your honest voice matters to us</p></div>
+    </div>
+    <p><strong>Leaving reviews:</strong> We welcome honest reviews — positive and negative. When you submit a review, you grant ShowerEnvy a non-exclusive, royalty-free license to use, display, and share your review on our website and marketing materials. You retain ownership of your content.</p>
+    <p><strong>Review integrity:</strong> We never edit the substance of a review. We may moderate for profanity, personal information (like full names of non-public individuals), or content that is clearly spam or unrelated to our products.</p>
+    <p><strong>Photos in reviews:</strong> If you submit before-and-after photos with your review, you confirm that you have the right to share those images and that they accurately represent your experience.</p>
+    <p><strong>Removing your review:</strong> You can request removal of your review at any time by emailing us.</p>
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> Leave honest reviews. We won't change what you said. We may use your review on our site. You can ask us to take it down anytime.</p>
+    </div>
+  </div>
+
+  <!-- INTELLECTUAL PROPERTY -->
+  <div class="policy-section rv" id="ip">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">©️</div>
+      <div><h2>Intellectual Property</h2><p>What belongs to whom</p></div>
+    </div>
+    <p>All content on showerenvy.com — including text, images, graphics, logos, product designs, icons, software, and the overall "look and feel" — is owned by ShowerEnvy Technologies LLC and protected by US and international copyright, trademark, and intellectual property laws.</p>
+    <p><strong>What you can do:</strong> You're welcome to share links to our website, reference our products in personal blog posts or social media, and print pages for personal use.</p>
+    <p><strong>What you can't do:</strong> You may not copy, reproduce, distribute, or commercially use our content, images, product designs, or branding without prior written permission. This includes using our product images on competing websites or creating derivative products based on our designs.</p>
+    <p><strong>Trademarks:</strong> "ShowerEnvy," the ShowerEnvy logo, "2.0 Handheld," "5.0 Stationary," and "PureFlow" are trademarks of ShowerEnvy Technologies LLC. Use of these marks without permission is prohibited.</p>
+  </div>
+
+  <!-- PERSONAL USE ONLY -->
+  <div class="policy-section rv" id="personal">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">🏠</div>
+      <div><h2>Products for Personal Use</h2><p>Not for resale or redistribution</p></div>
+    </div>
+    <p>Products purchased from ShowerEnvy are intended for your personal, non-commercial, household use only. You agree not to resell, redistribute, modify, or export any product purchased from showerenvy.com.</p>
+    <p>Resale outside of authorized channels may result in the product becoming materially different (e.g., expired filters, damaged seals, missing components), which may affect safety, performance, and our ability to honor warranties or guarantees.</p>
+    <p>We reserve the right to limit or prohibit orders that, in our sole judgment, appear to be placed by dealers, resellers, or distributors.</p>
+  </div>
+
+  <!-- DISCLAIMER OF WARRANTIES -->
+  <div class="policy-section rv" id="warranties">
+    <div class="section-header">
+      <div class="section-icon" style="background:#FEF2F2">📋</div>
+      <div><h2>Disclaimer of Warranties</h2><p>Important legal terms</p></div>
+    </div>
+    <p>This section contains capitalized legal language required for enforceability. We've included a plain-English summary below.</p>
+
+    <div class="highlight-box red" style="margin:16px 0">
+      <p style="font-size:12px;line-height:1.7;letter-spacing:.01em"><strong>EXCEPT WHERE PROHIBITED BY LAW, THE SHOWERENVY WEBSITE AND ALL PRODUCTS AND SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF TITLE, IMPLIED WARRANTIES OF MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. SHOWERENVY DOES NOT WARRANT THAT: (A) OUR PRODUCTS OR SERVICES WILL MEET YOUR SPECIFIC REQUIREMENTS OR EXPECTATIONS, (B) THE RESULTS OBTAINED FROM USING OUR PRODUCTS WILL BE ACCURATE, RELIABLE, OR CONSISTENT FOR ALL USERS, OR (C) THE WEBSITE OR THE SERVERS THAT MAKE THE WEBSITE AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. ALL CONDITIONS, REPRESENTATIONS, AND WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF THIRD-PARTY RIGHTS, ARE HEREBY DISCLAIMED TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW. SOME STATES DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES, SO SOME OF THESE EXCLUSIONS MAY NOT APPLY TO YOU AND YOU MAY HAVE ADDITIONAL RIGHTS.</strong></p>
+    </div>
+
+    <p><strong>Results disclaimer:</strong> Our products are designed to reduce chlorine, heavy metals, and hard water minerals from your shower water. Our filters are NSF/ANSI certified to remove 90%+ of free chlorine — that's a laboratory-tested fact. However, individual results regarding hair thickness, skin hydration, and scalp health vary based on your water quality, hormonal health, usage patterns, genetics, and other personal factors. ShowerEnvy does not guarantee specific cosmetic, dermatological, or medical outcomes. Our products are not medical devices and are not intended to diagnose, treat, cure, or prevent any disease or medical condition.</p>
+
+    <p><strong>Website accuracy:</strong> While we strive to provide accurate product descriptions, pricing, and imagery, our website may occasionally contain typographical errors, inaccuracies, or omissions. We reserve the right to correct errors and update information at any time without prior notice, including after you have submitted an order. Colors displayed on screen may vary from actual product appearance.</p>
+
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> We sell our products "as is" — meaning we can't guarantee they'll work perfectly for every single person because bodies are different. Our chlorine removal claims are lab-certified. But what that clean water does for your specific hair and skin depends on your unique situation. That's exactly why we offer 60-day and 90-day guarantees — so you can judge for yourself, risk-free.</p>
+    </div>
+  </div>
+
+  <!-- LIABILITY -->
+  <div class="policy-section rv" id="liability">
+    <div class="section-header">
+      <div class="section-icon" style="background:#FEF2F2">⚖️</div>
+      <div><h2>Limitation of Liability</h2><p>The important legal boundaries</p></div>
+    </div>
+    <p>This section contains capitalized legal language required for enforceability.</p>
+
+    <div class="highlight-box red" style="margin:16px 0">
+      <p style="font-size:12px;line-height:1.7;letter-spacing:.01em"><strong>EXCEPT WHERE PROHIBITED BY LAW, IN NO EVENT SHALL SHOWERENVY TECHNOLOGIES LLC OR ANY OF ITS OFFICERS, DIRECTORS, SHAREHOLDERS, EMPLOYEES, INDEPENDENT CONTRACTORS, OR AGENTS BE LIABLE FOR ANY INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, CONSEQUENTIAL, PUNITIVE, OR ANY OTHER DAMAGES, FEES, COSTS, OR CLAIMS ARISING FROM OR RELATED TO THESE TERMS, THE PRIVACY POLICY, THE REFUND POLICY, OUR PRODUCTS, OR YOUR OR ANY THIRD PARTY'S USE OR ATTEMPTED USE OF THE WEBSITE OR ANY PRODUCT, REGARDLESS OF WHETHER SHOWERENVY HAS HAD NOTICE OF THE POSSIBILITY OF SUCH DAMAGES. THIS INCLUDES, WITHOUT LIMITATION, ANY LOSS OF USE, LOSS OF PROFITS, LOSS OF DATA, LOSS OF GOODWILL, COST OF PROCUREMENT OF SUBSTITUTE SERVICES OR PRODUCTS, OR ANY OTHER INDIRECT, SPECIAL, INCIDENTAL, PUNITIVE, CONSEQUENTIAL, OR OTHER DAMAGES. THIS APPLIES REGARDLESS OF THE MANNER IN WHICH DAMAGES ARE CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER FOR BREACH OF CONTRACT, TORT (INCLUDING NEGLIGENCE AND STRICT LIABILITY), WARRANTY, OR OTHERWISE.</strong></p>
+    </div>
+
+    <p><strong>Maximum liability:</strong> If, notwithstanding the above limitations, ShowerEnvy is found liable under any theory, ShowerEnvy's total aggregate liability and your exclusive remedy shall be limited to the total amount you actually paid to ShowerEnvy for the specific product(s) giving rise to the claim during the twelve (12) months preceding the event. This limitation applies to all claims regardless of whether ShowerEnvy was aware of or advised in advance of the possibility of damages.</p>
+
+    <p><strong>Consumer protection carve-outs:</strong> Nothing in these terms limits our liability for fraud, gross negligence, willful misconduct, death or personal injury caused by our negligence, or anything else that cannot be limited or excluded by applicable law. Your statutory rights as a consumer are not affected by these terms. Some states do not allow the exclusion or limitation of certain damages, so some of the above limitations may not apply to you.</p>
+
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> If something goes wrong, the most we can owe you is what you paid us in the past 12 months. We're not liable for indirect consequences (like lost time or missed opportunities). But nothing here overrides your legal rights as a consumer — those always apply. And we're always liable for fraud or reckless behavior on our part.</p>
+    </div>
+  </div>
+
+  <!-- INDEMNIFICATION -->
+  <div class="policy-section rv" id="indemnification">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">🛡️</div>
+      <div><h2>Indemnification</h2><p>Your responsibility for your actions</p></div>
+    </div>
+    <p>To the fullest extent permitted by law, you agree to indemnify, defend, and hold harmless ShowerEnvy Technologies LLC, its officers, directors, agents, contractors, suppliers, and employees from and against any claims, actions, losses, liabilities, damages, expenses, and costs (including reasonable attorneys' fees) arising out of or related to:</p>
+    <ul class="plain-list red-dots">
+      <li>Your breach of these Terms or any representations you've made</li>
+      <li>Your violation of any law or the rights of a third party</li>
+      <li>Your misuse of our products in a manner inconsistent with their intended residential purpose</li>
+      <li>Any content you submit to ShowerEnvy (reviews, photos, messages) that infringes on third-party rights</li>
+    </ul>
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> If you break these rules and we get sued because of it, you agree to cover our costs. This is standard in virtually every terms of service — it means "don't do things that get us both in trouble."</p>
+    </div>
+  </div>
+
+  <!-- ELECTRONIC COMMUNICATIONS -->
+  <div class="policy-section rv" id="electronic">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">📱</div>
+      <div><h2>Electronic Communications</h2><p>How we communicate with you</p></div>
+    </div>
+    <p>By placing an order or creating an account on showerenvy.com, you consent to receive electronic communications from ShowerEnvy. You agree that all notices, disclosures, agreements, and other communications that we provide to you electronically — via email, website notifications, or your customer portal — satisfy any legal requirement that such communications be in writing.</p>
+    <p>Electronic communications from ShowerEnvy may include:</p>
+    <ul class="plain-list sage-dots">
+      <li>Order confirmations and shipping notifications</li>
+      <li>Subscription billing reminders (7 days before each charge)</li>
+      <li>Account updates and security notifications</li>
+      <li>Changes to these Terms, our Privacy Policy, or our Refund Policy</li>
+      <li>Marketing emails (only if you opted in — with one-click unsubscribe)</li>
+    </ul>
+    <p>You may withdraw your consent to marketing communications at any time by clicking "unsubscribe" in any email or contacting us. Transactional emails (order confirmations, shipping updates, subscription reminders) cannot be opted out of while you have an active order or subscription — these are necessary to fulfill our obligations to you.</p>
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> We'll communicate with you by email. Those emails count as official notices. You can unsubscribe from marketing emails but not from order confirmations or subscription reminders — you need those.</p>
+    </div>
+  </div>
+
+  <!-- DISPUTES (strengthened) -->
+  <div class="policy-section rv" id="disputes">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">🕊️</div>
+      <div><h2>Dispute Resolution &amp; Arbitration</h2><p>Let's talk before we lawyer up</p></div>
+    </div>
+
+    <p><strong>Step 1 — Talk to us first (mandatory):</strong> Before initiating any formal dispute proceeding, you agree to first contact ShowerEnvy at <a href="mailto:hello@showerenvy.com">hello@showerenvy.com</a> or <a href="tel:+18339240099">+1 (833) 924-0099</a> and attempt to resolve the dispute informally for at least 30 days. We resolve the vast majority of issues directly with our customers — quickly, fairly, and without any formal proceedings.</p>
+
+    <p><strong>Step 2 — Binding arbitration:</strong> If we cannot resolve a dispute informally within 30 days, you agree that any dispute, claim, or controversy arising from or relating to these Terms, ShowerEnvy's Privacy Policy, Refund Policy, advertising or marketing practices, or ShowerEnvy's products or services shall be submitted to binding, final, and confidential arbitration before a single arbitrator administered by the American Arbitration Association ("AAA") under its Consumer Arbitration Rules.</p>
+
+    <div class="highlight-box red" style="margin:20px 0">
+      <p style="font-size:12px;line-height:1.7"><strong>⚠️ ARBITRATION AND CLASS ACTION WAIVER — PLEASE READ CAREFULLY:</strong></p>
+      <p style="font-size:12px;line-height:1.7"><strong>THIS AGREEMENT CONTAINS AN ARBITRATION PROVISION AND CLASS ACTION WAIVER THAT WAIVE YOUR RIGHT TO A COURT HEARING, RIGHT TO A JURY TRIAL, AND RIGHT TO PARTICIPATE IN A CLASS ACTION. ARBITRATION IS MANDATORY AND IS THE EXCLUSIVE REMEDY FOR ANY AND ALL DISPUTES UNLESS YOU OPT OUT AS DESCRIBED BELOW OR THE DISPUTE QUALIFIES FOR SMALL CLAIMS COURT.</strong></p>
+      <p style="font-size:12px;line-height:1.7"><strong>BY AGREEING TO THESE TERMS, UNLESS YOU TIMELY OPT OUT, YOU WILL NOT HAVE THE RIGHT TO: (A) HAVE A COURT OR JURY DECIDE YOUR DISPUTE; (B) PARTICIPATE IN A CLASS ACTION IN COURT OR IN ARBITRATION, EITHER AS A CLASS REPRESENTATIVE, CLASS MEMBER, OR CLASS OPPONENT; (C) ACT AS A PRIVATE ATTORNEY GENERAL; OR (D) JOIN OR CONSOLIDATE YOUR DISPUTE WITH THE DISPUTE OF ANY OTHER PERSON. OTHER RIGHTS THAT YOU WOULD HAVE HAD IN COURT MAY ALSO NOT BE AVAILABLE IN ARBITRATION.</strong></p>
+    </div>
+
+    <p><strong>Arbitration details:</strong> This arbitration provision is governed by the Federal Arbitration Act, 9 U.S.C. §§ 1–16. The arbitrator shall follow applicable substantive law of the State of Wyoming and shall be authorized to award all remedies available in an individual lawsuit, including compensatory, statutory, and punitive damages, declaratory and injunctive relief, and attorneys' fees and costs where available under applicable law. The arbitrator shall have exclusive authority to determine whether a dispute is arbitrable. The arbitrator may only resolve disputes between you and ShowerEnvy and may not consolidate claims without ShowerEnvy's consent.</p>
+
+    <p><strong>Class action waiver:</strong> Any dispute resolution proceedings will be conducted on an individual basis only. You agree that you will not bring, join, or participate in any class, consolidated, or representative action, proceeding, or hearing. If a court or arbitrator decides that any part of this class action waiver cannot be enforced as to a particular claim or remedy, then that claim or remedy (and only that claim or remedy) must be brought in court, and all other claims must be arbitrated.</p>
+
+    <p><strong>Your right to opt out of arbitration:</strong> You may opt out of the arbitration and class action waiver provisions within 30 days of your first purchase from showerenvy.com by sending a written letter to:</p>
+    <div class="highlight-box gold">
+      <p><strong>ShowerEnvy Technologies LLC<br>Attn: Legal Department — Arbitration Opt-Out<br>Cheyenne, WY 82001</strong><br><br>Your letter must include your full name, the product you purchased, your order number, and a clear statement that you wish to opt out of arbitration. Opting out will not affect any other aspect of these Terms or your relationship with ShowerEnvy.</p>
+    </div>
+
+    <p><strong>Small claims exception:</strong> Notwithstanding the above, either party may bring an individual claim in small claims court in Laramie County, Wyoming, if the dispute qualifies under the court's jurisdictional limits.</p>
+
+    <p><strong>Intellectual property exception:</strong> ShowerEnvy retains the right to bring a claim in state or federal courts of Wyoming for injunctive or equitable relief arising from any potential or actual misappropriation or infringement of ShowerEnvy's intellectual property rights.</p>
+
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> If there's a problem, email or call us first — we'll almost always solve it directly. If not, disputes go to arbitration (a private process) instead of court. You can opt out of arbitration within 30 days of your first purchase by mailing us a letter. You can always use small claims court regardless. We can't be part of a class action — disputes are handled individually.</p>
+    </div>
+  </div>
+
+  <!-- GOVERNING LAW -->
+  <div class="policy-section rv" id="governing">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">📜</div>
+      <div><h2>Governing Law</h2><p>Where these terms are enforceable</p></div>
+    </div>
+    <p>These Terms &amp; Conditions are governed by and construed in accordance with the laws of the State of Wyoming, United States, without regard to its conflict of law provisions.</p>
+    <p>These terms, together with our <a href="#">Privacy Policy</a> and <a href="#">Refund &amp; Return Policy</a>, constitute the entire agreement between you and ShowerEnvy Technologies LLC regarding use of our website and purchase of our products. Any ambiguities in the interpretation of these Terms shall not be construed against the drafting party.</p>
+  </div>
+
+  <!-- NO WAIVER & SEVERABILITY -->
+  <div class="policy-section rv" id="severability">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--cream)">📎</div>
+      <div><h2>No Waiver, Severability &amp; Assignment</h2><p>Standard but important legal provisions</p></div>
+    </div>
+    <p><strong>No waiver:</strong> If ShowerEnvy does not enforce any right or provision in these Terms at any time, that does not constitute a waiver of that right or provision. A waiver of any term is only effective if in writing and signed by ShowerEnvy.</p>
+    <p><strong>Severability:</strong> If any provision of these Terms is found to be unlawful, void, or unenforceable by a court of competent jurisdiction, that provision shall be enforceable to the fullest extent permitted by law, and the unenforceable portion shall be severed from these Terms without affecting the validity of the remaining provisions.</p>
+    <p><strong>Assignment:</strong> You may not assign or transfer any of your rights under these Terms without our prior written consent. Any attempt to do so will be void. ShowerEnvy may transfer or assign its rights and obligations under these Terms without restriction, including in connection with a merger, acquisition, or sale of assets. In such event, your rights under these Terms will be preserved.</p>
+    <p><strong>Termination &amp; survival:</strong> ShowerEnvy may terminate your access to the Website or services at any time if you violate these Terms, though we will always attempt to resolve issues through communication first. Upon termination, the sections relating to Intellectual Property, Disclaimer of Warranties, Limitation of Liability, Indemnification, Dispute Resolution, and Governing Law shall survive.</p>
+  </div>
+
+  <!-- THIRD-PARTY LINKS -->
+  <div class="policy-section rv" id="thirdparty">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">🔗</div>
+      <div><h2>Third-Party Links</h2><p>When you leave our site</p></div>
+    </div>
+    <p>Our website may contain links to third-party websites (such as social media platforms, payment processors, or shipping carriers). These links are provided for your convenience only. ShowerEnvy does not control, endorse, or assume responsibility for third-party websites, their content, or their privacy practices.</p>
+    <p>Please review the terms and privacy policies of any third-party site before engaging with it. ShowerEnvy is not liable for any harm, damages, or losses related to your use of third-party websites or services.</p>
+  </div>
+
+  <!-- CHANGES -->
+  <div class="policy-section rv" id="changes">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">📝</div>
+      <div><h2>Changes to These Terms</h2><p>We'll always give you fair notice</p></div>
+    </div>
+    <p>We may update these Terms &amp; Conditions from time to time. When we make material changes:</p>
+    <ul class="plain-list sage-dots">
+      <li>We'll update the "last updated" date at the top of this page</li>
+      <li>For significant changes, we'll email registered customers at least 14 days before the changes take effect</li>
+      <li>We'll post a notice on our website highlighting the changes</li>
+    </ul>
+    <p>Your continued use of our website or products after changes take effect constitutes acceptance of the updated terms. If you disagree with any changes, you may stop using our services and close your account.</p>
+    <p>We will never reduce your guarantee window, warranty coverage, or subscription rights retroactively. Changes like those would only apply to future purchases.</p>
+    <div class="highlight-box">
+      <p><strong>Plain English:</strong> If we change these terms, we'll tell you before they take effect. We'll never take away guarantees or warranties you already have.</p>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-card rv" id="contact">
+    <h2>Questions About These Terms?</h2>
+    <p>We're real people and we're happy to explain anything on this page. No question is too basic.</p>
+    <div class="contact-methods">
+      <div class="contact-method">
+        <div class="cm-icon">📧</div>
+        <div class="cm-label">Email</div>
+        <div class="cm-value"><a href="mailto:hello@showerenvy.com">hello@showerenvy.com</a></div>
+        <div class="cm-note">We respond within 24 hours</div>
+      </div>
+      <div class="contact-method">
+        <div class="cm-icon">📞</div>
+        <div class="cm-label">Phone</div>
+        <div class="cm-value">+1 (833) 924-0099</div>
+        <div class="cm-note">Mon–Fri, 9 AM–5 PM EST</div>
+      </div>
+      <div class="contact-method">
+        <div class="cm-icon">📮</div>
+        <div class="cm-label">Mail</div>
+        <div class="cm-value">ShowerEnvy Technologies LLC</div>
+        <div class="cm-note">Cheyenne, WY 82001</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div style="margin-bottom:14px"><a href="#" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:500;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px"><svg width="24" height="24" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span style="color:var(--sage);font-weight:700;font-style:italic">Envy</span></a></div>
+    <div class="footer-links">
+      <a href="#">Home</a><a href="#">2.0 Handheld</a><a href="#">5.0 Stationary</a>
+      <a href="#">Reviews</a><a href="#">Privacy Policy</a>
+      <a href="#">Refund Policy</a><a href="#" style="color:var(--sage);font-weight:700">Terms & Conditions</a>
+    </div>
+    <div class="footer-copy">© 2026 ShowerEnvy Technologies LLC · Cheyenne, Wyoming</div>
+  </div>
+</footer>
+
+</div>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+/* Scroll reveal */
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vis");obs.unobserve(e.target)}})},{threshold:0.05,rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".rv").forEach(function(el){obs.observe(el)});
+setTimeout(function(){document.querySelectorAll(".rv:not(.vis)").forEach(function(el){el.classList.add("vis")})},2500);
+
+/* Scroll to top */
+window.addEventListener("scroll",function(){var b=document.getElementById("scrollTop");if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show")}},{passive:true});
+
+/* TOC active state */
+var sections=document.querySelectorAll(".policy-section[id]");
+var tocLinks=document.querySelectorAll(".toc a");
+if(sections.length&&tocLinks.length){
+  window.addEventListener("scroll",function(){
+    var scrollPos=window.scrollY+120;
+    sections.forEach(function(sec){
+      if(sec.offsetTop<=scrollPos&&sec.offsetTop+sec.offsetHeight>scrollPos){
+        tocLinks.forEach(function(a){a.classList.remove("active")});
+        var link=document.querySelector(".toc a[href=\"#"+sec.id+"\"]");
+        if(link)link.classList.add("active");
+      }
+    });
+  },{passive:true});
+}
+
+/* Mobile nav toggle */
+function toggleMobileNav(){
+  var o=document.getElementById('mobOverlay');
+  var m=document.getElementById('mobMenu');
+  var h=document.querySelector('.ham');
+  if(o&&m){
+    o.classList.toggle('open');
+    m.classList.toggle('open');
+    document.body.style.overflow=m.classList.contains('open')?'hidden':'';
+  }
+  if(h)h.classList.toggle('open');
+}
+/* Close mobile nav on link click */
+document.querySelectorAll('.mob-link').forEach(function(a){
+  a.addEventListener('click',function(){toggleMobileNav()});
+});
+</script>
+</body>
+</html>
