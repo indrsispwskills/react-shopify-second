@@ -1,7 +1,7 @@
 @media(max-width:900px){.policy-layout{grid-template-columns:1fr}.toc{display:none}}
 
 @media(max-width:768px){
-  .page{padding:0 18px}
+  .pp-page{padding:0 18px}
   .topnav{padding:16px 0}
   .nav-links{display:none}
   .ham{display:flex!important}
@@ -26,7 +26,7 @@
 }
 
 @media(max-width:480px){
-  .page{padding:0 14px}
+  .pp-page{padding:0 14px}
   .policy-hero h1{font-size:28px}
   .policy-section{padding:20px 16px}
   .promise-box{padding:20px 16px}
