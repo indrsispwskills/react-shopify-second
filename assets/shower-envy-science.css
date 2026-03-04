@@ -67,8 +67,9 @@ section{padding:var(--section-pad) 0}
 .section-icon--red{background:var(--red-light);animation:gentlePulse 3s ease-in-out infinite 1s}
 
 /* NAV */
-.nav-bar{position:sticky;top:0;z-index:100;background:rgba(254,252,249,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+.nav-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(254,252,249,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
 .nav-bar.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.06)}
+.science-nav-offset{height:74px}
 .nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:var(--max-w);margin:0 auto;padding:0 24px;height:64px}
 .nav-left{display:flex;align-items:center;gap:16px}
 .nav-logo{font-family:var(--fh);font-size:26px;font-weight:500;color:var(--ink);letter-spacing:-.01em}.nav-logo span{color:var(--sage);font-weight:700;font-style:italic}
