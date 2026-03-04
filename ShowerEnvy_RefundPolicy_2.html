@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2714%27 fill=%27%235E8A6A%27/%3E%3Cpath d=%27M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3%27 stroke=%27%23fff%27 stroke-width=%272%27 stroke-linecap=%27round%27 fill=%27none%27/%3E%3Ccircle cx=%2716%27 cy=%2724%27 r=%271.2%27 fill=%27%23fff%27/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refund & Return Policy — ShowerEnvy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1F1D1A;--ink-deep:#141210;--sage:#5E8A6A;--sage-light:#EBF2ED;--sage-mid:#C4D9CA;--saged:#4A7254;--cream:#FAF6F0;--warm:#FEFCF8;--gold:#B08642;--gold-light:#F5EDE3;--gold-dark:#8A6A34;--rose:#C25D4E;--ink2:#4A4743;--mut:#8A857D;--light:#A8A29E;--bdr:#E8E3DA;--success:#16A34A;--red:#DC2626;--shadow-sm:0 2px 8px rgba(31,29,26,.06);--shadow-md:0 8px 32px rgba(31,29,26,.08)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'DM Sans',sans-serif;background:var(--warm);color:var(--ink2);font-size:16px;line-height:1.8}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;color:var(--ink);line-height:1.25}
+a{color:var(--sage);text-decoration:none;font-weight:500;transition:color .2s}
+a:hover{color:var(--saged)}
+button{font-family:'DM Sans',sans-serif;cursor:pointer;border:none}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.vis{opacity:1;transform:none}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+.page{max-width:1200px;margin:0 auto;padding:0 32px}
+.content{max-width:800px;margin:0 auto}
+
+/* Nav */
+.topnav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--bdr)}
+.logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:500;letter-spacing:-.01em;color:var(--ink)}
+.logo span{color:var(--sage);font-weight:700;font-style:italic}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:14px;color:var(--mut);font-weight:500}
+.nav-links a:hover{color:var(--sage)}
+.cart-btn{background:linear-gradient(135deg,var(--sage),var(--saged));color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:700;box-shadow:0 2px 12px rgba(94,138,106,.25);transition:transform .2s}
+.cart-btn:hover{transform:translateY(-2px)}
+
+/* Hero */
+.policy-hero{padding:64px 0 48px;text-align:center}
+.policy-hero .badge{display:inline-block;padding:6px 18px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}
+.policy-hero h1{font-size:44px;margin-bottom:16px}
+.policy-hero-sub{font-size:18px;color:var(--mut);max-width:640px;margin:0 auto 32px;line-height:1.7}
+.updated{font-size:14px;color:var(--light);font-weight:500}
+
+/* Guarantee banner */
+.guarantee-banner{background:linear-gradient(135deg,var(--sage-light),#D4E5D8);border-radius:24px;padding:40px;text-align:center;margin-bottom:48px;border:1px solid rgba(94,138,106,.12);position:relative;overflow:hidden}
+.guarantee-banner::before{content:'';position:absolute;inset:0;opacity:.03;background-image:radial-gradient(circle,var(--sage) 1px,transparent 1px);background-size:32px 32px}
+.guarantee-banner>*{position:relative;z-index:1}
+.guarantee-shield{font-size:56px;margin-bottom:12px}
+.guarantee-banner h3{font-size:28px;margin-bottom:10px}
+.guarantee-banner p{font-size:16px;color:var(--mut);max-width:560px;margin:0 auto;line-height:1.7}
+
+/* Product comparison cards */
+.product-compare{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:40px}
+.pc-card{border-radius:20px;padding:32px;background:#fff;border:2px solid var(--bdr);box-shadow:var(--shadow-sm);transition:box-shadow .3s,border-color .3s}
+.pc-card:hover{box-shadow:var(--shadow-md)}
+.pc-card.sage-accent{border-color:rgba(94,138,106,.2)}
+.pc-card.gold-accent{border-color:rgba(196,154,108,.2)}
+.pc-badge{display:inline-block;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.pc-badge.sage{color:var(--sage);background:var(--sage-light)}
+.pc-badge.gold{color:var(--gold);background:var(--gold-light)}
+.pc-card h3{font-size:22px;margin-bottom:6px}
+.pc-card .pc-price{font-size:14px;color:var(--mut);margin-bottom:20px}
+.pc-card .pc-guarantee{display:flex;align-items:center;gap:10px;padding:14px 18px;border-radius:12px;margin-bottom:18px;font-size:20px;font-weight:700}
+.pc-card.sage-accent .pc-guarantee{background:var(--sage-light);color:var(--sage)}
+.pc-card.gold-accent .pc-guarantee{background:var(--gold-light);color:var(--gold)}
+.pc-guarantee-label{font-size:12px;font-weight:600;color:var(--mut);display:block}
+.pc-list{list-style:none;padding:0}
+.pc-list li{display:flex;align-items:flex-start;gap:8px;font-size:14px;line-height:1.6;margin-bottom:10px}
+.pc-list li::before{content:'✓';width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700;margin-top:2px}
+.sage-accent .pc-list li::before{background:var(--sage-light);color:var(--sage)}
+.gold-accent .pc-list li::before{background:var(--gold-light);color:var(--gold)}
+
+/* Section cards */
+.policy-section{background:#fff;border-radius:20px;padding:36px 40px;margin-bottom:24px;border:1px solid var(--bdr);box-shadow:var(--shadow-sm);transition:box-shadow .3s}
+.policy-section:hover{box-shadow:var(--shadow-md)}
+.section-header{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.section-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.section-header h2{font-size:24px}
+.section-header p{font-size:14px;color:var(--mut);margin-top:2px}
+
+.policy-section p{font-size:15px;line-height:1.8;color:var(--ink2);margin-bottom:14px}
+.policy-section p:last-child{margin-bottom:0}
+
+.highlight-box{background:var(--cream);border-radius:12px;padding:20px 24px;margin:16px 0;border-left:4px solid var(--sage)}
+.highlight-box.gold{border-left-color:var(--gold);background:var(--gold-light)}
+.highlight-box.red{border-left-color:var(--red);background:#FEF2F2}
+.highlight-box p{margin-bottom:0;font-size:14px}
+.highlight-box strong{color:var(--ink)}
+
+.plain-list{list-style:none;padding:0;margin:12px 0}
+.plain-list li{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.7;margin-bottom:10px}
+.plain-list li::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--sage-mid);flex-shrink:0;margin-top:8px}
+
+/* Steps timeline */
+.steps{display:flex;flex-direction:column;gap:0;margin:20px 0}
+.step{display:flex;gap:20px;position:relative;padding-bottom:24px}
+.step:last-child{padding-bottom:0}
+.step::before{content:'';position:absolute;left:19px;top:40px;bottom:0;width:2px;background:var(--bdr)}
+.step:last-child::before{display:none}
+.step-num{width:40px;height:40px;border-radius:50%;background:var(--sage-light);color:var(--sage);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;flex-shrink:0;position:relative;z-index:1}
+.step-content h4{font-size:16px;margin-bottom:4px;color:var(--ink)}
+.step-content p{font-size:14px;color:var(--mut);line-height:1.6;margin:0}
+
+/* TOC sidebar */
+.toc{position:sticky;top:100px}
+.toc-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--light);margin-bottom:12px}
+.toc a{display:block;font-size:14px;color:var(--mut);padding:6px 0;border-left:2px solid transparent;padding-left:14px;transition:all .2s;font-weight:500}
+.toc a:hover,.toc a.active{color:var(--sage);border-left-color:var(--sage)}
+
+.policy-layout{display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:start}
+@media(max-width:900px){.policy-layout{grid-template-columns:1fr}.toc{display:none}.product-compare{grid-template-columns:1fr}}
+
+/* Contact card */
+.contact-card{background:linear-gradient(135deg,var(--ink-deep),var(--ink),#2A2825);border-radius:24px;padding:48px;text-align:center;color:#fff;position:relative;overflow:hidden;margin-top:48px}
+.contact-card::before{content:'';position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:48px 48px}
+.contact-card>*{position:relative;z-index:1}
+.contact-card h2{color:#fff;font-size:28px;margin-bottom:12px}
+.contact-card p{color:rgba(255,255,255,.65);font-size:16px;margin-bottom:28px}
+.contact-methods{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.contact-method{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px 28px;text-align:center;min-width:200px;transition:background .3s}
+.contact-method:hover{background:rgba(255,255,255,.12)}
+.contact-method .cm-icon{font-size:28px;margin-bottom:8px}
+.contact-method .cm-label{font-size:12px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:4px}
+.contact-method .cm-value{font-size:16px;color:#fff;font-weight:700}
+.contact-method .cm-note{font-size:12px;color:rgba(255,255,255,.4);margin-top:4px}
+
+/* Footer */
+.footer{padding:40px 0 48px;border-top:1px solid var(--bdr);margin-top:48px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}
+.footer-links a{color:var(--mut)}.footer-links a:hover{color:var(--sage)}
+.footer-copy{font-size:12px;color:var(--light)}
+
+.scroll-top{position:fixed;bottom:32px;right:32px;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--sage),var(--saged));color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(94,138,106,.3);opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;z-index:200;font-size:20px}
+.scroll-top.show{opacity:1;transform:none}
+.scroll-top:hover{transform:translateY(-3px)}
+
+/* ═══ MOBILE RESPONSIVE ═══ */
+@media(max-width:768px){
+  .page{padding:0 18px}
+  .topnav{padding:16px 0}
+  .nav-links{display:none}
+  .ham{display:flex!important}
+  .policy-hero{padding:40px 0 32px}
+  .policy-hero h1{font-size:32px}
+  .policy-hero-sub{font-size:16px}
+  .promise-box{padding:24px 20px;border-radius:16px}
+  .promise-grid{grid-template-columns:1fr}
+  .policy-section{padding:24px 20px;border-radius:16px}
+  .section-header h2{font-size:20px}
+  .section-icon{width:40px;height:40px;border-radius:12px;font-size:20px}
+  .contact-card{padding:32px 20px;border-radius:18px}
+  .contact-card h2{font-size:22px}
+  .contact-methods{flex-direction:column;align-items:stretch}
+  .contact-method{min-width:auto}
+  .footer-inner{flex-direction:column;text-align:center;gap:14px}
+  .footer-links{flex-wrap:wrap;justify-content:center;gap:14px}
+  .scroll-top{bottom:20px;right:20px;width:44px;height:44px}
+  .highlight-box{padding:16px 18px}
+  .cart-btn{padding:10px 18px;font-size:14px}
+  .topnav>.cart-btn{display:none}
+  .guarantee-banner{padding:28px 20px;border-radius:18px}
+  .guarantee-banner h3{font-size:22px}
+  .guarantee-shield{font-size:44px}
+  .product-compare{grid-template-columns:1fr}
+  .pc-card{padding:24px 20px}
+  .product-diff{grid-template-columns:1fr}
+  .pd-card{padding:20px 16px}
+  .friendly-banner{flex-direction:column;gap:16px;padding:24px 20px;border-radius:16px}
+  .quick-nav{gap:8px}
+}
+@media(max-width:480px){
+  .page{padding:0 14px}
+  .policy-hero h1{font-size:28px}
+  .policy-section{padding:20px 16px}
+  .promise-box{padding:20px 16px}
+  .contact-card{padding:28px 16px}
+  .guarantee-banner{padding:24px 16px}
+}
+/* Hamburger */
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.ham span{display:block;width:22px;height:2px;background:var(--ink);border-radius:1px;transition:all .3s}
+
+/* Mobile nav overlay + drawer */
+.mob-overlay{position:fixed;inset:0;background:rgba(31,29,26,.4);z-index:998;opacity:0;pointer-events:none;transition:opacity .3s;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.mob-overlay.open{opacity:1;pointer-events:auto}
+.mob-menu{position:fixed;top:0;right:-300px;width:280px;height:100%;background:var(--warm,#FEFCF8);z-index:999;padding:24px;box-shadow:-4px 0 24px rgba(31,29,26,.1);transition:right .35s cubic-bezier(.16,1,.3,1);overflow-y:auto;-webkit-overflow-scrolling:touch}
+.mob-menu.open{right:0}
+.mob-link{display:block;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:500;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--bdr);text-decoration:none;transition:color .2s}
+.mob-link:hover{color:var(--sage)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<nav class="topnav">
+  <div style="display:flex;align-items:center;gap:24px">
+    <div class="logo"><svg class="brand-mark" width="24" height="24" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:6px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></div>
+    <div class="nav-links">
+      <a href="#">Home</a><a href="#">2.0 Handheld</a><a href="#">5.0 Stationary</a><a href="#">Science</a><a href="#">Reviews</a>
+    </div>
+  </div>
+  <button class="cart-btn">Shop Now</button>
+  <button class="ham" aria-label="Menu" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE NAV OVERLAY -->
+<div class="mob-overlay" id="mobOverlay" onclick="toggleMobileNav()"></div>
+<div class="mob-menu" id="mobMenu">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+    <div class="logo" style="font-size:22px"><svg width="20" height="20" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:5px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></div>
+    <button onclick="toggleMobileNav()" style="background:none;border:none;font-size:24px;color:var(--ink);cursor:pointer;padding:4px">✕</button>
+  </div>
+  <a href="#" class="mob-link">Home</a>
+  <a href="#" class="mob-link">2.0 Handheld</a>
+  <a href="#" class="mob-link">5.0 Stationary</a>
+  <a href="#" class="mob-link">Science</a>
+  <a href="#" class="mob-link">Reviews</a>
+  <a href="#" class="mob-link">Filters</a>
+  <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--bdr)">
+    <button class="cart-btn" style="width:100%;text-align:center;padding:14px 0;font-size:15px;border-radius:12px">Shop Now</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="policy-hero rv">
+  <div class="badge" style="color:var(--gold);background:var(--gold-light)">HAPPINESS GUARANTEED</div>
+  <h1>Refund &amp; Return Policy</h1>
+  <p class="policy-hero-sub">Hair improvements take time — especially during hormonal transitions. That's why we give you the space to see real results before deciding. No pressure, no tricks.</p>
+  <div class="updated">Last updated: February 15, 2026 · Effective immediately</div>
+</section>
+
+<!-- GUARANTEE BANNER -->
+<div class="guarantee-banner rv rv-d1">
+  <div class="guarantee-shield">🛡️</div>
+  <h3>The ShowerEnvy Promise</h3>
+  <p>We stand behind every product we sell. If you're not seeing results, we want to make it right — not just take your money. Real results take real time, and our guarantee reflects that.</p>
+</div>
+
+<!-- PRODUCT COMPARISON -->
+<div class="product-compare rv rv-d2">
+
+  <!-- 2.0 HANDHELD -->
+  <div class="pc-card sage-accent">
+    <div class="pc-badge sage">2.0 HANDHELD</div>
+    <h3>2.0 Handheld Showerhead</h3>
+    <p class="pc-price">Starting at $49 · 3-Stage Filtration</p>
+    <div class="pc-guarantee">
+      <span>60</span>
+      <div><span class="pc-guarantee-label">Day Money-Back Guarantee</span></div>
+    </div>
+    <ul class="pc-list">
+      <li>Full refund within 60 days of delivery — no questions asked</li>
+      <li>Used or unused — we accept both (yes, really)</li>
+      <li>Simply ship it back to us and we'll handle the rest</li>
+      <li>Refund processed within 5–7 business days of receiving the return</li>
+      <li>Replacement filters: 30-day return window (unopened only)</li>
+      <li>Subscription filters can be paused, skipped, or cancelled anytime</li>
+    </ul>
+  </div>
+
+  <!-- 5.0 STATIONARY -->
+  <div class="pc-card gold-accent">
+    <div class="pc-badge gold">5.0 STATIONARY</div>
+    <h3>5.0 Stationary Showerhead</h3>
+    <p class="pc-price">Starting at $89 · 15-Stage Filtration</p>
+    <div class="pc-guarantee">
+      <span>90</span>
+      <div><span class="pc-guarantee-label">Day Money-Back Guarantee</span></div>
+    </div>
+    <ul class="pc-list">
+      <li>Full refund within 90 days of delivery — the longest in the industry</li>
+      <li>Used or unused — test it fully, we insist</li>
+      <li>Simply ship it back to us and we'll handle the rest</li>
+      <li>Refund processed within 5–7 business days of receiving the return</li>
+      <li>Replacement filters: 30-day return window (unopened only)</li>
+      <li>Annual prepay subscriptions: prorated refund for unused filters</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="highlight-box rv" style="max-width:800px;margin:0 auto 40px">
+  <p><strong>Why the difference?</strong> The 5.0 Stationary features our advanced 15-stage filtration system which produces more gradual, cumulative results. We give you 90 days because deep changes to hair density and skin repair — especially during hormonal transitions — take 8–12 weeks to become fully visible. We want you to experience the complete transformation, not just the first hint of one.</p>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="policy-layout">
+
+<aside>
+  <div class="toc">
+    <div class="toc-title">On this page</div>
+    <a href="#how">How to Return</a>
+    <a href="#refund">Refund Details</a>
+    <a href="#bundles">Bundles & Kits</a>
+    <a href="#subscriptions">Subscriptions</a>
+    <a href="#filters">Replacement Filters</a>
+    <a href="#damaged">Damaged Items</a>
+    <a href="#exchanges">Exchanges</a>
+    <a href="#gifts">Gift Returns</a>
+    <a href="#exceptions">Exceptions</a>
+    <a href="#contact">Contact</a>
+  </div>
+</aside>
+
+<div class="content">
+
+  <!-- HOW TO RETURN -->
+  <div class="policy-section rv" id="how">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">📦</div>
+      <div><h2>How to Start a Return</h2><p>Three simple steps — no hoops, no hassle</p></div>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Email us or call</h4>
+          <p>Send an email to <a href="mailto:hello@showerenvy.com">hello@showerenvy.com</a> with your order number and "Return" in the subject line. Or call us at <a href="tel:+18339240099">+1 (833) 924-0099</a> during business hours. We'll respond within 24 hours.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Pack it up and ship it back</h4>
+          <p>We'll email you our return address and any instructions. Use whatever shipping method is most convenient for you — USPS, UPS, FedEx, whatever works. We recommend using a trackable method so you can confirm delivery.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Refund hits your account</h4>
+          <p>Once we receive the return, your refund is processed within 5–7 business days. You'll get an email confirmation when it's done. The refund goes back to your original payment method.</p>
+        </div>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <p><strong>Real talk:</strong> We don't make you jump through hoops. No "escalation teams," no guilt trips, no trying to talk you out of it. If you want a refund, you get a refund. Period.</p>
+    </div>
+  </div>
+
+  <!-- REFUND DETAILS -->
+  <div class="policy-section rv" id="refund">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">💰</div>
+      <div><h2>Refund Details</h2><p>Exactly what you'll get back</p></div>
+    </div>
+    <p><strong>Full product refund:</strong> You'll receive 100% of the purchase price back (excluding any original shipping charges on orders that didn't qualify for free shipping).</p>
+    <p><strong>Refund timeline:</strong> Refunds are processed within 5–7 business days after we receive the returned item. Depending on your bank, it may take an additional 3–5 business days for the credit to appear on your statement.</p>
+    <p><strong>Original payment method:</strong> Refunds always go back to the payment method you used. Credit card → credit card. PayPal → PayPal. No exceptions — this protects you.</p>
+    <p><strong>Partial use is fine:</strong> Used the showerhead for 3 weeks? That's exactly what we want. You can return a used 2.0 Handheld within 60 days or a used 5.0 Stationary within 90 days, and still receive a full refund.</p>
+    <div class="highlight-box gold">
+      <p><strong>For the 5.0 Stationary specifically:</strong> We strongly encourage you to use it for at least 8 weeks before deciding. The 15-stage filtration creates cumulative benefits that build over time. Many customers who were unsure at week 4 became enthusiastic fans by week 10. That's why we give you a full 90 days.</p>
+    </div>
+  </div>
+
+  <!-- BUNDLES -->
+  <div class="policy-section rv" id="bundles">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">🏠</div>
+      <div><h2>Bundles &amp; Multi-Packs</h2><p>Flexible returns even on multi-unit orders</p></div>
+    </div>
+    <p><strong>Two-Bathroom Kit / Whole Home Kit:</strong> You can return individual units from a bundle. If you love the one in your master bath but don't need the guest bathroom unit, return just that one.</p>
+    <p>The refund will be calculated proportionally based on the per-unit price in the bundle. For example, if you bought the Two-Bathroom Kit ($153 for 2 units) and return one, you'll receive $76.50 back.</p>
+    <p>The return window follows the product type: 60 days for each 2.0 Handheld in the bundle, 90 days for each 5.0 Stationary.</p>
+  </div>
+
+  <!-- SUBSCRIPTIONS -->
+  <div class="policy-section rv" id="subscriptions">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">🔄</div>
+      <div><h2>Subscription Filters</h2><p>Complete control, always</p></div>
+    </div>
+    <p><strong>Cancel anytime:</strong> Your filter subscription has no contract, no penalty, and no minimum commitment. Cancel with one click in your account or by emailing us.</p>
+    <p><strong>Skip or pause:</strong> Going on vacation? Stocked up? Just pause your subscription for up to 6 months or skip the next shipment.</p>
+    <p><strong>7-day advance notice:</strong> We always email you 7 days before processing your next subscription order. This gives you time to skip, pause, or cancel if you want.</p>
+    <p><strong>Annual prepay refunds:</strong> If you chose the Annual Prepay option and want to cancel, we'll refund you for any unshipped filters on a prorated basis. For instance, if you've received 1 of 2 filters, we'll refund half.</p>
+  </div>
+
+  <!-- REPLACEMENT FILTERS -->
+  <div class="policy-section rv" id="filters">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">🔧</div>
+      <div><h2>Replacement Filters</h2><p>Fair and straightforward</p></div>
+    </div>
+    <p><strong>Unopened filters:</strong> Return within 30 days for a full refund. Must be in original sealed packaging.</p>
+    <p><strong>Opened/installed filters:</strong> Because filters are a hygiene product that comes into direct contact with water, we cannot accept returns on opened or installed filters. This is an industry-standard health and safety practice.</p>
+    <p><strong>Defective filters:</strong> If a filter arrives damaged or defective, we'll replace it free of charge — no return needed. Just email us a photo of the damage and we'll ship a replacement immediately.</p>
+    <div class="highlight-box">
+      <p><strong>This applies to both products:</strong> Whether you're using the 3-stage filter for the 2.0 Handheld or the 15-stage filter for the 5.0 Stationary, the filter return policy is the same. 30 days unopened, free replacement for defects.</p>
+    </div>
+  </div>
+
+  <!-- DAMAGED -->
+  <div class="policy-section rv" id="damaged">
+    <div class="section-header">
+      <div class="section-icon" style="background:#FEF2F2">📸</div>
+      <div><h2>Damaged or Defective Items</h2><p>We make it right immediately</p></div>
+    </div>
+    <p>If your order arrives damaged, defective, or with missing components, here's what happens:</p>
+    <ul class="plain-list">
+      <li><strong>Email us a photo</strong> of the damage to <a href="mailto:hello@showerenvy.com">hello@showerenvy.com</a></li>
+      <li><strong>We ship a replacement within 24 hours</strong> — no need to return the damaged item first</li>
+      <li><strong>If you prefer a refund</strong> instead of a replacement, we'll process it immediately</li>
+      <li><strong>We cover all shipping costs</strong> for replacements due to damage</li>
+    </ul>
+    <p>This applies to both the 2.0 Handheld and 5.0 Stationary, as well as all accessories, filters, and kits.</p>
+    <div class="highlight-box red">
+      <p><strong>Please report damage within 48 hours</strong> of delivery if possible. This helps us file claims with shipping carriers on your behalf. However, we'll work with you even if you notice damage later.</p>
+    </div>
+  </div>
+
+  <!-- EXCHANGES -->
+  <div class="policy-section rv" id="exchanges">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">🔄</div>
+      <div><h2>Exchanges</h2><p>Got the wrong style or finish?</p></div>
+    </div>
+    <p><strong>Style exchanges</strong> (Fixed Mount ↔ Handheld): Happy to exchange within the return window for your product. We'll ship the new style as soon as your return is on the way.</p>
+    <p><strong>Finish exchanges</strong> (Chrome / Brushed Nickel / Matte Black): Same process — exchange within the return window, new finish ships promptly.</p>
+    <p><strong>Product upgrades</strong> (2.0 → 5.0): Want to upgrade from the 2.0 Handheld to the 5.0 Stationary? We'll credit your original purchase price toward the upgrade. Just pay the difference.</p>
+    <p><strong>Product downgrades</strong> (5.0 → 2.0): We'll exchange it and refund the price difference to your original payment method.</p>
+  </div>
+
+  <!-- GIFTS -->
+  <div class="policy-section rv" id="gifts">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">🎁</div>
+      <div><h2>Gift Returns</h2><p>Gifts should bring joy, not stress</p></div>
+    </div>
+    <p><strong>Gift recipients</strong> can return items within the same guarantee window (60 days for 2.0, 90 days for 5.0) for a store credit or exchange. We'll never reveal the purchase price to the gift recipient.</p>
+    <p><strong>Gift card refunds:</strong> Digital gift cards are non-refundable once sent but never expire. If you haven't sent a gift card yet, we can refund or cancel it.</p>
+    <p><strong>Gift purchasers</strong> can request a direct refund to their payment method — just include your order number when contacting us.</p>
+  </div>
+
+  <!-- EXCEPTIONS -->
+  <div class="policy-section rv" id="exceptions">
+    <div class="section-header">
+      <div class="section-icon" style="background:#FEF2F2">⚠️</div>
+      <div><h2>What We Cannot Accept</h2><p>A few reasonable exceptions</p></div>
+    </div>
+    <p>In the interest of hygiene and fairness, we cannot process returns on:</p>
+    <ul class="plain-list">
+      <li>Opened or installed replacement filters (hygiene/health reason)</li>
+      <li>Items returned after the guarantee window (60 days for 2.0, 90 days for 5.0) without prior arrangement</li>
+      <li>Items purchased from unauthorized resellers (we can only guarantee products bought from showerenvy.com)</li>
+      <li>Items that have been intentionally damaged or modified beyond normal use</li>
+    </ul>
+    <p>If you're outside the window but have extenuating circumstances, email us anyway. We're real people and we genuinely want to help.</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-card rv" id="contact">
+    <h2>Need to Start a Return?</h2>
+    <p>Our team handles returns with the same warmth you'd expect from a friend. No judgment, no hassle.</p>
+    <div class="contact-methods">
+      <div class="contact-method">
+        <div class="cm-icon">📧</div>
+        <div class="cm-label">Email</div>
+        <div class="cm-value"><a href="mailto:hello@showerenvy.com">hello@showerenvy.com</a></div>
+        <div class="cm-note">Include your order number</div>
+      </div>
+      <div class="contact-method">
+        <div class="cm-icon">📞</div>
+        <div class="cm-label">Phone</div>
+        <div class="cm-value">+1 (833) 924-0099</div>
+        <div class="cm-note">Mon–Fri, 9 AM–5 PM EST</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div style="margin-bottom:14px"><a href="#" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:500;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px"><svg width="24" height="24" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span style="color:var(--sage);font-weight:700;font-style:italic">Envy</span></a></div>
+    <div class="footer-links">
+      <a href="#">Home</a><a href="#">2.0 Handheld</a><a href="#">5.0 Stationary</a>
+      <a href="#">Reviews</a><a href="#">Privacy Policy</a>
+      <a href="#" style="color:var(--sage);font-weight:700">Refund Policy</a><a href="#">Terms & Conditions</a>
+    </div>
+    <div class="footer-copy">© 2026 ShowerEnvy Technologies LLC · Cheyenne, Wyoming</div>
+  </div>
+</footer>
+
+</div>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+/* Scroll reveal */
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vis");obs.unobserve(e.target)}})},{threshold:0.05,rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".rv").forEach(function(el){obs.observe(el)});
+setTimeout(function(){document.querySelectorAll(".rv:not(.vis)").forEach(function(el){el.classList.add("vis")})},2500);
+
+/* Scroll to top */
+window.addEventListener("scroll",function(){var b=document.getElementById("scrollTop");if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show")}},{passive:true});
+
+/* TOC active state */
+var sections=document.querySelectorAll(".policy-section[id]");
+var tocLinks=document.querySelectorAll(".toc a");
+if(sections.length&&tocLinks.length){
+  window.addEventListener("scroll",function(){
+    var scrollPos=window.scrollY+120;
+    sections.forEach(function(sec){
+      if(sec.offsetTop<=scrollPos&&sec.offsetTop+sec.offsetHeight>scrollPos){
+        tocLinks.forEach(function(a){a.classList.remove("active")});
+        var link=document.querySelector(".toc a[href=\"#"+sec.id+"\"]");
+        if(link)link.classList.add("active");
+      }
+    });
+  },{passive:true});
+}
+
+/* Mobile nav toggle */
+function toggleMobileNav(){
+  var o=document.getElementById('mobOverlay');
+  var m=document.getElementById('mobMenu');
+  var h=document.querySelector('.ham');
+  if(o&&m){
+    o.classList.toggle('open');
+    m.classList.toggle('open');
+    document.body.style.overflow=m.classList.contains('open')?'hidden':'';
+  }
+  if(h)h.classList.toggle('open');
+}
+/* Close mobile nav on link click */
+document.querySelectorAll('.mob-link').forEach(function(a){
+  a.addEventListener('click',function(){toggleMobileNav()});
+});
+</script>
+</body>
+</html>
