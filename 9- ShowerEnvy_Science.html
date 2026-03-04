@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2714%27 fill=%27%235E8A6A%27/%3E%3Cpath d=%27M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3%27 stroke=%27%23fff%27 stroke-width=%272%27 stroke-linecap=%27round%27 fill=%27none%27/%3E%3Ccircle cx=%2716%27 cy=%2724%27 r=%271.2%27 fill=%27%23fff%27/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only">
+<meta name="description" content="The science behind why filtered water matters more for women 45+ experiencing hormonal changes. Peer-reviewed research on hair growth cycles, skin barrier biology, and the compounding effect.">
+<title>The Science — ShowerEnvy Filtered Showerheads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1F1D1A;--ink2:#3D3A35;--ink3:#5A564F;--navy:#1B3A4B;--navy-deep:#0F2027;
+  --teal:#2A9D8F;--teal-light:#E8F5F3;--teal-mid:#B8E6DE;
+  --cream:#FAF6F0;--cream2:#F5F0E8;--warm:#FEFCF8;--wh:#FFF;
+  --gold:#B08642;--gold-dark:#8E6B34;--gold-light:#FBF6ED;--gold2:rgba(176,134,66,.08);
+  --text:#1F1D1A;--muted:#8A857D;--light:#B5B0A8;--border:#E8E3DA;
+  --rose:#C25D4E;--rosed:#A34A3D;--rose2:#F3DEDB;--rose3:#FBF2F0;--sage:#5E8A6A;--saged:#4A7255;--sage2:#DDE9E0;--sage3:#EDF3EF;--red:#DC2626;--red-light:#FEF2F2;
+  --fh:'Cormorant Garamond',Georgia,serif;--fb:'DM Sans',sans-serif;
+  --max-w:1080px;--section-pad:80px;
+  --eo:cubic-bezier(.22,1,.36,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--fb);background:var(--warm);color:var(--text);font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--fh);color:var(--ink);line-height:1.2}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--fb);cursor:pointer;border:none}
+:focus-visible{outline:3px solid var(--sage);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;top:-100px;left:24px;background:var(--sage);color:#fff;padding:12px 28px;border-radius:8px;font-weight:600;z-index:999;transition:top .2s}.skip:focus{top:12px}
+.wrap{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+section{padding:var(--section-pad) 0}
+
+/* SHARED */
+.badge{display:inline-block;padding:5px 14px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.badge--hero{color:var(--gold);background:rgba(176,134,66,.15);animation:badgePulse 3s ease-in-out infinite}
+@keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(176,134,66,0)}50%{box-shadow:0 0 0 8px rgba(176,134,66,.1)}}
+.s-tag{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.s-head{text-align:center;margin-bottom:48px}
+.s-title{font-size:36px;font-weight:700;margin-bottom:14px;line-height:1.2}
+.s-sub{font-size:17px;color:var(--muted);max-width:640px;margin:0 auto;line-height:1.75}
+.btn{display:inline-block;padding:16px 36px;border-radius:12px;font-size:16px;font-weight:700;text-align:center;transition:transform .15s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}.btn:active{transform:translateY(0)}
+.btn--teal{background:var(--rose);color:#fff}.btn--teal:hover{box-shadow:0 8px 30px rgba(194,93,78,.3)}
+.btn--gold{background:var(--gold);color:#fff}.btn--gold:hover{box-shadow:0 8px 30px rgba(176,134,66,.3)}
+.cr{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start;font-size:16px;line-height:1.7}
+.ci{display:inline-flex;flex-shrink:0;margin-top:3px}
+.cite{font-size:12px;color:var(--light);font-style:italic;line-height:1.5}
+.content-max{max-width:860px;margin:0 auto}
+
+/* REVEALS Multi-direction */
+.rv{opacity:0;transform:translateY(32px);transition:opacity .8s var(--eo),transform .8s var(--eo)}.rv.vis{opacity:1;transform:none}
+.rv-left{opacity:0;transform:translateX(-40px);transition:opacity .8s var(--eo),transform .8s var(--eo)}.rv-left.vis{opacity:1;transform:none}
+.rv-right{opacity:0;transform:translateX(40px);transition:opacity .8s var(--eo),transform .8s var(--eo)}.rv-right.vis{opacity:1;transform:none}
+.rv-scale{opacity:0;transform:scale(.88);transition:opacity .8s var(--eo),transform .8s var(--eo)}.rv-scale.vis{opacity:1;transform:none}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}.rv-d4{transition-delay:.4s}.rv-d5{transition-delay:.5s}
+@media(prefers-reduced-motion:reduce){.rv,.rv-left,.rv-right,.rv-scale{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* KEYFRAMES */
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes floatSlow{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-12px) rotate(2deg)}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes gentlePulse{0%,100%{opacity:.6}50%{opacity:1}}
+@keyframes ripple{0%{transform:scale(0);opacity:.6}100%{transform:scale(3);opacity:0}}
+@keyframes gradShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}14%{transform:scale(1.08)}28%{transform:scale(1)}42%{transform:scale(1.05)}56%{transform:scale(1)}}
+@keyframes bubbleUp{0%{transform:translateY(100%) scale(0);opacity:0}40%{opacity:.8}100%{transform:translateY(-100%) scale(1);opacity:0}}
+@keyframes spinSlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes glowPulse{0%,100%{box-shadow:0 0 20px rgba(94,138,106,.1)}50%{box-shadow:0 0 40px rgba(94,138,106,.25)}}
+
+/* ILLUSTRATION CONTAINERS */
+.illust{display:flex;justify-content:center;margin-bottom:40px}
+.illust svg{max-width:100%;height:auto}
+.illust--float{animation:floatSlow 6s ease-in-out infinite}
+.illust--small{margin-bottom:24px}
+.section-icon{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:28px}
+.section-icon--teal{background:var(--sage3);animation:gentlePulse 3s ease-in-out infinite}
+.section-icon--gold{background:var(--gold-light);animation:gentlePulse 3s ease-in-out infinite .5s}
+.section-icon--red{background:var(--red-light);animation:gentlePulse 3s ease-in-out infinite 1s}
+
+/* NAV */
+.nav-bar{position:sticky;top:0;z-index:100;background:rgba(254,252,249,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+.nav-bar.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.06)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:var(--max-w);margin:0 auto;padding:0 24px;height:64px}
+.nav-left{display:flex;align-items:center;gap:16px}
+.nav-logo{font-family:var(--fh);font-size:26px;font-weight:500;color:var(--ink);letter-spacing:-.01em}.nav-logo span{color:var(--sage);font-weight:700;font-style:italic}
+.nav-back{font-size:13px;color:var(--muted);padding:6px 14px;border-radius:20px;background:#f3f4f6;transition:all .2s}.nav-back:hover{color:var(--sage);background:var(--sage3)}
+.nav-links{display:flex;gap:4px;align-items:center}
+.nav-link{padding:7px 12px;font-size:13px;font-weight:500;color:var(--muted);border-radius:8px;transition:color .2s,background .2s;position:relative}
+.nav-link:hover{color:var(--sage);background:var(--sage3)}
+.nav-link.active{color:var(--sage);font-weight:600}
+.nav-link.active::after{content:'';position:absolute;bottom:-1px;left:12px;right:12px;height:2px;background:var(--sage);border-radius:1px}
+.nav-cta{padding:10px 22px;background:var(--rose);color:#fff;border-radius:8px;font-size:14px;font-weight:600;transition:box-shadow .2s,transform .15s}
+.nav-cta:hover{box-shadow:0 4px 16px rgba(194,93,78,.3);transform:translateY(-1px)}
+.nav-progress{position:absolute;bottom:-1px;left:0;height:2px;background:linear-gradient(90deg,var(--rose),var(--gold));width:0%;transition:width .15s}
+.nav-hamburger{display:none;background:none;border:none;padding:8px;cursor:pointer}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;border-radius:2px;transition:all .3s}
+
+/* HERO */
+.hero{background:linear-gradient(150deg,var(--navy-deep) 0%,var(--navy) 55%,#264653 100%);padding:80px 24px 72px;text-align:center;position:relative;overflow:hidden;border-radius:0 0 24px 24px}
+.hero::before{content:'';position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:52px 52px}
+.hero::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hero-inner{position:relative;z-index:1;max-width:720px;margin:0 auto}
+.hero h1{font-size:42px;color:#fff;margin:24px 0 22px;line-height:1.1}
+.hero h1 .accent{background:linear-gradient(90deg,var(--rose),var(--gold),var(--rose));background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradShift 4s ease infinite}
+.hero-desc{font-size:18px;color:rgba(255,255,255,.76);line-height:1.75;max-width:600px;margin:0 auto 36px}
+.hero-meta{display:flex;gap:36px;justify-content:center;padding-top:32px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.hero-meta div{text-align:center}
+.hero-meta b{display:block;font-family:var(--fh);font-size:22px;font-weight:700;color:var(--sage)}
+.hero-meta small{font-size:11px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.05em}
+.hero-particles{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.hero-particle{position:absolute;border-radius:50%;opacity:0;animation:bubbleUp 8s ease-in-out infinite}
+.hero-particle:nth-child(1){width:6px;height:6px;background:var(--sage);left:10%;bottom:0;animation-delay:0s;animation-duration:7s}
+.hero-particle:nth-child(2){width:4px;height:4px;background:var(--gold);left:25%;bottom:0;animation-delay:1.5s;animation-duration:9s}
+.hero-particle:nth-child(3){width:8px;height:8px;background:rgba(94,138,106,.5);left:45%;bottom:0;animation-delay:3s;animation-duration:8s}
+.hero-particle:nth-child(4){width:5px;height:5px;background:var(--gold);left:65%;bottom:0;animation-delay:2s;animation-duration:10s}
+.hero-particle:nth-child(5){width:7px;height:7px;background:var(--rose);left:80%;bottom:0;animation-delay:4s;animation-duration:7.5s}
+.hero-particle:nth-child(6){width:4px;height:4px;background:rgba(255,255,255,.3);left:55%;bottom:0;animation-delay:5s;animation-duration:9s}
+.hero-particle:nth-child(7){width:6px;height:6px;background:rgba(94,138,106,.4);left:35%;bottom:0;animation-delay:6s;animation-duration:8.5s}
+.hero-particle:nth-child(8){width:3px;height:3px;background:var(--gold);left:90%;bottom:0;animation-delay:1s;animation-duration:11s}
+.hero-dna{position:absolute;right:5%;top:50%;transform:translateY(-50%);opacity:.08;z-index:0;animation:spinSlow 30s linear infinite}
+
+/* EXPAND ACCORDION */
+.expand{border:1px solid var(--border);border-radius:12px;margin-bottom:16px;overflow:hidden;transition:box-shadow .3s,border-color .3s}
+.expand:hover{box-shadow:0 4px 16px rgba(0,0,0,.04);border-color:var(--sage2)}
+.expand-btn{width:100%;padding:18px 20px;background:#fff;border:none;display:flex;justify-content:space-between;align-items:center;text-align:left;font-size:16px;font-weight:600;color:var(--ink);gap:16px;line-height:1.45;transition:background .2s,color .2s}
+.expand-btn:hover{color:var(--sage)}
+.expand-btn.open{background:var(--cream)}
+.expand-icon{font-size:22px;color:var(--muted);flex-shrink:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center;transition:transform .3s,color .3s}
+.expand-btn.open .expand-icon{transform:rotate(45deg);color:var(--sage)}
+.expand-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.expand-body.open{grid-template-rows:1fr}
+.expand-body-inner{overflow:hidden}
+.expand-body.open .expand-body-inner{padding:0 20px 20px}
+.expand-body-inner p{font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:14px}
+.expand-body-inner p:last-child{margin-bottom:0}
+.expand-body-inner strong{color:var(--text)}
+
+/* STAT BOXES */
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:36px}
+.stat-box{text-align:center;padding:22px 14px;border-radius:16px;background:#fff;border:1px solid var(--border);transition:transform .25s,box-shadow .25s}
+.stat-box:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.08)}
+.stat-num{font-family:var(--fh);font-size:32px;font-weight:700}
+.stat-label{font-size:14px;font-weight:600;color:var(--ink);margin:6px 0 2px}
+.stat-sub{font-size:12px;color:var(--muted);line-height:1.4}
+.a-bar{height:6px;border-radius:3px;background:#eee;margin-top:10px;overflow:hidden}
+.a-bar-fill{height:100%;border-radius:3px;width:0;transition:width 1.5s var(--eo)}
+.vis .a-bar-fill{width:var(--fill)}
+.a-bar-fill--red{background:linear-gradient(90deg,#f87171,var(--red))}
+.a-bar-fill--gold{background:linear-gradient(90deg,#f5d5a8,var(--gold))}
+
+/* CONTENT CARDS */
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px}
+.content-card{padding:28px;border-radius:16px;background:#fff;border:1px solid var(--border);transition:transform .3s,box-shadow .3s}
+.content-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.07)}
+.content-card--gold{background:var(--gold-light);border-color:rgba(176,134,66,.15)}
+.content-card--red{background:var(--red-light);border-color:rgba(220,38,38,.15)}
+.content-card--teal{background:var(--sage3);border-color:rgba(94,138,106,.15)}
+.content-card h4{font-size:20px;font-weight:700;margin-bottom:16px}
+.content-card p{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:14px}
+.content-card p:last-child{margin-bottom:0}
+.item-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px}
+.item-row span,.item-row div{font-size:15px;line-height:1.65}
+.item-icon{flex-shrink:0;margin-top:2px}
+.warn-icon{color:var(--red);font-weight:700;font-size:16px;line-height:1.2;margin-top:3px;flex-shrink:0}
+.x-icon{color:var(--red);font-weight:700;margin-top:3px;flex-shrink:0}
+.tip-box{padding:22px 24px;border-radius:16px;display:flex;gap:18px;align-items:flex-start;margin-bottom:20px;transition:transform .3s}
+.tip-box:hover{transform:scale(1.01)}
+.tip-box--teal{background:var(--sage3);border:1px solid rgba(94,138,106,.15)}
+.tip-box--gold{background:var(--gold-light);border:1px solid rgba(176,134,66,.15)}
+.tip-box p{font-size:16px;color:var(--text);line-height:1.7;margin:0}
+.tip-emoji{font-size:24px;flex-shrink:0}
+
+/* COMPOUNDING DIAGRAM */
+.compound-row{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0;align-items:center;margin-bottom:32px}
+.compound-card{padding:24px;border-radius:16px;text-align:center;transition:transform .25s,box-shadow .25s}
+.compound-card:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 14px 40px rgba(0,0,0,.08)}
+.compound-card .emoji{font-size:36px;margin-bottom:10px;display:inline-block}
+.compound-card h4{font-size:18px;margin-bottom:8px}
+.compound-card p{font-size:14px;color:var(--muted);line-height:1.6}
+.compound-op{text-align:center;padding:0 12px;font-family:var(--fh);font-size:28px;font-weight:700;color:var(--red);animation:heartbeat 2s ease-in-out infinite}
+
+/* PHASE CARDS */
+.phase-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:32px}
+.phase-card{padding:24px;border-radius:16px;background:#fff;transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.phase-card:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(0,0,0,.07)}
+.phase-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;border-radius:0 0 16px 16px}
+.phase-card:nth-child(1)::after{background:var(--sage)}
+.phase-card:nth-child(2)::after{background:var(--gold)}
+.phase-card:nth-child(3)::after{background:var(--muted)}
+.phase-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.phase-tag{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.phase-card h4{font-size:20px;margin-bottom:6px}
+.phase-meta{display:flex;gap:12px;margin-bottom:14px;font-size:14px}
+.phase-card p{font-size:14px;color:var(--muted);line-height:1.65}
+.phase-bar{height:8px;border-radius:4px;background:#f0f0f0;margin-top:12px;overflow:hidden}
+.phase-bar-fill{height:100%;border-radius:4px;width:0;transition:width 1.8s var(--eo) .3s}
+.vis .phase-bar-fill{width:var(--fill)}
+
+/* AGE TABLE */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-bottom:28px;border-radius:12px;border:1px solid var(--border)}
+.age-table{width:100%;border-collapse:collapse}
+.age-table th,.age-table td{padding:13px 16px;font-size:14px;text-align:left;border-bottom:1px solid var(--border)}
+.age-table th{font-weight:700;color:var(--ink);background:var(--cream);border-bottom:2px solid var(--ink)}
+.age-table th:not(:first-child){text-align:center}
+.age-table td:first-child{color:var(--muted);font-weight:500}
+.age-table td:nth-child(2){color:var(--sage);text-align:center}
+.age-table td:nth-child(3){color:var(--red);text-align:center;background:rgba(254,242,242,.4)}
+.age-table tr{transition:background .15s}
+.age-table tbody tr:hover{background:rgba(94,138,106,.06)}
+
+/* DERM CARDS */
+.derm-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.derm-card{padding:24px;border-radius:16px;background:#fff;border:1px solid var(--border);transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
+.derm-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.07)}
+.derm-card::before{content:'\201C';position:absolute;top:10px;right:18px;font-family:var(--fh);font-size:64px;color:var(--gold);opacity:.15;line-height:1}
+.derm-area{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+.derm-quote{font-size:15px;color:var(--text);line-height:1.7;font-style:italic;margin-bottom:12px;position:relative;z-index:1}
+.derm-source{font-size:12px;color:var(--light)}
+
+/* Section backgrounds */
+.section-cream{padding:64px 24px;background:var(--cream);border-radius:24px;margin:0 -24px;position:relative;overflow:hidden}
+.section-cream::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(94,138,106,.06),transparent 70%);border-radius:50%;pointer-events:none}
+.section-cream::after{content:'';position:absolute;bottom:-40px;left:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(176,134,66,.06),transparent 70%);border-radius:50%;pointer-events:none}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:40px;margin:28px 0}
+.timeline::before{content:'';position:absolute;left:15px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--sage),var(--gold))}
+.timeline-item{position:relative;padding-bottom:28px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-dot{position:absolute;left:-33px;top:4px;width:12px;height:12px;border-radius:50%;border:2px solid var(--sage);background:#fff;transition:background .3s,transform .3s}
+.vis .timeline-dot{background:var(--sage);transform:scale(1.1)}
+.timeline-label{font-size:12px;font-weight:700;color:var(--sage);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.timeline-text{font-size:15px;color:var(--muted);line-height:1.65}
+.timeline-text strong{color:var(--text)}
+
+/* VISUAL COMPARISON */
+.comparison{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;margin:32px 0}
+.comparison-side{text-align:center;padding:28px 20px;border-radius:16px}
+.comparison-side--good{background:var(--sage3);border:1px solid rgba(94,138,106,.15)}
+.comparison-side--bad{background:var(--red-light);border:1px solid rgba(220,38,38,.15)}
+.comparison-side h4{font-size:18px;margin-bottom:12px}
+.comparison-vs{font-family:var(--fh);font-size:24px;font-weight:700;color:var(--ink);opacity:.3}
+.comparison-icon{font-size:48px;margin-bottom:12px;display:block}
+.comparison-list{text-align:left;font-size:14px;color:var(--muted);line-height:1.7;padding:0;list-style:none}
+.comparison-list li{padding:4px 0;padding-left:20px;position:relative}
+.comparison-list li::before{content:'';position:absolute;left:0;top:11px;width:8px;height:8px;border-radius:50%}
+.comparison-side--good .comparison-list li::before{background:var(--sage)}
+.comparison-side--bad .comparison-list li::before{background:var(--red)}
+
+/* FINAL CTA */
+.final-cta{padding:64px 24px;border-radius:24px;text-align:center;background:linear-gradient(150deg,var(--navy-deep),var(--navy),#264653);position:relative;overflow:hidden;margin:0 -24px}
+.final-cta::before{content:'';position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:52px 52px}
+.final-cta::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.final-cta-inner{position:relative;z-index:1;max-width:620px;margin:0 auto}
+.final-cta h2{font-size:34px;color:#fff;margin-bottom:18px;line-height:1.15}
+.final-cta p{font-size:17px;color:rgba(255,255,255,.72);line-height:1.75;margin-bottom:32px}
+.final-cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.final-cta small{font-size:13px;color:rgba(255,255,255,.4);display:block;margin-top:20px}
+.cta-features{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.cta-feat{display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.6)}
+.cta-feat span{font-size:18px;animation:float 3s ease-in-out infinite}
+.cta-feat:nth-child(2) span{animation-delay:.5s}
+.cta-feat:nth-child(3) span{animation-delay:1s}
+.cta-feat:nth-child(4) span{animation-delay:1.5s}
+.cta-orb{position:absolute;border-radius:50%;pointer-events:none}
+.cta-orb--1{width:200px;height:200px;background:radial-gradient(circle,rgba(94,138,106,.12),transparent 70%);top:-60px;right:-40px;animation:float 8s ease-in-out infinite}
+.cta-orb--2{width:140px;height:140px;background:radial-gradient(circle,rgba(176,134,66,.1),transparent 70%);bottom:-30px;left:-20px;animation:float 6s ease-in-out infinite 2s}
+
+/* FOOTER */
+.footer{padding:48px 0 28px;border-top:1px solid var(--border);margin-top:80px}
+.footer-inner{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px;margin-bottom:32px}
+.footer-brand .nav-logo{margin-bottom:12px;display:block}
+.footer-brand p{font-size:15px;color:var(--muted);max-width:280px;line-height:1.65}
+.footer-col-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin-bottom:14px}
+.footer-inner a{display:block;font-size:14px;color:var(--muted);margin-bottom:8px;padding:3px 0;transition:color .15s}
+.footer-inner a:hover{color:var(--sage)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:20px;font-size:12px;color:var(--light);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-bottom a{color:inherit;transition:color .15s}.footer-bottom a:hover{color:var(--sage)}
+.btt{position:fixed;bottom:24px;right:24px;z-index:80;width:48px;height:48px;border-radius:50%;background:var(--ink);color:#fff;border:none;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(0,0,0,.15);opacity:0;transform:translateY(16px);transition:opacity .3s,transform .3s,background .2s;cursor:pointer}
+.btt.vis{opacity:1;transform:translateY(0)}.btt:hover{background:var(--rose)}
+
+/* MOBILE NAV OVERLAY */
+.mobile-menu{display:none;position:fixed;inset:0;z-index:150;background:rgba(15,32,39,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);flex-direction:column;align-items:center;justify-content:center;gap:0}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-family:var(--fh);font-size:22px;color:#fff;padding:16px 32px;opacity:.8;transition:opacity .2s,color .2s,transform .2s}
+.mobile-menu a:hover{opacity:1;color:var(--rose);transform:translateX(4px)}
+.mobile-menu-close{position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;padding:8px}
+
+/* RESPONSIVE */
+@media(min-width:768px){.wrap{padding:0 48px}.hero{padding:96px 48px 88px}.section-cream{padding:80px 48px;margin:0 -48px}.final-cta{padding:80px 48px;margin:0 -48px}.nav-inner{padding:0 48px;height:68px}.hero h1{font-size:50px}.s-title{font-size:40px}.final-cta h2{font-size:38px}}
+@media(max-width:767px){
+  .nav-links{display:none}.nav-hamburger{display:block}
+  .hero h1{font-size:30px}.hero-desc{font-size:16px}.hero-meta{gap:20px}.hero-meta b{font-size:18px}.hero-dna{display:none}
+  .s-title{font-size:28px}
+  .compound-row{grid-template-columns:1fr;gap:12px}.compound-op{padding:4px 0;font-size:24px}
+  .phase-grid{grid-template-columns:1fr}.card-grid{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .derm-grid{grid-template-columns:1fr}
+  .age-table th,.age-table td{padding:10px 10px;font-size:13px}
+  .final-cta h2{font-size:26px}.final-cta-btns{flex-direction:column;align-items:center}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:28px}
+  .tip-box{flex-direction:column;gap:12px}.content-card{padding:22px}
+  .expand-btn{padding:16px;font-size:15px}
+  .comparison{grid-template-columns:1fr;gap:16px}.comparison-vs{transform:rotate(90deg)}
+  .cta-features{flex-direction:column;align-items:center;gap:12px}
+  .timeline{padding-left:32px}.timeline::before{left:11px}.timeline-dot{left:-27px}
+}
+@media print{.nav-bar,.btt,.mobile-menu{display:none!important}.rv,.rv-left,.rv-right,.rv-scale{opacity:1!important;transform:none!important}}
+
+/* ═══════════════ DARK MODE PROTECTION ═══════════════ */
+:root{color-scheme:light only}
+html{color-scheme:light only}
+@media(prefers-color-scheme:dark){
+  html,body{background-color:var(--warm,var(--cream,var(--bg,#FEFCF8))) !important;color:var(--ink,#1F1D1A) !important}
+  *{-webkit-text-fill-color:inherit}
+  .topnav,nav{background-color:rgba(254,252,248,.97) !important;color:var(--ink,#1F1D1A) !important}
+  .logo,.logo span,.nav-links a,.faq-q{color:var(--ink,#1F1D1A) !important}
+  .topbar,.page-banner{background-color:var(--sage,#5E8A6A) !important;color:#fff !important}
+  .why-card,.qty-card,.tl-card,.inside-card,.stat-card,.stat-box,.card,
+  .stage-item,.spec-grid,.delivery-box,.gallery-main,.gallery,
+  .faq-item,.faq-a,.install-img,.xp-card,.xp-item,.feature-card,
+  .testi,.tcard,.review-card,.rv-card,.mini-testi,
+  .vs-us,.vs-them,.vs-row,.vs-wrap,
+  .prob-card,.stg,.guarantee,
+  .step-card,.sidebar-card,.pkg,.gift,.pay-tab,.ship-opt,
+  .offer{background-color:#fff !important;color:var(--ink,#1F1D1A) !important}
+  .badge-sage,.hero-badge,.cta-section,.final-cta,
+  .root-cause,.vit-hero,.vitamin-hero,.guarantee-mini,
+  .callout-sage,.inside-eff,.stages-bg,
+  .hero-quote{background-color:var(--sage-light,#EDF3EF) !important;color:var(--ink,#1F1D1A) !important}
+  .badge-gold,.callout-gold,.pt-save,.badge-save{background-color:var(--gold-light,#FDF6EC) !important}
+  .callout-rose{background-color:var(--rose-light,#FCEEED) !important}
+  .qty-best,.qty-card.selected,.pkg.selected,.gift.selected,.pay-tab.active,
+  .purchase-toggle .active,.act{background-color:var(--sage-light,#EDF3EF) !important}
+  .cart-btn,.cta-btn,.btn,.btn--sage,.btn-gold,.btn--gold,.btn--ink,.shop-btn,.submit-btn,
+  .stage-num,.step-num,.inst-num,.install-num,.tl-dot,.scroll-top{color:#fff !important}
+  footer,.footer{background-color:var(--ink,#1F1D1A) !important;color:rgba(255,255,255,.6) !important}
+  footer a,.footer a,.footer-links a,.footer-copy{color:rgba(255,255,255,.6) !important}
+  .footer-inner{background-color:transparent !important}
+  .mob-menu{background-color:var(--warm,#FEFCF8) !important}
+  .mob-link{color:var(--ink,#1F1D1A) !important}
+  .mob-overlay{background-color:rgba(31,29,26,.4) !important}
+  p,span,div,li,h1,h2,h3,h4,h5,h6,td,th,label,a,blockquote,figcaption,small{color:inherit !important;-webkit-text-fill-color:inherit !important}
+  .sub,.why-card p,.inside-card p,.stage-item p,.stg p,.prob-card p,.inst p,
+  .faq-a,.tl-text,.testi-text,.tcard-text,.review-text,.mini-testi-text,
+  .vit-desc,.gift-desc,.pkg-info p,.author-meta,.testi-meta,.tcard-meta,
+  .breadcrumb,.delivery-box p,.spec-grid p{color:#555 !important}
+  .stars,.star,.hero-stars,.testi-stars,.tcard-stars,.star-text{color:var(--gold,#B08642) !important}
+  .trust-item,.trust-row span{color:#777 !important}
+  input,select,textarea{background-color:#fff !important;color:var(--ink,#1F1D1A) !important;border-color:var(--bdr,#E8E3DA) !important}
+  .stat-num,.vit-letter,.tl-week,.price-current{color:var(--sage,#5E8A6A) !important}
+  img,svg,video{color-scheme:light only}
+  .badge{color:inherit !important}
+  .thumb,.gallery-thumbs{background-color:#fff !important}
+  .divider{border-color:var(--bdr,#E8E3DA) !important}
+  .sticky-nav,.nav-progress{background-color:rgba(254,252,248,.97) !important}
+  .particles{background-color:transparent !important}
+  table th{color:#fff !important}
+  table td{background-color:#fff !important;color:var(--ink,#1F1D1A) !important}
+  table tr:nth-child(even) td{background-color:rgba(94,138,106,.03) !important}
+  .sort-select{background-color:#fff !important;color:var(--ink,#1F1D1A) !important}
+  .hero,.hero-grid,section,.page{color:var(--ink,#1F1D1A) !important}
+
+  /* ═══ PRESERVE INTENTIONALLY-DARK SECTIONS ═══ */
+  .pressure-bg,.pressure-bg *{color:rgba(255,255,255,.85) !important;-webkit-text-fill-color:rgba(255,255,255,.85) !important}
+  .pressure-bg{background:linear-gradient(150deg,#1A1816,#1F1D1A 40%,#2D2A26) !important}
+  .pressure-bg h2,.pressure-bg h3,.pressure-bg h4,.pressure-bg b,.pressure-bg strong{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .pressure-bg .tag,.pressure-bg .lbl{color:rgba(168,213,181,.8) !important;-webkit-text-fill-color:rgba(168,213,181,.8) !important}
+  .pressure-bg p,.pressure-bg small{color:rgba(255,255,255,.5) !important;-webkit-text-fill-color:rgba(255,255,255,.5) !important}
+  .pressure-bg .pc{background-color:rgba(255,255,255,.04) !important;border-color:rgba(255,255,255,.1) !important}
+  .pressure-bg .meter{background-color:rgba(255,255,255,.08) !important}
+  .pressure,.pressure *{color:rgba(255,255,255,.85) !important;-webkit-text-fill-color:rgba(255,255,255,.85) !important}
+  .pressure{background:linear-gradient(140deg,#0F2027,#1F1D1A 50%,#264653) !important}
+  .pressure h2,.pressure h3,.pressure h4,.pressure b,.pressure strong{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .pressure .s-tag,.pressure .lbl{color:var(--sage) !important;-webkit-text-fill-color:var(--sage) !important}
+  .pressure p,.pressure .s-sub,.pressure small{color:rgba(255,255,255,.6) !important;-webkit-text-fill-color:rgba(255,255,255,.6) !important}
+  .pressure .pressure-card{background-color:rgba(255,255,255,.06) !important;border-color:rgba(255,255,255,.1) !important}
+  .pressure .pressure-card *{color:inherit !important;-webkit-text-fill-color:inherit !important}
+  .pressure .pressure-card h4{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .pressure .pressure-sub{color:var(--sage) !important;-webkit-text-fill-color:var(--sage) !important}
+  .pressure .p-stat b{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .pressure .p-feat strong{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .pressure .pressure-vs-circle{color:rgba(255,255,255,.3) !important;-webkit-text-fill-color:rgba(255,255,255,.3) !important}
+  .cta-end,.cta-end *{color:rgba(255,255,255,.85) !important;-webkit-text-fill-color:rgba(255,255,255,.85) !important}
+  .cta-end{background:linear-gradient(150deg,#1A1816,#1F1D1A 50%,#2D2A26) !important}
+  .cta-end h2,.cta-end h3,.cta-end b,.cta-end strong{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .cta-end p,.cta-end small{color:rgba(255,255,255,.35) !important;-webkit-text-fill-color:rgba(255,255,255,.35) !important}
+  .cta-end .cta-stat b{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .cta-end .btn{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .final-cta,.final-cta *{color:rgba(255,255,255,.85) !important;-webkit-text-fill-color:rgba(255,255,255,.85) !important}
+  .final-cta{background:linear-gradient(150deg,#0F2027,#1B3A4B,#264653) !important}
+  .final-cta h2,.final-cta h3,.final-cta b,.final-cta strong{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .final-cta p,.final-cta small{color:rgba(255,255,255,.72) !important;-webkit-text-fill-color:rgba(255,255,255,.72) !important}
+  .final-cta .btn{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .hero,.hero *{color:rgba(255,255,255,.85) !important;-webkit-text-fill-color:rgba(255,255,255,.85) !important}
+  .hero h1,.hero h2,.hero b,.hero strong{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .hero .badge,.hero .badge--hero{color:rgba(255,255,255,.8) !important;-webkit-text-fill-color:rgba(255,255,255,.8) !important;background-color:rgba(255,255,255,.08) !important}
+  .hero p,.hero .hero-desc{color:rgba(255,255,255,.72) !important;-webkit-text-fill-color:rgba(255,255,255,.72) !important}
+  .hero small,.hero .hero-stat small{color:rgba(255,255,255,.5) !important;-webkit-text-fill-color:rgba(255,255,255,.5) !important}
+  .hero .hero-stat b{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .hero .btn{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .hero .hero-meta b{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .hero .hero-meta small{color:rgba(255,255,255,.5) !important;-webkit-text-fill-color:rgba(255,255,255,.5) !important}
+  .dark-section,.dark-section *{color:rgba(255,255,255,.85) !important;-webkit-text-fill-color:rgba(255,255,255,.85) !important}
+  .dark-section h1,.dark-section h2,.dark-section h3,.dark-section b,.dark-section strong{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .dark-section p,.dark-section small{color:rgba(255,255,255,.68) !important;-webkit-text-fill-color:rgba(255,255,255,.68) !important}
+  .dark-section .btn{color:#fff !important;-webkit-text-fill-color:#fff !important}
+  .hero{background:linear-gradient(150deg,#0F2027 0%,#1B3A4B 55%,#264653 100%) !important}
+
+}
+
+
+
+
+
+
+
+
+/* ═══ MOBILE RESPONSIVE ENFORCEMENT ═══ */
+@media(max-width:768px){
+  html,body{
+    overflow-x:hidden !important;
+    max-width:100vw !important;
+    width:100% !important;
+  }
+  *{
+    max-width:100vw;
+    box-sizing:border-box !important;
+  }
+  img,video,svg,canvas,iframe{
+    max-width:100% !important;
+    height:auto !important;
+  }
+  table{
+    display:block !important;
+    overflow-x:auto !important;
+    max-width:100% !important;
+    -webkit-overflow-scrolling:touch;
+  }
+  pre,code{
+    overflow-x:auto !important;
+    max-width:100% !important;
+    white-space:pre-wrap !important;
+    word-break:break-word !important;
+  }
+  /* Force wrap on all containers */
+  .wrap,.nav-inner,.section,.hero,.footer-inner{
+    max-width:100% !important;
+    padding-left:16px !important;
+    padding-right:16px !important;
+    overflow:hidden !important;
+  }
+  /* Nav: hide links, show logo + CTA only */
+  .nav-links,.nav-link{
+    display:none !important;
+  }
+  .nav-cta{
+    font-size:14px !important;
+    padding:10px 16px !important;
+    flex-shrink:0 !important;
+  }
+  .nav-bar{
+    overflow:hidden !important;
+  }
+  .nav-inner{
+    display:flex !important;
+    justify-content:space-between !important;
+    align-items:center !important;
+    flex-wrap:nowrap !important;
+    gap:8px !important;
+    padding:12px 16px !important;
+  }
+  .nav-logo{
+    font-size:22px !important;
+    flex-shrink:0 !important;
+  }
+  .nav-back{
+    display:none !important;
+  }
+  .nav-left{
+    flex-shrink:0 !important;
+  }
+  /* Grid collapses */
+  .prod-grid,.problem-grid,.install-grid,.install-compare,
+  .reviews-grid,.science,.tl-tracks,.pressure-grid,
+  .stat-grid,.grid-2,.grid-3{
+    grid-template-columns:1fr !important;
+    flex-direction:column !important;
+  }
+  /* Hero text sizing */
+  .hero h1,.hero-title{
+    font-size:clamp(28px,7vw,36px) !important;
+    line-height:1.2 !important;
+  }
+  .hero-desc,.hero-sub{
+    font-size:17px !important;
+  }
+  /* Buttons stack on mobile */
+  .hero-btns{
+    flex-direction:column !important;
+    gap:12px !important;
+    align-items:stretch !important;
+  }
+  .hero-btns .btn,.hero-btns a{
+    width:100% !important;
+    text-align:center !important;
+    justify-content:center !important;
+  }
+  /* Section titles */
+  .s-title,.section-title{
+    font-size:clamp(24px,6vw,32px) !important;
+  }
+  /* Cards */
+  .prod-card,.feature-card,.stat-card,.compare-card,
+  .timeline-card,.review-card,.install-card{
+    padding:20px !important;
+  }
+  /* Compare table */
+  .compare-wrap{
+    padding:16px !important;
+    overflow-x:auto !important;
+  }
+  /* Footer */
+  .footer-grid,.footer-cols{
+    grid-template-columns:1fr !important;
+    text-align:center !important;
+  }
+  /* FAQ */
+  .faq-q{
+    font-size:17px !important;
+    padding:16px 0 !important;
+    min-height:48px !important;
+  }
+  .faq-a{
+    font-size:16px !important;
+  }
+}
+
+
+/* ═══ NAV HAMBURGER FOR MOBILE ═══ */
+.se-mob-overlay{position:fixed;inset:0;background:rgba(31,29,26,.45);z-index:998;opacity:0;pointer-events:none;transition:opacity .3s;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.se-mob-overlay.open{opacity:1;pointer-events:auto}
+.se-mob-menu{position:fixed;top:0;right:-310px;width:300px;height:100%;background:var(--warm,var(--cream,#FEFCF8));z-index:999;padding:24px;box-shadow:-4px 0 24px rgba(31,29,26,.12);transition:right .35s cubic-bezier(.16,1,.3,1);overflow-y:auto}
+.se-mob-menu.open{right:0}
+.se-mob-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--bdr,#E8E3DA)}
+.se-mob-close{background:none;border:none;font-size:26px;color:var(--ink,#1F1D1A);cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center}
+.se-mob-link{display:block;font-family:var(--fb,'DM Sans',sans-serif);font-size:18px;font-weight:500;color:var(--ink,#1F1D1A);padding:16px 0;border-bottom:1px solid var(--bdr,#E8E3DA);text-decoration:none}
+.se-mob-cta{display:block;width:100%;text-align:center;margin-top:20px;padding:16px;background:var(--sage,#5E8A6A);color:#fff;border:none;border-radius:12px;font-size:17px;font-weight:700;font-family:var(--fb,'DM Sans',sans-serif);cursor:pointer}
+@media(max-width:768px){}
+}
+
+
+/* ═══════════════ MOBILE: SCIENCE PAGE ═══════════════ */
+@media(max-width:768px){
+  html,body{overflow-x:hidden !important;max-width:100vw !important}
+
+  /* Nav: logo + hamburger */
+  .nav-bar{padding:0 !important}
+  .nav-inner{
+    padding:10px 16px !important;
+    gap:8px !important;
+    height:auto !important;
+  }
+  .nav-logo{font-size:22px !important;white-space:nowrap !important}
+  .nav-logo svg,.brand-mark{width:22px !important;height:22px !important}
+  .nav-links{display:none !important}
+  .nav-cta{display:none !important}
+  .nav-back{display:none !important}
+  .nav-left{gap:0 !important}
+  .nav-progress{height:3px !important}
+
+  /* Hamburger prominent */
+  .nav-hamburger{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:5px !important;
+    width:44px !important;height:44px !important;
+    background:none !important;
+    border:1.5px solid var(--bdr,#E8E3DA) !important;
+    border-radius:10px !important;
+    cursor:pointer !important;
+    padding:8px !important;
+  }
+  .nav-hamburger span{
+    display:block !important;
+    width:20px !important;height:2.5px !important;
+    background:var(--ink,#1F1D1A) !important;
+    border-radius:2px !important;
+    margin:0 !important;
+  }
+
+  /* Mobile menu */
+  .mobile-menu{
+    display:none !important;
+    position:fixed !important;inset:0 !important;
+    z-index:150 !important;
+    background:rgba(15,32,39,.96) !important;
+    backdrop-filter:blur(16px) !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:0 !important;
+  }
+  .mobile-menu.open{display:flex !important}
+  .mobile-menu a{
+    font-size:20px !important;
+    padding:18px 32px !important;
+    color:#fff !important;
+  }
+  .mobile-menu-close{
+    position:absolute !important;top:20px !important;right:24px !important;
+    font-size:32px !important;color:#fff !important;
+    width:48px !important;height:48px !important;
+    display:flex !important;align-items:center !important;justify-content:center !important;
+  }
+
+  /* Wrap */
+  .wrap{padding:0 16px !important;overflow-x:hidden !important}
+
+  /* Grids collapse */
+  .compound-row,.phase-grid,.card-grid,.derm-grid,.comparison,
+  .cta-features,.footer-inner{
+    grid-template-columns:1fr !important;
+  }
+  .stat-grid{grid-template-columns:1fr 1fr !important;gap:10px !important}
+  .tip-box{flex-direction:column !important;gap:12px !important}
+  .final-cta-btns{flex-direction:column !important;align-items:center !important}
+  .timeline{padding-left:32px !important}
+
+  /* Font sizes for 45+ */
+  body{font-size:18px !important;line-height:1.75 !important}
+  p,td,li,.content-card p,.card p,.phase-text,.derm-card p,
+  .tip-text,.expand-content p,.faq-a{
+    font-size:16px !important;line-height:1.7 !important;
+  }
+  .hero h1{font-size:28px !important;line-height:1.2 !important}
+  .hero-desc{font-size:16px !important}
+  .hero-meta b{font-size:18px !important}
+  h3,.s-title{font-size:24px !important}
+  .expand-btn{font-size:16px !important;padding:16px !important}
+  .age-table th,.age-table td{font-size:14px !important;padding:10px !important}
+  .btn{font-size:17px !important;padding:16px 28px !important}
+  .final-cta h2{font-size:26px !important}
+  .stat-card .stat-num{font-size:24px !important}
+  footer,footer p,footer a{font-size:14px !important}
+}
+/* ═══════════════ END MOBILE: SCIENCE ═══════════════ */
+
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to main content</a>
+<header class="nav-bar" id="navBar">
+  <div class="nav-progress" id="navProgress"></div>
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="#" class="nav-logo"><svg class="brand-mark" width="24" height="24" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:6px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></a>
+      <a href="#" class="nav-back">← Back to Home</a>
+    </div>
+    <nav class="nav-links" role="navigation" aria-label="Page sections">
+      <a href="#compounding" class="nav-link" data-section="compounding">Compounding</a>
+      <a href="#hair" class="nav-link" data-section="hair">Hair Cycle</a>
+      <a href="#skin" class="nav-link" data-section="skin">Skin Barrier</a>
+      <a href="#whynow" class="nav-link" data-section="whynow">Why 45+</a>
+      <a href="#solution" class="nav-link" data-section="solution">Solution</a>
+      <a href="#dermatologists" class="nav-link" data-section="dermatologists">Experts</a>
+    </nav>
+    <button class="nav-cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+    <button class="se-ham" aria-label="Menu" onclick="toggleSeMobileNav()"><span></span><span></span><span></span></button>
+    <button class="nav-hamburger" id="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="se-mob-overlay" id="seMobOverlay" onclick="toggleSeMobileNav()"></div>
+<div class="se-mob-menu" id="seMobMenu">
+  <div class="se-mob-header">
+    <div class="nav-logo" style="font-size:22px"><svg class="brand-mark" width="22" height="22" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:6px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></div>
+    <button class="se-mob-close" onclick="toggleSeMobileNav()">&times;</button>
+  </div>
+  <a href="#compounding" class="se-mob-link" onclick="toggleSeMobileNav()">Compounding</a>
+  <a href="#hair" class="se-mob-link" onclick="toggleSeMobileNav()">Hair Cycle</a>
+  <a href="#skin" class="se-mob-link" onclick="toggleSeMobileNav()">Skin Barrier</a>
+  <a href="#whynow" class="se-mob-link" onclick="toggleSeMobileNav()">Why 45+</a>
+  <a href="#solution" class="se-mob-link" onclick="toggleSeMobileNav()">Solution</a>
+  <a href="#dermatologists" class="se-mob-link" onclick="toggleSeMobileNav()">Experts</a>
+  <button class="se-mob-cta" onclick="toggleSeMobileNav()">Shop Now</button>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')" aria-label="Close menu">✕</button>
+  <a href="#compounding" onclick="document.getElementById('mobileMenu').classList.remove('open')">Compounding Effect</a>
+  <a href="#hair" onclick="document.getElementById('mobileMenu').classList.remove('open')">Hair Growth Cycle</a>
+  <a href="#skin" onclick="document.getElementById('mobileMenu').classList.remove('open')">Skin Barrier Science</a>
+  <a href="#whynow" onclick="document.getElementById('mobileMenu').classList.remove('open')">Why It Matters at 45+</a>
+  <a href="#solution" onclick="document.getElementById('mobileMenu').classList.remove('open')">What Filters Do</a>
+  <a href="#dermatologists" onclick="document.getElementById('mobileMenu').classList.remove('open')">Dermatologist Perspectives</a>
+  <a href="#cta" onclick="document.getElementById('mobileMenu').classList.remove('open')" style="color:var(--rose);opacity:1;margin-top:16px">Shop Now →</a>
+</div>
+<div class="wrap">
+<section class="hero" id="main" style="margin:0 -24px">
+  <div class="hero-particles"><div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div></div>
+  <svg class="hero-dna" width="120" height="300" viewBox="0 0 120 300" fill="none"><path d="M20,10 Q60,40 100,10 Q60,80 20,50 Q60,120 100,90 Q60,160 20,130 Q60,200 100,170 Q60,240 20,210 Q60,280 100,250" stroke="rgba(94,138,106,.3)" stroke-width="1.5" fill="none"/><path d="M100,10 Q60,40 20,10 Q60,80 100,50 Q60,120 20,90 Q60,160 100,130 Q60,200 20,170 Q60,240 100,210 Q60,280 20,250" stroke="rgba(176,134,66,.3)" stroke-width="1.5" fill="none"/><circle cx="20" cy="10" r="3" fill="rgba(94,138,106,.4)"/><circle cx="100" cy="10" r="3" fill="rgba(176,134,66,.4)"/><circle cx="60" cy="50" r="3" fill="rgba(94,138,106,.3)"/><circle cx="60" cy="90" r="3" fill="rgba(176,134,66,.3)"/><circle cx="20" cy="130" r="3" fill="rgba(94,138,106,.4)"/><circle cx="100" cy="130" r="3" fill="rgba(176,134,66,.4)"/><circle cx="60" cy="170" r="3" fill="rgba(94,138,106,.3)"/><circle cx="60" cy="210" r="3" fill="rgba(176,134,66,.3)"/></svg>
+  <div class="hero-inner">
+    <div class="badge badge--hero">RESEARCH-BACKED SCIENCE</div>
+    <h1>The Biology Behind Why<br><span class="accent">Your Water Matters More Now</span></h1>
+    <p class="hero-desc">The same hormonal changes causing your hair and skin to shift also make you more vulnerable to contaminants in your shower water. Here's the science — no marketing, no fluff, just the research.</p>
+    <div class="hero-meta"><div><b>6</b><small>Sections</small></div><div><b>12 min</b><small>Read Time</small></div><div><b>14</b><small>Studies Cited</small></div><div><b>4</b><small>Deep Dives</small></div></div>
+  </div>
+</section>
+
+<!-- SECTION 1: COMPOUNDING EFFECT -->
+<section id="compounding" class="rv">
+  <div class="content-max">
+    <div class="s-head">
+      <div class="section-icon section-icon--gold rv-scale">🧬</div>
+      <div class="s-tag" style="color:var(--gold)">THE CORE INSIGHT</div>
+      <h2 class="s-title">The Compounding Effect: 1 + 1 = 3</h2>
+      <p class="s-sub">Hormonal changes and unfiltered water aren't two separate problems. They compound each other, creating accelerated damage that neither would cause alone.</p>
+    </div>
+    <div class="illust illust--float rv-scale rv-d1">
+      <svg width="360" height="100" viewBox="0 0 360 100" fill="none">
+        <rect x="0" y="60" width="360" height="40" rx="8" fill="#FAF7F2" stroke="#E8E5E0"/>
+        <text x="180" y="84" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="11" fill="#B5B0A8">SKIN SURFACE</text>
+        <rect x="20" y="48" width="100" height="14" rx="7" fill="#5E8A6A" opacity=".25"/><rect x="20" y="48" width="100" height="14" rx="7" stroke="#5E8A6A" stroke-width="1" fill="none"/>
+        <text x="70" y="42" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5E8A6A" font-weight="600">PROTECTIVE OIL</text>
+        <text x="70" y="26" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B5B0A8">At 25 — Abundant</text>
+        <rect x="145" y="52" width="60" height="8" rx="4" fill="#B08642" opacity=".25"/><rect x="145" y="52" width="60" height="8" rx="4" stroke="#B08642" stroke-width="1" fill="none"/>
+        <text x="175" y="46" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#B08642" font-weight="600">LESS OIL</text>
+        <text x="175" y="26" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B5B0A8">At 45+ — Declining</text>
+        <line x1="260" y1="56" x2="340" y2="56" stroke="#DC2626" stroke-width="1" stroke-dasharray="4,4" opacity=".5"/>
+        <text x="300" y="46" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#DC2626" font-weight="600">NO PROTECTION</text>
+        <text x="300" y="26" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B5B0A8">45+ With Chlorine</text>
+        <path d="M125,38 L140,38" stroke="#B5B0A8" stroke-width="1.5" marker-end="url(#aG)"/>
+        <path d="M210,38 L255,38" stroke="#DC2626" stroke-width="1.5" marker-end="url(#aR)"/>
+        <defs><marker id="aG" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#B5B0A8"/></marker><marker id="aR" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#DC2626"/></marker></defs>
+      </svg>
+    </div>
+    <div class="compound-row">
+      <div class="compound-card rv-left rv-d1" style="background:var(--gold-light);border:1px solid rgba(176,134,66,.15)"><div class="emoji" style="animation:float 3s ease-in-out infinite">🧬</div><div class="s-tag" style="color:var(--gold);font-size:11px">HORMONAL CHANGES</div><h4>Less Oil Produced</h4><p>Estrogen decline reduces sebum production. Your scalp and skin make fewer protective oils.</p></div>
+      <div class="compound-op rv-scale rv-d2">+</div>
+      <div class="compound-card rv-scale rv-d2" style="background:var(--red-light);border:1px solid rgba(220,38,38,.15)"><div class="emoji" style="animation:float 3s ease-in-out infinite .5s">🚿</div><div class="s-tag" style="color:var(--red);font-size:11px">UNFILTERED WATER</div><h4>Remaining Oil Stripped</h4><p>Chlorine oxidizes and strips what little natural oil your body still produces, leaving nothing.</p></div>
+      <div class="compound-op rv-scale rv-d3">=</div>
+      <div class="compound-card rv-right rv-d3" style="background:linear-gradient(135deg,var(--red-light),#FDE8E8);border:1px solid rgba(220,38,38,.2)"><div class="emoji" style="animation:heartbeat 2s ease-in-out infinite">⚠️</div><div class="s-tag" style="color:var(--red);font-size:11px">COMPOUNDED DAMAGE</div><h4>Exponential Dryness</h4><p>Zero protective oil layer = extreme vulnerability. Products can't absorb. Follicles are exposed.</p></div>
+    </div>
+    <div class="expand rv rv-d2"><button class="expand-btn" onclick="toggleExpand(this)" aria-expanded="false"><span>Deep Dive: How Estrogen Loss + Chlorine Create a Vicious Cycle</span><span class="expand-icon">+</span></button><div class="expand-body"><div class="expand-body-inner"><p>Estrogen directly regulates sebum production through insulin-like growth factor receptors on sebocytes (oil-producing cells). As estrogen levels decline during perimenopause and menopause, sebum output can drop significantly — leaving your skin and scalp with less of its natural protective oil layer.</p><p>Chlorine is a powerful oxidant. Its entire purpose in municipal water is to kill living organisms by oxidizing their cell walls. When it contacts your skin and hair, it does the same thing to your natural oils — breaking down the lipid barrier that keeps moisture in and irritants out.</p><p><strong>At 25, this isn't a major problem.</strong> Young skin produces abundant sebum and can replenish its oil layer quickly after a chlorinated shower. The damage is temporary.</p><p><strong style="color:var(--red)">At 50, it's a completely different situation.</strong> Your body is producing less oil AND chlorine is stripping what remains. There isn't enough sebum to rebuild the barrier between showers. Each shower compounds the deficit. This is why dryness, itching, and irritation accelerate — it's not just aging. It's aging <em>plus</em> daily chemical exposure on a body that can no longer compensate.</p><p class="cite">Sources: Ashcroft et al., 1997 (estrogen/sebocyte regulation) · Brincat et al., 1987 (collagen/estrogen correlation) · Aquasana skin disorder research</p></div></div></div>
+    <div class="tip-box tip-box--teal rv rv-d3"><div style="font-family:var(--fh);font-size:44px;font-weight:700;color:var(--sage);line-height:1;flex-shrink:0;animation:heartbeat 3s ease-in-out infinite">2×</div><p><strong>The compounding factor:</strong> A woman at 50 with unfiltered water faces roughly double the effective moisture loss from each shower compared to her 25-year-old self — not because the water got worse, but because her body's ability to recover from it decreased.</p></div>
+  </div>
+</section>
+
+<!-- SECTION 2: HAIR GROWTH CYCLE -->
+<section id="hair" class="section-cream rv">
+  <div class="content-max">
+    <div class="s-head"><div class="section-icon section-icon--teal rv-scale">💇‍♀️</div><div class="s-tag" style="color:var(--sage)">HAIR BIOLOGY</div><h2 class="s-title">Your Hair Growth Cycle Is Changing</h2><p class="s-sub">Every hair on your head goes through a 3-phase cycle. Menopause alters the timing. Unfiltered water stresses the cycle further.</p></div>
+    <div class="illust rv-scale rv-d1">
+      <svg width="340" height="120" viewBox="0 0 340 120" fill="none">
+        <g><rect x="20" y="40" width="80" height="70" rx="10" fill="#E8F5F3" stroke="#5E8A6A" stroke-width="1"/><ellipse cx="60" cy="40" rx="20" ry="6" fill="#5E8A6A" opacity=".2"/><rect x="56" y="10" width="8" height="40" rx="4" fill="#1B3A4B"/><circle cx="60" cy="80" r="12" fill="#5E8A6A" opacity=".2" stroke="#5E8A6A" stroke-width="1"/><circle cx="60" cy="80" r="5" fill="#5E8A6A"/><text x="60" y="4" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5E8A6A">↑ Growing</text><text x="60" y="118" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5E8A6A" font-weight="700">ANAGEN</text></g>
+        <g><rect x="130" y="40" width="80" height="70" rx="10" fill="#F5EDE3" stroke="#B08642" stroke-width="1"/><ellipse cx="170" cy="40" rx="16" ry="5" fill="#B08642" opacity=".2"/><rect x="167" y="18" width="6" height="32" rx="3" fill="#8A857D"/><circle cx="170" cy="75" r="9" fill="#B08642" opacity=".2" stroke="#B08642" stroke-width="1"/><circle cx="170" cy="75" r="4" fill="#B08642"/><text x="170" y="12" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#B08642">⏸ Transition</text><text x="170" y="118" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#B08642" font-weight="700">CATAGEN</text></g>
+        <g><rect x="240" y="40" width="80" height="70" rx="10" fill="#f3f4f6" stroke="#B5B0A8" stroke-width="1"/><ellipse cx="280" cy="40" rx="12" ry="4" fill="#B5B0A8" opacity=".2"/><rect x="278" y="26" width="4" height="20" rx="2" fill="#B5B0A8"/><circle cx="280" cy="72" r="7" fill="#B5B0A8" opacity=".2" stroke="#B5B0A8" stroke-width="1"/><circle cx="280" cy="72" r="3" fill="#B5B0A8"/><text x="280" y="20" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#B5B0A8">💤 Resting</text><text x="280" y="118" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#B5B0A8" font-weight="700">TELOGEN</text></g>
+        <path d="M105,65 L125,65" stroke="#E8E5E0" stroke-width="1.5" marker-end="url(#aGy)"/><path d="M215,65 L235,65" stroke="#E8E5E0" stroke-width="1.5" marker-end="url(#aGy)"/>
+        <defs><marker id="aGy" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#E8E5E0"/></marker></defs>
+      </svg>
+    </div>
+    <div class="phase-grid">
+      <div class="phase-card rv-left rv-d1" style="border:2px solid rgba(94,138,106,.2)"><div class="phase-top"><span style="font-size:26px">📈</span><span class="phase-tag" style="color:var(--sage)">ANAGEN</span></div><h4>Growth Phase</h4><div class="phase-meta"><span style="color:var(--sage);font-weight:600">2–7 years</span><span style="color:var(--light)">|</span><span style="color:var(--muted)">85–90% of hairs</span></div><p>Active growth. Your follicle produces a hair shaft. Matrix cells divide rapidly. Melanocytes add pigment. This is when healthy, visible hair is being built.</p><div class="phase-bar"><div class="phase-bar-fill" style="--fill:88%;background:linear-gradient(90deg,var(--sage2),var(--sage))"></div></div></div>
+      <div class="phase-card rv-scale rv-d2" style="border:2px solid rgba(176,134,66,.2)"><div class="phase-top"><span style="font-size:26px">⏸️</span><span class="phase-tag" style="color:var(--gold)">CATAGEN</span></div><h4>Transition Phase</h4><div class="phase-meta"><span style="color:var(--gold);font-weight:600">2–4 weeks</span><span style="color:var(--light)">|</span><span style="color:var(--muted)">~2% of hairs</span></div><p>Growth stops. The follicle shrinks and detaches from its blood supply. The hair shaft fully keratinizes and becomes a 'club hair' — formed but no longer growing.</p><div class="phase-bar"><div class="phase-bar-fill" style="--fill:5%;background:linear-gradient(90deg,#f5d5a8,var(--gold))"></div></div></div>
+      <div class="phase-card rv-right rv-d3" style="border:2px solid rgba(107,114,128,.15)"><div class="phase-top"><span style="font-size:26px">💤</span><span class="phase-tag" style="color:var(--muted)">TELOGEN</span></div><h4>Resting Phase</h4><div class="phase-meta"><span style="color:var(--muted);font-weight:600">~3 months</span><span style="color:var(--light)">|</span><span style="color:var(--muted)">10–15% of hairs</span></div><p>The follicle is dormant. No growth, no cell division. The club hair sits loosely until the next anagen phase pushes it out. This is normal daily shedding.</p><div class="phase-bar"><div class="phase-bar-fill" style="--fill:14%;background:linear-gradient(90deg,#d4d4d4,#B5B0A8)"></div></div></div>
+    </div>
+    <div class="card-grid">
+      <div class="content-card content-card--gold rv-left rv-d2"><h4>What Menopause Does to This Cycle</h4><div class="item-row"><svg class="item-icon" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#B08642" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#B08642" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><div><strong>Anagen phase shortens</strong><br><span style="font-size:14px;color:var(--muted)">Hair doesn't grow as long or as thick. The proportion of anagen hairs decreases — especially across the frontal scalp.</span></div></div><div class="item-row"><svg class="item-icon" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#B08642" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#B08642" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><div><strong>Telogen phase lengthens</strong><br><span style="font-size:14px;color:var(--muted)">More follicles sit in the resting phase for longer. Fewer hairs are actively growing at any given time.</span></div></div><div class="item-row"><svg class="item-icon" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#B08642" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#B08642" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><div><strong>Follicle miniaturization begins</strong><br><span style="font-size:14px;color:var(--muted)">Some follicles produce finer, shorter 'vellus' hairs. Density decreases before you see bald spots.</span></div></div><div class="item-row"><svg class="item-icon" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#B08642" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#B08642" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><div><strong>DHT sensitivity increases</strong><br><span style="font-size:14px;color:var(--muted)">As estrogen declines, androgens (particularly DHT) shrink follicles — the same mechanism behind male pattern baldness.</span></div></div></div>
+      <div class="content-card content-card--red rv-right rv-d3"><h4>What Unfiltered Water Does to This <em>Already Compromised</em> Cycle</h4><div class="item-row"><span class="warn-icon">⚠</span><div><strong>Chlorine strips protective sebum</strong><br><span style="font-size:14px;color:var(--muted)">Without sebum, the follicle environment becomes dry and inflamed — accelerating the anagen-to-catagen transition.</span></div></div><div class="item-row"><span class="warn-icon">⚠</span><div><strong>Heavy metals cause follicular inflammation</strong><br><span style="font-size:14px;color:var(--muted)">Lead, mercury, and cadmium cause chronic inflammation around follicles, pushing hairs into telogen prematurely.</span></div></div><div class="item-row"><span class="warn-icon">⚠</span><div><strong>Hard water clogs follicles</strong><br><span style="font-size:14px;color:var(--muted)">Mineral film blocks product absorption and physically occludes follicle openings, stressing miniaturizing hairs.</span></div></div><div class="item-row"><span class="warn-icon">⚠</span><div><strong>Chloramines penetrate deeper</strong><br><span style="font-size:14px;color:var(--muted)">Used in 30%+ of U.S. systems, chloramines penetrate skin effectively, reaching the dermis where follicle roots live.</span></div></div></div>
+    </div>
+    <h4 style="text-align:center;margin:36px 0 8px;font-size:20px" class="rv rv-d1">What to Expect: Your Results Timeline</h4>
+    <p style="text-align:center;color:var(--muted);font-size:15px;margin-bottom:24px" class="rv rv-d1">Based on hair biology and customer feedback</p>
+    <div class="timeline rv rv-d2">
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-label">Weeks 1–3</div><div class="timeline-text"><strong>Skin & scalp respond first.</strong> Reduced itching, less tightness, softer feel. Chlorine removal works on surface oils immediately.</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-label">Weeks 4–8</div><div class="timeline-text"><strong>Hair starts improving.</strong> Reduced breakage, less shedding, better product absorption. Existing hairs healthier; early new growth begins.</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-label">Weeks 8–12</div><div class="timeline-text"><strong>The full picture.</strong> New growth stronger and thicker. Cumulative follicle cycling shows visible density improvement. This is why we offer 60–90 day guarantees.</div></div>
+    </div>
+    <div class="expand rv rv-d3"><button class="expand-btn" onclick="toggleExpand(this)" aria-expanded="false"><span>Deep Dive: The 8–12 Week Timeline Explained</span><span class="expand-icon">+</span></button><div class="expand-body"><div class="expand-body-inner"><p>When people ask "how long until I see results?", the answer is rooted in hair biology. Each hair follicle cycles independently. When you remove environmental stressors, follicles in anagen begin growing healthier immediately — but you won't see the effect until that hair grows visibly.</p><p>Scalp hair grows at approximately 1 cm per month. A follicle entering anagen on install day won't produce visible hair for 2–3 weeks. You need enough follicles to transition for the cumulative effect to become noticeable.</p><p>This is why our 5.0 Stationary includes a 90-day guarantee and our 2.0 Handheld includes 60 days — calibrated to the biological timeline.</p><p class="cite">Sources: Paus & Cotsarelis, 1999 (hair follicle biology) · StatPearls Hair Physiology · ScienceDirect Menopause and Hair Loss, 2025</p></div></div></div>
+  </div>
+</section>
+
+<!-- SECTION 3: SKIN BARRIER -->
+<section id="skin" class="rv">
+  <div class="content-max">
+    <div class="s-head"><div class="section-icon section-icon--gold rv-scale">🛡️</div><div class="s-tag" style="color:var(--gold)">SKIN BIOLOGY</div><h2 class="s-title">Your Skin Barrier Is Thinning —<br>And Your Water Is Making It Worse</h2></div>
+    <div class="illust rv-scale rv-d1">
+      <svg width="360" height="140" viewBox="0 0 360 140" fill="none">
+        <text x="10" y="28" font-family="DM Sans,sans-serif" font-size="9" fill="#5E8A6A" font-weight="600">ACID MANTLE</text>
+        <text x="10" y="58" font-family="DM Sans,sans-serif" font-size="9" fill="#B08642" font-weight="600">STRATUM CORNEUM</text>
+        <text x="10" y="88" font-family="DM Sans,sans-serif" font-size="9" fill="#1B3A4B" font-weight="600">EPIDERMIS</text>
+        <text x="10" y="118" font-family="DM Sans,sans-serif" font-size="9" fill="#8A857D" font-weight="600">DERMIS</text>
+        <text x="180" y="12" font-family="DM Sans,sans-serif" font-size="10" fill="#5E8A6A" font-weight="700" text-anchor="middle">HEALTHY (pH 4.5–5.5)</text>
+        <rect x="110" y="20" width="120" height="10" rx="5" fill="#5E8A6A" opacity=".2" stroke="#5E8A6A" stroke-width=".5"/>
+        <rect x="110" y="36" width="120" height="24" rx="4" fill="#F5EDE3" stroke="#B08642" stroke-width=".5"/>
+        <rect x="110" y="66" width="120" height="24" rx="4" fill="#fff" stroke="#1B3A4B" stroke-width=".5" opacity=".6"/>
+        <rect x="110" y="96" width="120" height="30" rx="4" fill="#f3f4f6" stroke="#B5B0A8" stroke-width=".5"/>
+        <text x="310" y="12" font-family="DM Sans,sans-serif" font-size="10" fill="#DC2626" font-weight="700" text-anchor="middle">DAMAGED (pH 7–8.5)</text>
+        <rect x="250" y="20" width="120" height="5" rx="2.5" fill="#DC2626" opacity=".15" stroke="#DC2626" stroke-width=".5" stroke-dasharray="3,3"/>
+        <rect x="250" y="36" width="120" height="16" rx="4" fill="#FEF2F2" stroke="#DC2626" stroke-width=".5" stroke-dasharray="3,3"/>
+        <rect x="250" y="58" width="120" height="18" rx="4" fill="#fff" stroke="#DC2626" stroke-width=".5" opacity=".4"/>
+        <rect x="250" y="82" width="120" height="24" rx="4" fill="#f3f4f6" stroke="#B5B0A8" stroke-width=".5"/>
+        <text x="310" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#DC2626">THINNING</text>
+        <text x="310" y="74" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="7" fill="#DC2626">GAPS FORMING</text>
+        <circle cx="280" cy="14" r="3" fill="#DC2626" opacity=".3"/><circle cx="310" cy="10" r="2" fill="#DC2626" opacity=".2"/><circle cx="340" cy="16" r="2.5" fill="#DC2626" opacity=".25"/>
+        <text x="170" y="134" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#B5B0A8">Strong barrier retains moisture</text>
+        <text x="310" y="118" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#DC2626">Chlorine + hard water = accelerated TEWL</text>
+      </svg>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-box rv-scale rv-d1"><div class="stat-num counter" data-target="30" data-suffix="%" style="color:var(--red)">0%</div><div class="stat-label">Collagen Lost</div><div class="stat-sub">In first 5 years post-menopause</div><div class="a-bar"><div class="a-bar-fill a-bar-fill--red" style="--fill:75%"></div></div></div>
+      <div class="stat-box rv-scale rv-d2"><div class="stat-num counter" data-target="2.1" data-suffix="%" data-decimal="true" style="color:var(--gold)">0%</div><div class="stat-label">Annual Decline</div><div class="stat-sub">Collagen per postmenopausal year</div><div class="a-bar"><div class="a-bar-fill a-bar-fill--gold" style="--fill:42%"></div></div></div>
+      <div class="stat-box rv-scale rv-d3"><div class="stat-num counter" data-target="1.1" data-suffix="%" data-decimal="true" style="color:var(--gold)">0%</div><div class="stat-label">Thickness Loss</div><div class="stat-sub">Skin thickness decrease per year</div><div class="a-bar"><div class="a-bar-fill a-bar-fill--gold" style="--fill:30%"></div></div></div>
+      <div class="stat-box rv-scale rv-d4"><div class="stat-num" style="color:var(--red)">↓ 40%</div><div class="stat-label">Sebum Decline</div><div class="stat-sub">Estimated oil production reduction</div><div class="a-bar"><div class="a-bar-fill a-bar-fill--red" style="--fill:65%"></div></div></div>
+    </div>
+    <div class="card-grid">
+      <div class="content-card rv-left rv-d2"><div class="s-tag" style="color:var(--gold);font-size:11px">FAILURE #1: STRUCTURAL</div><h4>Collagen Collapse</h4><p>Estrogen stimulates production of Type I and Type III collagen — the structural proteins that give skin its firmness. It also maintains elastin, hyaluronic acid, and glycosaminoglycans (the molecules that hold moisture in your skin).</p><p>Clinical studies show that collagen content declines with <strong>menopausal age rather than chronological age</strong> — meaning it's driven by estrogen loss, not simply getting older. The decline is dramatic: up to 30% in just five years, then 2.1% every year after that.</p></div>
+      <div class="content-card rv-right rv-d3"><div class="s-tag" style="color:var(--red);font-size:11px">FAILURE #2: CHEMICAL</div><h4>Acid Mantle Disruption</h4><p>Your skin maintains a slightly acidic surface (pH 4.5–5.5) called the acid mantle. This invisible film of sebum and sweat protects against bacteria, retains moisture, and keeps your microbiome healthy.</p><p>Hard water is alkaline (pH 7–8.5). Every shower pushes your skin's pH upward, disrupting the acid mantle. Chlorine (pH 11.7 in concentrated form) compounds this further. <strong>For skin that's already producing less sebum, this pH disruption is far harder to recover from.</strong></p></div>
+    </div>
+    <div class="expand rv rv-d3"><button class="expand-btn" onclick="toggleExpand(this)" aria-expanded="false"><span>Deep Dive: Why Dermatologists Recommend Shower Filters for Skin Conditions</span><span class="expand-icon">+</span></button><div class="expand-body"><div class="expand-body-inner"><p>Eczema, psoriasis, and chronic dryness are all conditions where the skin barrier is already compromised. The stratum corneum (outermost skin layer) acts like a fine mesh — keeping moisture in and irritants out. In these conditions, that mesh has gaps.</p><p>When you shower in chlorinated hard water, you're pushing two aggressive agents through an already weakened barrier: chlorine (which kills beneficial bacteria and strips oils) and calcium/magnesium minerals (which deposit on the skin and increase pH). For healthy skin, this is manageable. For menopausal skin with eczema or psoriasis, it triggers a cascade of moisture loss, inflammation, cracking, and flare-ups.</p><p>Most municipal water systems maintain chlorine levels above 1.5 ppm — which is actually higher than the recommended maximum for swimming pools. You're showering in water more chlorinated than pool water, with skin that has less protection than it had a decade ago.</p><p class="cite">Sources: Brincat et al., 1987 (collagen/menopausal age) · Duarte et al., 2016 (stratum corneum/estrogen) · PMC Estrogens and Aging Skin</p></div></div></div>
+  </div>
+</section>
+
+<!-- SECTION 4: WHY NOW -->
+<section id="whynow" class="section-cream rv">
+  <div class="content-max">
+    <div class="s-head"><div class="section-icon section-icon--teal rv-scale">⏳</div><div class="s-tag" style="color:var(--sage)">THE TIMING FACTOR</div><h2 class="s-title">Why Filtered Water Matters <em>More</em> at 45+</h2><p class="s-sub">The same contaminants were in your water at 25. Here's why they didn't matter as much then — and why they matter enormously now.</p></div>
+    <div class="comparison rv rv-d1">
+      <div class="comparison-side comparison-side--good"><span class="comparison-icon" style="animation:float 4s ease-in-out infinite">🌿</span><h4 style="color:var(--sage)">At 25</h4><p style="font-size:14px;color:var(--muted);margin-bottom:12px">Your body compensates naturally</p><ul class="comparison-list"><li>Abundant sebum production</li><li>Peak collagen levels</li><li>Quick acid mantle recovery</li><li>Strong estrogen protection</li><li>Damage rebounds overnight</li></ul></div>
+      <div class="comparison-vs">VS</div>
+      <div class="comparison-side comparison-side--bad"><span class="comparison-icon" style="animation:heartbeat 3s ease-in-out infinite">⚠️</span><h4 style="color:var(--red)">At 50+</h4><p style="font-size:14px;color:var(--muted);margin-bottom:12px">Damage compounds daily</p><ul class="comparison-list"><li>Sebum declining rapidly</li><li>30%+ collagen lost</li><li>Days to recover pH balance</li><li>Estrogen protection gone</li><li>Each shower adds damage</li></ul></div>
+    </div>
+    <div class="table-wrap rv rv-d2">
+    <table class="age-table"><thead><tr><th style="min-width:120px"></th><th style="min-width:160px">At 25</th><th style="min-width:160px">At 50+</th></tr></thead><tbody>
+      <tr><td>Sebum production</td><td>Abundant — recovers quickly</td><td>Declining — slow recovery</td></tr>
+      <tr><td>Collagen content</td><td>Peak levels</td><td>30%+ lost post-menopause</td></tr>
+      <tr><td>Skin thickness</td><td>Full thickness</td><td>Decreasing ~1.1%/year</td></tr>
+      <tr><td>Follicle density</td><td>Maximum density</td><td>Miniaturizing, fewer anagen hairs</td></tr>
+      <tr><td>Acid mantle recovery</td><td>Hours after disruption</td><td>Days after disruption</td></tr>
+      <tr><td>Antioxidant defense</td><td>Estrogen provides protection</td><td>Estrogen protection declining</td></tr>
+      <tr><td>Product absorption</td><td>Good — minimal buildup</td><td>Blocked by mineral deposits</td></tr>
+      <tr><td>Damage from chlorine</td><td>Temporary — rebounds next day</td><td>Cumulative — compounds daily</td></tr>
+    </tbody></table></div>
+    <div class="expand rv rv-d3"><button class="expand-btn" onclick="toggleExpand(this)" aria-expanded="false"><span>Deep Dive: The Oxidative Stress Multiplier</span><span class="expand-icon">+</span></button><div class="expand-body"><div class="expand-body-inner"><p>Estrogen is one of your body's primary antioxidant defenses. It protects skin cells against oxidative damage by modulating free radical production. The dramatic decrease of estrogen levels during menopause renders skin significantly more susceptible to oxidative damage from environmental sources.</p><p>Chlorine is an oxidant. It literally works by oxidizing organic matter. When your body's internal antioxidant defense (estrogen) is declining, and your external oxidant exposure (chlorine) remains constant, the net oxidative stress on your skin and hair <em>increases</em> — even though the water hasn't changed.</p><p>This is why many women report that their hair and skin suddenly got "worse" in their mid-40s even though nothing else changed. The water didn't get worse. Their body's ability to defend against it decreased. This is also why our 5.0 filter includes Vitamin C and E infusion — to provide external antioxidant support where your body's internal production has declined.</p><p class="cite">Sources: Bottai et al., 2013 (estrogen/oxidative damage) · PMC Estrogen-deficient Skin · ScienceDirect Topical Therapy for EDS</p></div></div></div>
+  </div>
+</section>
+
+<!-- SECTION 5: WHAT FILTERED WATER DOES -->
+<section id="solution" class="rv">
+  <div class="content-max">
+    <div class="s-head"><div class="section-icon section-icon--teal rv-scale">💧</div><div class="s-tag" style="color:var(--sage)">THE SOLUTION</div><h2 class="s-title">What Filtered Water Actually Does</h2><p class="s-sub">We're not claiming to reverse menopause. Here's what a shower filter can and cannot do — honestly.</p></div>
+    <div class="illust illust--small rv-scale rv-d1">
+      <svg width="200" height="100" viewBox="0 0 200 100" fill="none">
+        <path d="M100,8 L160,28 L160,58 C160,78 135,92 100,98 C65,92 40,78 40,58 L40,28 Z" fill="#E8F5F3" stroke="#5E8A6A" stroke-width="1.5"/>
+        <path d="M100,20 L145,36 L145,58 C145,72 128,82 100,86 C72,82 55,72 55,58 L55,36 Z" fill="#5E8A6A" opacity=".15"/>
+        <text x="100" y="52" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#5E8A6A" font-weight="700">FILTRATION</text>
+        <text x="100" y="66" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="8" fill="#5E8A6A">SHIELD</text>
+        <circle cx="75" cy="14" r="4" fill="#DC2626" opacity=".2"/><circle cx="125" cy="10" r="3" fill="#DC2626" opacity=".15"/>
+        <line x1="75" y1="18" x2="80" y2="28" stroke="#DC2626" stroke-width="1" opacity=".3" stroke-dasharray="2,2"/>
+        <line x1="125" y1="13" x2="120" y2="30" stroke="#DC2626" stroke-width="1" opacity=".3" stroke-dasharray="2,2"/>
+        <circle cx="90" cy="88" r="3" fill="#5E8A6A" opacity=".3"/><circle cx="110" cy="92" r="2.5" fill="#5E8A6A" opacity=".25"/>
+      </svg>
+    </div>
+    <div class="card-grid">
+      <div class="content-card content-card--teal rv-left rv-d1"><h4>✓ What ShowerEnvy <em>Can</em> Do</h4>
+        <div class="cr"><svg class="ci" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#5E8A6A" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#5E8A6A" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span>Stop chlorine from stripping your remaining natural oils every shower</span></div>
+        <div class="cr"><svg class="ci" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#5E8A6A" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#5E8A6A" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span>Remove heavy metals that cause chronic scalp inflammation</span></div>
+        <div class="cr"><svg class="ci" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#5E8A6A" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#5E8A6A" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span>Eliminate hard water mineral deposits that block product absorption</span></div>
+        <div class="cr"><svg class="ci" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#5E8A6A" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#5E8A6A" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span>Rebalance water pH closer to your skin's acid mantle</span></div>
+        <div class="cr"><svg class="ci" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#5E8A6A" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#5E8A6A" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span>Reduce eczema, psoriasis, and dermatitis flare triggers</span></div>
+        <div class="cr"><svg class="ci" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#5E8A6A" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#5E8A6A" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span>Allow your existing products to actually penetrate and work</span></div>
+        <div class="cr"><svg class="ci" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#5E8A6A" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#5E8A6A" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span>Create a less hostile environment for follicles under hormonal stress</span></div>
+        <div class="cr"><svg class="ci" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="#5E8A6A" opacity=".15"/><path d="M5 8l2 2 4-4" stroke="#5E8A6A" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span>Infuse Vitamin C/E to supplement declining antioxidant defense (5.0 only)</span></div>
+      </div>
+      <div class="content-card rv-right rv-d2"><h4>✗ What ShowerEnvy <em>Cannot</em> Do</h4>
+        <div class="item-row"><span class="x-icon">✗</span><span style="color:var(--muted)">Reverse hormonal hair loss or restore estrogen levels</span></div>
+        <div class="item-row"><span class="x-icon">✗</span><span style="color:var(--muted)">Regrow hair from follicles that have permanently miniaturized</span></div>
+        <div class="item-row"><span class="x-icon">✗</span><span style="color:var(--muted)">Replace medical treatments like minoxidil or HRT</span></div>
+        <div class="item-row"><span class="x-icon">✗</span><span style="color:var(--muted)">Cure eczema, psoriasis, or dermatitis</span></div>
+        <div class="item-row"><span class="x-icon">✗</span><span style="color:var(--muted)">Change your genetic predisposition for hair thinning</span></div>
+        <div class="item-row"><span class="x-icon">✗</span><span style="color:var(--muted)">Compensate for nutritional deficiencies (iron, zinc, B12, vitamin D)</span></div>
+        <div class="item-row"><span class="x-icon">✗</span><span style="color:var(--muted)">Replace a dermatologist's evaluation for significant hair loss</span></div>
+        <div class="item-row"><span class="x-icon">✗</span><span style="color:var(--muted)">Work miracles overnight (real results take 4–12 weeks)</span></div>
+      </div>
+    </div>
+    <div class="tip-box tip-box--gold rv rv-d3"><span class="tip-emoji" style="animation:float 3s ease-in-out infinite">💡</span><p><strong>Think of it this way:</strong> A filtered showerhead doesn't fix the hormonal problem. It removes the environmental problem that's making the hormonal problem worse. When your body is already under internal stress, the most impactful thing you can do is stop adding external stress. That's what ShowerEnvy does.</p></div>
+  </div>
+</section>
+
+<!-- SECTION 6: DERMATOLOGISTS -->
+<section id="dermatologists" class="section-cream rv">
+  <div class="content-max">
+    <div class="s-head"><div class="section-icon section-icon--gold rv-scale">👩‍⚕️</div><div class="s-tag" style="color:var(--gold)">CLINICAL PERSPECTIVE</div><h2 class="s-title">What Dermatologists Say</h2><p class="s-sub">Peer-reviewed research and clinical perspectives from board-certified dermatologists on the relationship between water quality, hormonal changes, and skin health.</p></div>
+    <div class="derm-grid">
+      <div class="derm-card rv-left rv-d1"><div class="derm-area">On Chlorine & Skin</div><p class="derm-quote">"Chlorine is a strong oxidant that causes damage to skin and hair even at very low levels. Most tap water maintains chlorine levels greater than recommended for swimming pools. It kills beneficial bacteria on the skin surface that provides natural defense against skin disorders."</p><p class="derm-source">— Aquasana dermatological research</p></div>
+      <div class="derm-card rv-right rv-d2"><div class="derm-area">On Hard Water & Eczema</div><p class="derm-quote">"Hard water leaves behind mineral residue that can clog pores and dry out skin by disrupting its natural barrier. For people with eczema or psoriasis, the barrier is already thinner and more delicate — making filtered water a particularly meaningful intervention."</p><p class="derm-source">— Vitaclean / dermatology research</p></div>
+      <div class="derm-card rv-left rv-d3"><div class="derm-area">On Menopause & Skin</div><p class="derm-quote">"The perimenopausal years are marked by an accelerated decline in skin quality, largely due to declining estrogen levels. Collagen content declines at 2.1% per postmenopausal year, correlating with estrogen deficiency rather than chronological age."</p><p class="derm-source">— Brincat et al. / European Medical Journal</p></div>
+      <div class="derm-card rv-right rv-d4"><div class="derm-area">On Shower Filters</div><p class="derm-quote">"Dermatologists often recommend shower filters for patients with sensitive skin or chronic conditions like eczema and acne. Removing chlorine and metals helps prevent dryness and irritation while maintaining skin hydration and elasticity."</p><p class="derm-source">— Dr. Dendy Engelman / AAD research</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="cta" class="final-cta rv" style="margin:0 -24px">
+  <div class="cta-orb cta-orb--1"></div><div class="cta-orb cta-orb--2"></div>
+  <div class="final-cta-inner">
+    <h2>Now You Know the Science.<br>Here's What to Do About It.</h2>
+    <p>You can't control hormonal changes. But you can control what touches your hair and skin every single day.</p>
+    <div class="cta-features"><div class="cta-feat"><span>🧬</span> 15-Stage Filtration</div><div class="cta-feat"><span>🍊</span> Vitamin C & E</div><div class="cta-feat"><span>🔧</span> 3-Min Install</div><div class="cta-feat"><span>💰</span> 60-Day Guarantee</div></div>
+    <div class="final-cta-btns"><a href="#" class="btn btn--teal" style="padding:18px 40px;font-size:17px;border-radius:14px">Shop the 2.0 — $49</a><a href="#" class="btn btn--gold" style="padding:18px 40px;font-size:17px;border-radius:14px">Shop the 5.0 — $89</a></div>
+    <small>Both include water quality test strips so you can see the difference yourself.</small>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><div class="nav-logo" style="margin-bottom:12px"><svg class="brand-mark" width="24" height="24" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:6px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></div><p>Science-backed filtration designed for women navigating hormonal changes. Because what touches your hair and skin every day matters more now.</p></div>
+    <div><div class="footer-col-title">Shop</div><a href="#">2.0 Handheld — $49</a><a href="#">5.0 Stationary — $89</a><a href="#">15-Stage Filter Upgrade</a><a href="#">Replacement Filters</a><a href="#">Hose & Holder</a></div>
+    <div><div class="footer-col-title">Learn</div><a href="#">The Science</a><a href="#">Water Quality Quiz</a><a href="#">Reviews</a><a href="#">Blog</a><a href="#">FAQ</a></div>
+    <div><div class="footer-col-title">Support</div><a href="#">Installation Guide</a><a href="#">Contact Us</a><a href="#">Shipping Info</a><a href="#">Returns & Guarantee</a><a href="#">Accessibility</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 ShowerEnvy · All rights reserved</span><span><a href="#">Privacy Policy</a> · <a href="#">Terms</a> · <a href="#">Accessibility</a></span></div>
+</footer>
+</div>
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script>
+(function(){
+  var navLinks=document.querySelectorAll('.nav-link[data-section]');
+  var sections=[];
+  navLinks.forEach(function(l){var s=document.getElementById(l.getAttribute('data-section'));if(s)sections.push({el:s,id:l.getAttribute('data-section')})});
+  function updateSpy(){var current='';sections.forEach(function(s){if(s.el.getBoundingClientRect().top<=120)current=s.id});navLinks.forEach(function(l){l.classList.toggle('active',l.getAttribute('data-section')===current)})}
+  var navBar=document.getElementById('navBar'),navProgress=document.getElementById('navProgress');
+  function updateProgress(){var scrollY=window.pageYOffset||document.documentElement.scrollTop;var h=document.documentElement.scrollHeight-window.innerHeight;navProgress.style.width=(h>0?(scrollY/h*100):0)+'%';navBar.classList.toggle('scrolled',scrollY>20)}
+  var btt=document.getElementById('btt');
+  function updateBtt(){btt.classList.toggle('vis',(window.pageYOffset||document.documentElement.scrollTop)>800)}
+  window.addEventListener('scroll',function(){updateSpy();updateProgress();updateBtt()},{passive:true});
+  updateSpy();updateProgress();
+
+  // Multi-direction scroll reveal
+  var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');ro.unobserve(e.target)}})},{threshold:.06,rootMargin:'0px 0px -60px 0px'});
+  ['.rv','.rv-left','.rv-right','.rv-scale'].forEach(function(cls){document.querySelectorAll(cls).forEach(function(el){ro.observe(el)})});
+
+  // Animated counters
+  var co=new IntersectionObserver(function(entries){entries.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;var target=parseFloat(el.getAttribute('data-target'));var suffix=el.getAttribute('data-suffix')||'';var isD=el.getAttribute('data-decimal')==='true';var dur=1600,start=null;function a(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1);var eased=1-Math.pow(1-p,3);el.textContent=(isD?(eased*target).toFixed(1):Math.round(eased*target))+suffix;if(p<1)requestAnimationFrame(a)}requestAnimationFrame(a);co.unobserve(el)})},{threshold:.5});
+  document.querySelectorAll('.counter').forEach(function(el){co.observe(el)});
+})();
+function toggleExpand(btn){var body=btn.nextElementSibling,isOpen=btn.classList.contains('open');var section=btn.closest('section')||btn.closest('.content-max');if(section){section.querySelectorAll('.expand-btn.open').forEach(function(b){b.classList.remove('open');b.setAttribute('aria-expanded','false');b.nextElementSibling.classList.remove('open')})}if(!isOpen){btn.classList.add('open');btn.setAttribute('aria-expanded','true');body.classList.add('open')}}
+</script>
+
+<script>
+function toggleSeMobileNav(){
+  var o=document.getElementById('seMobOverlay'),m=document.getElementById('seMobMenu');
+  if(o&&m){o.classList.toggle('open');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':''}
+}
+</script>
+</body>
+</html>
