@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "terms_header": {
+      "type": "terms-header",
+      "settings": {}
+    },
+    "terms_content": {
+      "type": "terms-content",
+      "settings": {}
+    },
+    "terms_footer": {
+      "type": "terms-footer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "terms_header",
+    "terms_content",
+    "terms_footer"
+  ]
+}
