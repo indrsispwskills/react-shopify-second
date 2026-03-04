@@ -1,0 +1,65 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "science_navigation": {
+      "type": "shower-science-navigation",
+      "settings": {}
+    },
+    "science_hero": {
+      "type": "shower-science-hero",
+      "settings": {}
+    },
+    "science_compounding": {
+      "type": "shower-science-compounding",
+      "settings": {}
+    },
+    "science_hair": {
+      "type": "shower-science-hair-cycle",
+      "settings": {}
+    },
+    "science_skin": {
+      "type": "shower-science-skin-barrier",
+      "settings": {}
+    },
+    "science_why_now": {
+      "type": "shower-science-why-now",
+      "settings": {}
+    },
+    "science_solution": {
+      "type": "shower-science-solution",
+      "settings": {}
+    },
+    "science_experts": {
+      "type": "shower-science-experts",
+      "settings": {}
+    },
+    "science_cta": {
+      "type": "shower-science-cta",
+      "settings": {}
+    },
+    "science_footer": {
+      "type": "shower-science-footer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "science_navigation",
+    "science_hero",
+    "science_compounding",
+    "science_hair",
+    "science_skin",
+    "science_why_now",
+    "science_solution",
+    "science_experts",
+    "science_cta",
+    "science_footer"
+  ]
+}
