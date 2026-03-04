@@ -1,0 +1,8 @@
+{
+  "sections": {
+    "refund_policy_header": {"type": "refund-policy-header", "settings": {}},
+    "refund_policy_content": {"type": "refund-policy-content", "settings": {}},
+    "refund_policy_footer": {"type": "refund-policy-footer", "settings": {}}
+  },
+  "order": ["refund_policy_header", "refund_policy_content", "refund_policy_footer"]
+}
