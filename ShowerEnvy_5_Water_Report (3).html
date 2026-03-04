@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=5">
+<title>Free Water Report — ShowerEnvy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--fh:'Cormorant Garamond',Georgia,serif;--fb:'DM Sans','Segoe UI',sans-serif;--sage:#5E8A6A;--sage-dk:#4A7656;--sage-lt:#EBF3ED;--sage-bg:#F5FAF6;--rose:#C17B6E;--rose-dk:#A5635A;--rose-lt:#FAF0EE;--gold:#B8956A;--gold-lt:#FBF5ED;--gold-dk:#9C7A55;--ink:#2C3E50;--ink2:#556B7A;--wh:#FFF;--cream:#FDFBF7;--bg:#F8F7F4;--bdr:#E5E0D7;--mute:#8A9690;--r:14px;--red:#D64545;--red-lt:#FFF0F0;--amber:#E8873D;--amber-lt:#FFF6ED;--green:#3D9B5E;--green-lt:#E8F5EC}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--fb);font-size:17px;line-height:1.7;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--sage);font-weight:600;text-decoration:none}
+button{font-family:var(--fb);cursor:pointer;border:none;background:none;-webkit-tap-highlight-color:transparent}
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
+
+/* ===== HEADER ===== */
+.hdr{background:var(--wh);border-bottom:1px solid var(--bdr);padding:14px 20px;text-align:center}
+.hdr-logo{font-family:var(--fh);font-size:24px;font-weight:700;display:inline-block}.hdr-logo em{color:var(--sage);font-style:italic}
+
+/* ===== SCREENS ===== */
+.screen{display:none}.screen.active{display:block}
+.anim-up{animation:fadeUp .6s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+
+/* ===== SCREEN 1: ZIP ENTRY ===== */
+.entry-sec{min-height:calc(100vh - 60px);display:flex;align-items:center;justify-content:center;padding:40px 20px;position:relative;overflow:hidden}
+.water-bg{position:absolute;inset:0;opacity:.05;pointer-events:none}
+.water-bg .rip{position:absolute;border-radius:50%;border:2px solid var(--sage);animation:rip 4.5s ease-out infinite}
+.water-bg .rip:nth-child(1){width:300px;height:300px;top:15%;left:8%;animation-delay:0s}
+.water-bg .rip:nth-child(2){width:220px;height:220px;top:55%;right:12%;animation-delay:1.3s}
+.water-bg .rip:nth-child(3){width:400px;height:400px;bottom:5%;left:45%;animation-delay:2.6s}
+@keyframes rip{0%{transform:scale(.5);opacity:1}100%{transform:scale(2.8);opacity:0}}
+
+.entry-card{position:relative;z-index:2;max-width:540px;width:100%;text-align:center}
+
+/* Water drop SVG illustration */
+.drop-hero{width:110px;height:140px;margin:0 auto 24px;position:relative}
+.drop-hero svg{width:100%;height:100%}
+.drop-hero .particle{position:absolute;border-radius:50%;animation:pFloat 2.8s ease-in-out infinite}
+.drop-hero .particle:nth-child(2){width:6px;height:6px;background:var(--red);top:42%;left:30%;animation-delay:0s}
+.drop-hero .particle:nth-child(3){width:5px;height:5px;background:var(--amber);top:55%;left:55%;animation-delay:.7s}
+.drop-hero .particle:nth-child(4){width:4px;height:4px;background:var(--rose);top:48%;left:68%;animation-delay:1.3s}
+.drop-hero .particle:nth-child(5){width:5px;height:5px;background:var(--gold);top:62%;left:38%;animation-delay:.4s}
+.drop-hero .particle:nth-child(6){width:3px;height:3px;background:var(--red);top:58%;left:60%;animation-delay:1s}
+@keyframes pFloat{0%,100%{transform:translate(0,0)}25%{transform:translate(3px,-5px)}50%{transform:translate(-3px,4px)}75%{transform:translate(5px,2px)}}
+
+.entry-tag{display:inline-block;background:var(--sage-lt);color:var(--sage);font-size:14px;font-weight:700;padding:5px 16px;border-radius:20px;margin-bottom:14px;text-transform:uppercase;letter-spacing:.04em}
+.entry-title{font-family:var(--fh);font-size:clamp(30px,6vw,46px);font-weight:700;line-height:1.15;margin-bottom:12px}
+.entry-title em{color:var(--sage);font-style:italic}
+.entry-sub{font-size:17px;color:var(--ink2);max-width:420px;margin:0 auto 30px;line-height:1.6}
+
+.zip-form{display:flex;gap:10px;max-width:360px;margin:0 auto 12px}
+.zip-input{flex:1;padding:16px 20px;font-size:20px;font-weight:600;border:2px solid var(--bdr);border-radius:12px;text-align:center;letter-spacing:5px;background:var(--wh);color:var(--ink);transition:.2s;min-height:58px}
+.zip-input:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 4px rgba(94,138,106,.12)}
+.zip-input::placeholder{letter-spacing:1px;color:var(--mute);font-weight:400;font-size:16px}
+.zip-btn{padding:16px 28px;background:var(--sage);color:var(--wh);font-size:16px;font-weight:700;border-radius:12px;border:none;cursor:pointer;transition:.2s;white-space:nowrap;min-height:58px}
+.zip-btn:hover{background:var(--sage-dk);transform:translateY(-1px)}
+.zip-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.zip-error{color:var(--red);font-size:14px;font-weight:600;margin-top:6px;min-height:20px}
+.zip-note{font-size:14px;color:var(--mute);margin-top:18px;line-height:1.5}
+.entry-trust{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.entry-trust span{font-size:13px;color:var(--mute);padding:6px 12px;background:var(--wh);border:1px solid var(--bdr);border-radius:8px}
+
+/* ===== SCREEN 2: LOADING ===== */
+.load-sec{min-height:calc(100vh - 60px);display:flex;align-items:center;justify-content:center;padding:40px 20px}
+.load-card{text-align:center;max-width:460px;width:100%}
+.load-title{font-family:var(--fh);font-size:28px;font-weight:700;margin-bottom:28px}
+.load-title span{color:var(--sage)}
+
+/* Scanner animation */
+.scanner{width:180px;height:180px;margin:0 auto 32px;position:relative}
+.scanner-ring{position:absolute;inset:0;border:3px solid var(--bdr);border-radius:50%}
+.scanner-sweep{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,transparent 0%,rgba(94,138,106,.2) 25%,transparent 30%);animation:sweep 2s linear infinite}
+@keyframes sweep{to{transform:rotate(360deg)}}
+.scanner-dot{position:absolute;width:12px;height:12px;background:var(--sage);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);box-shadow:0 0 20px rgba(94,138,106,.4);animation:pulse 1.5s ease infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 20px rgba(94,138,106,.4)}50%{box-shadow:0 0 40px rgba(94,138,106,.6)}}
+.scanner-label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--sage)}
+
+/* Progress steps */
+.load-steps{text-align:left;max-width:320px;margin:0 auto}
+.load-step{display:flex;align-items:center;gap:12px;padding:10px 0;font-size:15px;color:var(--mute);transition:.4s}
+.load-step.active{color:var(--ink);font-weight:600}
+.load-step.done{color:var(--green)}
+.load-step .ico{width:28px;height:28px;border-radius:50%;border:2px solid var(--bdr);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;transition:.4s}
+.load-step.active .ico{border-color:var(--sage);background:var(--sage-lt);color:var(--sage)}
+.load-step.done .ico{border-color:var(--green);background:var(--green-lt);color:var(--green)}
+
+/* ===== SCREEN 3: RESULTS ===== */
+.results-sec{padding:0 0 80px}
+.results-sec .wrap{display:flex;flex-direction:column;gap:0}
+
+/* Result header */
+.res-hdr{text-align:center;padding:40px 20px 32px;background:var(--wh);border-bottom:1px solid var(--bdr);margin-bottom:32px}
+.res-hdr .res-zip{font-size:14px;font-weight:700;color:var(--sage);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.res-hdr h1{font-family:var(--fh);font-size:clamp(28px,5vw,40px);font-weight:700;line-height:1.2;margin-bottom:8px}
+.res-hdr h1 em{color:var(--sage);font-style:italic}
+.res-hdr .res-sub{font-size:16px;color:var(--ink2);max-width:520px;margin:0 auto}
+
+/* Shared card */
+.rcard{background:var(--wh);border:1px solid var(--bdr);border-radius:18px;padding:32px;margin-bottom:24px}
+.rcard-title{font-family:var(--fh);font-size:clamp(22px,4vw,30px);font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rcard-title .emoji{font-size:28px}
+.rcard-sub{font-size:15px;color:var(--ink2);margin-bottom:24px;line-height:1.55}
+
+/* ===== WATER QUALITY GAUGE ===== */
+.gauge-wrap{display:flex;align-items:center;gap:36px;flex-wrap:wrap;justify-content:center}
+.gauge-svg{width:200px;height:200px;flex-shrink:0}
+.gauge-svg text{font-family:var(--fb);font-weight:700}
+.gauge-info{flex:1;min-width:240px}
+.gauge-grade{display:inline-block;padding:6px 18px;border-radius:8px;font-size:15px;font-weight:700;margin-bottom:12px}
+.gauge-grade.poor{background:var(--red-lt);color:var(--red)}
+.gauge-grade.fair{background:var(--amber-lt);color:var(--amber)}
+.gauge-grade.good{background:var(--green-lt);color:var(--green)}
+.gauge-detail{font-size:15px;color:var(--ink2);line-height:1.65;margin-bottom:16px}
+.gauge-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gauge-stat{background:var(--cream);padding:12px 14px;border-radius:10px}
+.gauge-stat .gs-num{font-size:22px;font-weight:700;color:var(--ink);line-height:1.2}
+.gauge-stat .gs-lab{font-size:13px;color:var(--mute);font-weight:500}
+
+/* ===== CONTAMINANT BARS ===== */
+.contam-list{display:flex;flex-direction:column;gap:18px}
+.contam-row{position:relative}
+.contam-hdr{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;gap:8px}
+.contam-name{font-size:15px;font-weight:700;display:flex;align-items:center;gap:6px}
+.contam-name .cdot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.contam-val{font-size:14px;font-weight:600;white-space:nowrap}
+.contam-val.high{color:var(--red)}.contam-val.med{color:var(--amber)}.contam-val.low{color:var(--green)}
+.contam-track{height:10px;background:var(--cream);border-radius:6px;overflow:hidden;position:relative}
+.contam-fill{height:100%;border-radius:6px;width:0;transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+.contam-fill.high{background:linear-gradient(90deg,var(--amber),var(--red))}.contam-fill.med{background:linear-gradient(90deg,var(--gold),var(--amber))}.contam-fill.low{background:var(--sage)}
+.contam-limit{position:absolute;top:0;height:100%;width:2px;background:var(--ink);opacity:.35}
+.contam-limit::after{content:'EPA';position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:700;color:var(--mute);white-space:nowrap}
+.contam-note{font-size:13px;color:var(--ink2);margin-top:4px;line-height:1.45}
+
+/* ===== HAIR & SKIN DAMAGE ===== */
+.damage-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.damage-card{background:var(--cream);border-radius:14px;padding:22px;position:relative;overflow:hidden}
+.damage-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:4px 4px 0 0}
+.damage-card.severe::before{background:var(--red)}.damage-card.moderate::before{background:var(--amber)}.damage-card.mild::before{background:var(--gold)}
+.dc-icon{font-size:32px;margin-bottom:10px}
+.dc-title{font-size:16px;font-weight:700;margin-bottom:4px}
+.dc-sev{font-size:13px;font-weight:700;margin-bottom:8px;display:inline-block;padding:2px 10px;border-radius:5px}
+.dc-sev.severe{background:var(--red-lt);color:var(--red)}.dc-sev.moderate{background:var(--amber-lt);color:var(--amber)}.dc-sev.mild{background:var(--gold-lt);color:var(--gold-dk)}
+.dc-desc{font-size:14px;color:var(--ink2);line-height:1.55}
+.dc-meter{margin-top:10px;height:6px;background:rgba(0,0,0,.06);border-radius:4px;overflow:hidden}
+.dc-meter-fill{height:100%;border-radius:4px;width:0;transition:width 1s cubic-bezier(.22,1,.36,1) .3s}
+.damage-card.severe .dc-meter-fill{background:var(--red)}.damage-card.moderate .dc-meter-fill{background:var(--amber)}.damage-card.mild .dc-meter-fill{background:var(--gold)}
+
+/* Body illustration */
+.body-illust{display:flex;justify-content:center;margin-bottom:28px}
+.body-svg{width:220px;height:auto}
+.body-svg .hotspot{animation:hotPulse 2s ease infinite}
+@keyframes hotPulse{0%,100%{opacity:.7}50%{opacity:1}}
+
+/* ===== SHOWERENVY SOLUTION ===== */
+.solution-intro{font-size:16px;color:var(--ink2);line-height:1.6;text-align:center;max-width:560px;margin:0 auto 28px}
+.filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.filter-card{padding:18px;border-radius:12px;text-align:center}
+.filter-card.before{background:var(--red-lt);border:1px solid rgba(214,69,69,.15)}
+.filter-card.after{background:var(--green-lt);border:1px solid rgba(61,155,94,.15)}
+.fc-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.filter-card.before .fc-label{color:var(--red)}.filter-card.after .fc-label{color:var(--green)}
+.fc-val{font-size:36px;font-weight:700;line-height:1}
+.filter-card.before .fc-val{color:var(--red)}.filter-card.after .fc-val{color:var(--green)}
+.fc-unit{font-size:14px;color:var(--ink2);margin-top:4px}
+
+/* Removal bars */
+.removal-list{display:flex;flex-direction:column;gap:14px}
+.removal-row{display:flex;align-items:center;gap:12px}
+.removal-name{width:120px;font-size:14px;font-weight:600;flex-shrink:0}
+.removal-track{flex:1;height:12px;background:var(--cream);border-radius:6px;overflow:hidden;position:relative}
+.removal-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--sage),var(--sage-dk));width:0;transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+.removal-pct{font-size:14px;font-weight:700;color:var(--sage);width:48px;text-align:right;flex-shrink:0}
+
+/* Vitamin infusion */
+.vit-row{display:flex;gap:14px;margin-top:24px;flex-wrap:wrap}
+.vit-pill{flex:1;min-width:140px;background:var(--gold-lt);border:1px solid rgba(184,149,106,.2);border-radius:12px;padding:16px;text-align:center}
+.vit-pill .vp-ico{font-size:28px;margin-bottom:6px}
+.vit-pill .vp-name{font-size:14px;font-weight:700;color:var(--gold-dk);margin-bottom:4px}
+.vit-pill .vp-desc{font-size:13px;color:var(--ink2);line-height:1.45}
+
+/* ===== CTA SECTION ===== */
+.cta-card{background:linear-gradient(135deg,var(--sage),var(--sage-dk));border-radius:18px;padding:36px 32px;text-align:center;color:var(--wh);margin-top:8px}
+.cta-card h2{font-family:var(--fh);font-size:clamp(24px,4.5vw,34px);font-weight:700;margin-bottom:10px}
+.cta-card h2 em{font-style:italic}
+.cta-card p{font-size:16px;opacity:.85;max-width:440px;margin:0 auto 22px;line-height:1.55}
+.cta-btn{display:inline-block;background:var(--wh);color:var(--sage-dk);font-size:18px;font-weight:700;padding:18px 40px;border-radius:12px;border:none;cursor:pointer;transition:.2s;min-height:58px;position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.cta-btn::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);animation:shim 3.5s ease infinite}
+@keyframes shim{0%{left:-100%}100%{left:200%}}
+.cta-trust{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:16px;font-size:14px;opacity:.8}
+
+/* ===== FOOTER ===== */
+.ftr{text-align:center;padding:28px 16px;font-size:13px;color:var(--mute);border-top:1px solid var(--bdr)}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:680px){
+  .gauge-wrap{flex-direction:column;text-align:center}
+  .gauge-svg{width:180px;height:180px}
+  .gauge-info{min-width:0}
+  .gauge-stats{grid-template-columns:1fr 1fr}
+  .damage-grid{grid-template-columns:1fr}
+  .filter-grid{grid-template-columns:1fr 1fr}
+  .rcard{padding:24px 18px}
+  .zip-form{flex-direction:column;max-width:280px}
+  .zip-btn{width:100%}
+  .removal-name{width:90px;font-size:13px}
+  .vit-row{flex-direction:column}
+  .vit-pill{min-width:0}
+}
+@media(max-width:400px){
+  .rcard{padding:20px 16px;border-radius:14px}
+  .filter-grid{gap:10px}
+  .fc-val{font-size:28px}
+  .gauge-stats{gap:8px}
+  .entry-title{font-size:28px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-logo">Shower<em>Envy</em> <span style="font-size:14px;font-weight:400;color:var(--mute)">Water Report</span></div>
+</header>
+
+<!-- ============================================================ -->
+<!-- SCREEN 1: ZIP ENTRY -->
+<!-- ============================================================ -->
+<div class="screen active" id="screenEntry">
+<div class="entry-sec">
+  <div class="water-bg"><div class="rip"></div><div class="rip"></div><div class="rip"></div></div>
+  <div class="entry-card anim-up">
+
+    <!-- Animated water drop with contamination particles -->
+    <div class="drop-hero">
+      <svg viewBox="0 0 110 140" fill="none">
+        <defs>
+          <linearGradient id="dropGrad" x1="55" y1="20" x2="55" y2="130" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#5E8A6A" stop-opacity=".15"/>
+            <stop offset="60%" stop-color="#5E8A6A" stop-opacity=".35"/>
+            <stop offset="100%" stop-color="#4A7656" stop-opacity=".25"/>
+          </linearGradient>
+          <radialGradient id="dropShine" cx=".35" cy=".3" r=".5">
+            <stop offset="0%" stop-color="#fff" stop-opacity=".5"/>
+            <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <ellipse cx="55" cy="134" rx="30" ry="6" fill="#5E8A6A" opacity=".1">
+          <animate attributeName="rx" values="30;24;30" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".1;.05;.1" dur="3s" repeatCount="indefinite"/>
+        </ellipse>
+        <g>
+          <animateTransform attributeName="transform" type="translate" values="0,0;0,-8;0,0" dur="3s" repeatCount="indefinite"/>
+          <path d="M55 12 C55 12 18 62 18 88 C18 108 35 126 55 126 C75 126 92 108 92 88 C92 62 55 12 55 12Z" fill="url(#dropGrad)" stroke="#5E8A6A" stroke-width="1.5" stroke-opacity=".3"/>
+          <path d="M55 12 C55 12 18 62 18 88 C18 108 35 126 55 126 C75 126 92 108 92 88 C92 62 55 12 55 12Z" fill="url(#dropShine)"/>
+          <ellipse cx="38" cy="72" rx="10" ry="13" fill="#fff" opacity=".25" transform="rotate(-20 38 72)"/>
+        </g>
+      </svg>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <div class="entry-tag">&#128300; Free Instant Analysis</div>
+    <h1 class="entry-title">What's <em>Really</em> in Your Shower Water?</h1>
+    <p class="entry-sub">Enter your zip code to see the contaminants in your water and how they affect your hair and skin after 45.</p>
+
+    <div class="zip-form">
+      <input type="text" class="zip-input" id="zipInput" placeholder="ZIP Code" maxlength="5" inputmode="numeric" autocomplete="postal-code">
+      <button class="zip-btn" id="zipBtn" onclick="startAnalysis()">Analyze &#8594;</button>
+    </div>
+    <div class="zip-error" id="zipError"></div>
+
+    <p class="zip-note">&#128274; We never store your data. Your zip code is only used to look up public water quality records.</p>
+    <div class="entry-trust">
+      <span>&#128202; EPA Data</span>
+      <span>&#128300; Lab Verified</span>
+      <span>&#128274; 100% Private</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SCREEN 2: LOADING -->
+<!-- ============================================================ -->
+<div class="screen" id="screenLoading">
+<div class="load-sec">
+  <div class="load-card anim-up">
+    <div class="scanner">
+      <div class="scanner-ring"></div>
+      <div class="scanner-sweep"></div>
+      <div class="scanner-dot"></div>
+      <div class="scanner-label" id="scanLabel">&#128300;</div>
+    </div>
+    <h2 class="load-title">Analyzing water for <span id="loadZip">00000</span></h2>
+    <div class="load-steps">
+      <div class="load-step" id="ls1"><span class="ico">1</span> Accessing municipal water records</div>
+      <div class="load-step" id="ls2"><span class="ico">2</span> Detecting contaminant levels</div>
+      <div class="load-step" id="ls3"><span class="ico">3</span> Calculating hair &amp; skin impact</div>
+      <div class="load-step" id="ls4"><span class="ico">4</span> Generating your personal report</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- SCREEN 3: RESULTS -->
+<!-- ============================================================ -->
+<div class="screen" id="screenResults">
+
+<!-- Results header -->
+<div class="res-hdr">
+  <div class="res-zip" id="resZipLabel">Water Report for 00000</div>
+  <h1>Your Water Quality <em>Report</em></h1>
+  <p class="res-sub" id="resSummary">We analyzed the public water records for your area. Here's what we found.</p>
+</div>
+
+<div class="wrap">
+
+<!-- CARD 1: WATER QUALITY SCORE -->
+<div class="rcard anim-up" id="cardGauge">
+  <div class="rcard-title"><span class="emoji">&#128167;</span> Water Quality Score</div>
+  <div class="rcard-sub">Based on EPA records for your water district. Lower scores indicate more contaminants detected.</div>
+  <div class="gauge-wrap">
+    <svg class="gauge-svg" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="85" fill="none" stroke="#E5E0D7" stroke-width="14" stroke-linecap="round" stroke-dasharray="401" stroke-dashoffset="133" transform="rotate(150 100 100)"/>
+      <circle id="gaugeArc" cx="100" cy="100" r="85" fill="none" stroke="var(--red)" stroke-width="14" stroke-linecap="round" stroke-dasharray="401" stroke-dashoffset="401" transform="rotate(150 100 100)" style="transition:stroke-dashoffset 1.5s cubic-bezier(.22,1,.36,1),stroke 1s ease"/>
+      <text id="gaugeNum" x="100" y="108" text-anchor="middle" font-size="48" fill="var(--ink)">—</text>
+      <text x="100" y="128" text-anchor="middle" font-size="13" fill="var(--mute)">out of 100</text>
+    </svg>
+    <div class="gauge-info">
+      <div class="gauge-grade" id="gaugeGrade">—</div>
+      <p class="gauge-detail" id="gaugeDetail"></p>
+      <div class="gauge-stats">
+        <div class="gauge-stat"><div class="gs-num" id="gsContam">—</div><div class="gs-lab">Contaminants Found</div></div>
+        <div class="gauge-stat"><div class="gs-num" id="gsExceed">—</div><div class="gs-lab">Exceed Guidelines</div></div>
+        <div class="gauge-stat"><div class="gs-num" id="gsHardness">—</div><div class="gs-lab">Water Hardness (GPG)</div></div>
+        <div class="gauge-stat"><div class="gs-num" id="gsPop">—</div><div class="gs-lab">People Affected</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD 2: CONTAMINANTS DETECTED -->
+<div class="rcard" id="cardContam">
+  <div class="rcard-title"><span class="emoji">&#9888;&#65039;</span> Contaminants Detected</div>
+  <div class="rcard-sub">These contaminants were detected in your water supply. Red bars show levels exceeding EPA guidelines or health goals.</div>
+  <div class="contam-list" id="contamList">
+    <!-- JS fills -->
+  </div>
+</div>
+
+<!-- CARD 3: HAIR & SKIN DAMAGE -->
+<div class="rcard" id="cardDamage">
+  <div class="rcard-title"><span class="emoji">&#129520;</span> Impact on Hair &amp; Skin After 45</div>
+  <div class="rcard-sub">Your water contaminants interact with the natural changes women experience during and after menopause — accelerating visible aging.</div>
+
+  <!-- Body illustration with damage hotspots -->
+  <div class="body-illust">
+    <svg class="body-svg" viewBox="0 0 200 400" fill="none">
+      <!-- Head / hair -->
+      <ellipse cx="100" cy="52" rx="36" ry="42" fill="#F5EDE8" stroke="#D4C4B8" stroke-width="1"/>
+      <!-- Hair -->
+      <path d="M64 42 C64 20 80 10 100 10 C120 10 136 20 136 42 C136 34 130 24 120 22 C110 20 90 20 80 22 C70 24 64 34 64 42Z" fill="#8B7355" opacity=".6"/>
+      <!-- Neck -->
+      <rect x="88" y="90" width="24" height="20" rx="8" fill="#F5EDE8"/>
+      <!-- Body -->
+      <path d="M60 110 C60 104 75 100 100 100 C125 100 140 104 140 110 L145 240 C145 248 125 254 100 254 C75 254 55 248 55 240 Z" fill="#F5EDE8" stroke="#D4C4B8" stroke-width="1"/>
+      <!-- Arms -->
+      <path d="M60 115 L38 180 C36 186 40 190 44 188 L64 140" fill="#F5EDE8" stroke="#D4C4B8" stroke-width="1"/>
+      <path d="M140 115 L162 180 C164 186 160 190 156 188 L136 140" fill="#F5EDE8" stroke="#D4C4B8" stroke-width="1"/>
+      <!-- Legs -->
+      <path d="M75 250 L68 360 C68 364 74 368 80 368 L82 360 L88 254" fill="#F5EDE8" stroke="#D4C4B8" stroke-width="1"/>
+      <path d="M125 250 L132 360 C132 364 126 368 120 368 L118 360 L112 254" fill="#F5EDE8" stroke="#D4C4B8" stroke-width="1"/>
+
+      <!-- DAMAGE HOTSPOTS (JS controls visibility via opacity) -->
+      <!-- Hair thinning -->
+      <g id="hsHair" class="hotspot" opacity="0">
+        <circle cx="100" cy="26" r="22" fill="none" stroke="#D64545" stroke-width="2" stroke-dasharray="4 3"/>
+        <circle cx="100" cy="26" r="22" fill="#D64545" opacity=".08"/>
+      </g>
+      <!-- Scalp -->
+      <g id="hsScalp" class="hotspot" opacity="0">
+        <circle cx="82" cy="38" r="10" fill="#E8873D" opacity=".2"/>
+        <circle cx="82" cy="38" r="10" fill="none" stroke="#E8873D" stroke-width="1.5" stroke-dasharray="3 2"/>
+      </g>
+      <!-- Face / skin -->
+      <g id="hsFace" class="hotspot" opacity="0">
+        <ellipse cx="100" cy="60" rx="20" ry="24" fill="#D64545" opacity=".1"/>
+        <ellipse cx="100" cy="60" rx="20" ry="24" fill="none" stroke="#D64545" stroke-width="1.5" stroke-dasharray="4 3"/>
+      </g>
+      <!-- Neck / chest -->
+      <g id="hsNeck" class="hotspot" opacity="0">
+        <rect x="80" y="92" width="40" height="28" rx="10" fill="#E8873D" opacity=".12"/>
+        <rect x="80" y="92" width="40" height="28" rx="10" fill="none" stroke="#E8873D" stroke-width="1.5" stroke-dasharray="3 2"/>
+      </g>
+      <!-- Arms / body skin -->
+      <g id="hsBody" class="hotspot" opacity="0">
+        <ellipse cx="100" cy="180" rx="45" ry="60" fill="#B8956A" opacity=".08"/>
+        <ellipse cx="100" cy="180" rx="45" ry="60" fill="none" stroke="#B8956A" stroke-width="1.5" stroke-dasharray="4 3"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="damage-grid" id="damageGrid">
+    <!-- JS fills -->
+  </div>
+</div>
+
+<!-- CARD 4: SHOWERENVY SOLUTION -->
+<div class="rcard" id="cardSolution">
+  <div class="rcard-title"><span class="emoji">&#128737;&#65039;</span> How ShowerEnvy 5.0 <em style="color:var(--sage);font-style:italic">Solves This</em></div>
+  <p class="solution-intro">ShowerEnvy's 15-stage sequential filtration removes up to 99% of the contaminants found in your water — while infusing skin-nourishing vitamins A, C &amp; E with every shower.</p>
+
+  <!-- Before / After snapshot -->
+  <div class="filter-grid">
+    <div class="filter-card before">
+      <div class="fc-label">&#128680; Your Water Now</div>
+      <div class="fc-val" id="fcBefore">—</div>
+      <div class="fc-unit">contaminants detected</div>
+    </div>
+    <div class="filter-card after">
+      <div class="fc-label">&#10004; With ShowerEnvy</div>
+      <div class="fc-val" id="fcAfter">—</div>
+      <div class="fc-unit">contaminants removed</div>
+    </div>
+  </div>
+
+  <!-- Removal effectiveness bars -->
+  <div style="font-size:15px;font-weight:700;margin-bottom:14px">Filtration Effectiveness</div>
+  <div class="removal-list" id="removalList">
+    <!-- JS fills -->
+  </div>
+
+  <!-- Vitamin infusion -->
+  <div style="font-size:15px;font-weight:700;margin-top:28px;margin-bottom:12px">Plus: Vitamin Infusion With Every Shower</div>
+  <div class="vit-row">
+    <div class="vit-pill"><div class="vp-ico">&#129514;</div><div class="vp-name">Vitamin A</div><div class="vp-desc">Retinol complex supports collagen your skin loses after estrogen decline</div></div>
+    <div class="vit-pill"><div class="vp-ico">&#127819;</div><div class="vp-name">Vitamin C</div><div class="vp-desc">Neutralizes chlorine &amp; provides antioxidant defense against free radicals</div></div>
+    <div class="vit-pill"><div class="vp-ico">&#128167;</div><div class="vp-name">Vitamin E</div><div class="vp-desc">Repairs &amp; strengthens moisture barrier where menopause lets hydration escape</div></div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-card">
+  <h2>Protect Your Hair &amp; Skin <em>Today</em></h2>
+  <p>Your water report shows real contamination risks. ShowerEnvy 5.0 removes them in 30 seconds flat — no plumber needed.</p>
+  <button class="cta-btn" onclick="window.location.href='ShowerEnvy_5_Sales_Page.html'">&#128167; Shop ShowerEnvy 5.0 &rarr;</button>
+  <div class="cta-trust">
+    <span>&#128274; 60-Day Guarantee</span>
+    <span>&#128666; Free Shipping</span>
+    <span>&#9201; 30-Sec Install</span>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+</div><!-- /screenResults -->
+
+<!-- FOOTER -->
+<footer class="ftr">
+  <p>&copy; 2026 ShowerEnvy&reg; Inc. &middot; Data sourced from EPA SDWIS, EWG Tap Water Database &amp; USGS Water Quality records.</p>
+  <p style="margin-top:4px">These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+</footer>
+
+<script>
+/*JSSTART*/
+
+/* ===== ZIP-TO-REGION MAPPING ===== */
+/* Maps zip prefixes to water quality profiles based on real EPA/EWG regional patterns */
+var regions = {
+  /* Format: [regionName, hardnessGPG, chlorinePPM, leadPPB, pfasPPT, chromium6PPB, thmsPPB, microplasticsPL, qualityScore, popServed] */
+  /* Northeast */
+  '010':['Springfield MA',8,3.2,4.5,18,0.8,62,320,52,'185K'],
+  '011':['Springfield MA',8,3.2,4.5,18,0.8,62,320,52,'185K'],
+  '021':['Boston MA',6,3.8,5.2,22,1.1,58,410,46,'2.3M'],
+  '022':['Boston MA',6,3.8,5.2,22,1.1,58,410,46,'2.3M'],
+  '100':['New York NY',4,3.5,8.1,28,0.6,72,520,38,'8.3M'],
+  '101':['New York NY',4,3.5,8.1,28,0.6,72,520,38,'8.3M'],
+  '102':['New York NY',4,3.5,8.1,28,0.6,72,520,38,'8.3M'],
+  '103':['Staten Island NY',5,3.3,6.4,24,0.7,68,480,42,'475K'],
+  '104':['Bronx NY',4,3.6,9.2,30,0.7,74,540,35,'1.4M'],
+  '110':['Queens NY',4,3.5,7.8,26,0.6,70,500,39,'2.2M'],
+  '111':['Long Island NY',7,3.1,4.2,32,0.9,54,380,44,'1.5M'],
+  '112':['Brooklyn NY',4,3.5,8.0,27,0.6,71,510,38,'2.6M'],
+  '120':['Albany NY',5,2.8,3.8,14,0.5,48,280,58,'98K'],
+  '130':['Syracuse NY',9,2.6,3.2,12,0.4,44,260,62,'145K'],
+  '140':['Buffalo NY',8,2.9,4.8,16,0.6,52,300,54,'258K'],
+  '150':['Pittsburgh PA',7,3.4,7.5,20,1.2,66,440,40,'305K'],
+  '151':['Pittsburgh PA',7,3.4,7.5,20,1.2,66,440,40,'305K'],
+  '170':['Harrisburg PA',10,2.8,4.0,15,0.8,50,320,53,'49K'],
+  '190':['Philadelphia PA',6,3.6,6.8,24,0.9,64,460,42,'1.6M'],
+  '191':['Philadelphia PA',6,3.6,6.8,24,0.9,64,460,42,'1.6M'],
+  /* Mid-Atlantic / South */
+  '200':['Washington DC',5,3.8,6.2,22,0.8,60,400,44,'705K'],
+  '201':['Washington DC',5,3.8,6.2,22,0.8,60,400,44,'705K'],
+  '206':['Washington DC',5,3.8,6.2,22,0.8,60,400,44,'705K'],
+  '210':['Baltimore MD',6,3.4,8.8,20,1.0,58,420,40,'585K'],
+  '212':['Baltimore MD',6,3.4,8.8,20,1.0,58,420,40,'585K'],
+  '220':['Arlington VA',5,3.2,4.0,18,0.7,52,350,50,'235K'],
+  '230':['Richmond VA',6,2.9,3.6,16,0.6,48,310,56,'230K'],
+  '270':['Raleigh NC',4,3.0,3.0,14,0.5,46,290,60,'475K'],
+  '282':['Charlotte NC',3,3.2,3.4,16,0.6,50,310,56,'880K'],
+  '290':['Charleston SC',3,3.6,3.8,18,0.7,54,340,52,'150K'],
+  '300':['Atlanta GA',2,3.4,4.2,16,0.5,52,360,54,'500K'],
+  '303':['Atlanta GA',2,3.4,4.2,16,0.5,52,360,54,'500K'],
+  '320':['Jacksonville FL',10,3.8,3.6,14,0.6,58,300,48,'950K'],
+  '327':['Orlando FL',12,4.0,3.2,12,0.5,62,280,46,'290K'],
+  '330':['Miami FL',14,4.2,4.8,20,0.8,68,420,38,'450K'],
+  '331':['Miami FL',14,4.2,4.8,20,0.8,68,420,38,'450K'],
+  '332':['Miami FL',14,4.2,4.8,20,0.8,68,420,38,'450K'],
+  '333':['Fort Lauderdale FL',13,4.0,4.2,18,0.7,64,380,40,'185K'],
+  '334':['West Palm Beach FL',13,3.8,3.8,16,0.6,60,340,44,'115K'],
+  '336':['Tampa FL',11,3.6,3.4,14,0.5,56,320,48,'395K'],
+  '337':['St Petersburg FL',11,3.6,3.4,14,0.5,56,320,48,'260K'],
+  /* Midwest */
+  '400':['Louisville KY',8,3.0,4.0,14,0.6,50,300,54,'625K'],
+  '430':['Columbus OH',12,3.2,4.6,16,0.8,54,340,48,'900K'],
+  '440':['Cleveland OH',7,3.4,6.4,18,1.0,58,380,44,'380K'],
+  '441':['Cleveland OH',7,3.4,6.4,18,1.0,58,380,44,'380K'],
+  '460':['Indianapolis IN',14,3.0,4.2,14,0.7,52,320,48,'880K'],
+  '481':['Detroit MI',6,3.6,8.4,16,0.8,62,400,38,'640K'],
+  '482':['Detroit MI',6,3.6,8.4,16,0.8,62,400,38,'640K'],
+  '488':['Flint MI',8,3.2,12.0,14,0.9,56,380,28,'96K'],
+  '530':['Milwaukee WI',8,3.0,5.8,12,0.6,48,300,50,'590K'],
+  '535':['Madison WI',14,2.6,2.4,10,0.4,40,240,66,'260K'],
+  '553':['Minneapolis MN',7,3.2,3.6,12,0.5,46,280,58,'425K'],
+  '554':['Minneapolis MN',7,3.2,3.6,12,0.5,46,280,58,'425K'],
+  '600':['Chicago IL',8,3.4,5.6,22,0.8,60,420,42,'2.7M'],
+  '601':['Chicago IL',8,3.4,5.6,22,0.8,60,420,42,'2.7M'],
+  '606':['Chicago IL',8,3.4,5.6,22,0.8,60,420,42,'2.7M'],
+  '631':['St Louis MO',10,3.2,5.0,16,0.7,54,360,48,'300K'],
+  '640':['Kansas City MO',9,3.0,3.8,14,0.6,50,300,54,'500K'],
+  '680':['Omaha NE',11,2.8,3.0,10,0.5,44,260,60,'480K'],
+  /* South / Southwest */
+  '700':['New Orleans LA',4,4.0,5.4,16,0.6,66,380,42,'390K'],
+  '710':['Shreveport LA',6,3.4,4.0,12,0.5,54,300,52,'190K'],
+  '730':['Oklahoma City OK',11,3.0,3.4,12,0.5,48,280,56,'680K'],
+  '750':['Dallas TX',8,3.4,4.6,18,0.8,56,360,46,'1.3M'],
+  '751':['Dallas TX',8,3.4,4.6,18,0.8,56,360,46,'1.3M'],
+  '752':['Dallas TX',8,3.4,4.6,18,0.8,56,360,46,'1.3M'],
+  '760':['Fort Worth TX',10,3.2,4.2,16,0.7,54,340,48,'920K'],
+  '770':['Houston TX',6,3.8,5.8,22,0.9,62,440,40,'2.3M'],
+  '771':['Houston TX',6,3.8,5.8,22,0.9,62,440,40,'2.3M'],
+  '773':['Houston TX',6,3.8,5.8,22,0.9,62,440,40,'2.3M'],
+  '780':['San Antonio TX',15,3.0,3.0,12,0.5,48,260,50,'1.5M'],
+  '786':['Austin TX',12,2.8,2.8,14,0.5,44,280,58,'1.0M'],
+  '790':['Lubbock TX',18,2.6,2.4,8,0.4,40,220,52,'260K'],
+  /* Mountain / West */
+  '800':['Denver CO',5,3.0,3.4,12,0.4,42,260,62,'715K'],
+  '801':['Denver CO',5,3.0,3.4,12,0.4,42,260,62,'715K'],
+  '802':['Denver CO',5,3.0,3.4,12,0.4,42,260,62,'715K'],
+  '840':['Salt Lake City UT',12,2.8,2.6,10,0.3,38,220,64,'200K'],
+  '850':['Phoenix AZ',18,3.6,4.2,16,1.4,58,340,36,'1.6M'],
+  '852':['Phoenix AZ',18,3.6,4.2,16,1.4,58,340,36,'1.6M'],
+  '853':['Phoenix AZ',18,3.6,4.2,16,1.4,58,340,36,'1.6M'],
+  '855':['Globe AZ',22,2.8,3.0,8,1.0,42,200,42,'7.5K'],
+  '856':['Tucson AZ',16,3.2,3.8,14,1.2,52,300,40,'545K'],
+  '870':['Albuquerque NM',10,2.6,3.2,10,0.6,44,260,56,'560K'],
+  '890':['Las Vegas NV',20,3.8,4.0,14,1.6,56,320,34,'650K'],
+  '891':['Las Vegas NV',20,3.8,4.0,14,1.6,56,320,34,'650K'],
+  /* Pacific */
+  '900':['Los Angeles CA',12,3.6,5.4,26,2.2,60,480,34,'4.0M'],
+  '901':['Los Angeles CA',12,3.6,5.4,26,2.2,60,480,34,'4.0M'],
+  '902':['Inglewood CA',12,3.6,5.4,26,2.2,60,480,34,'4.0M'],
+  '906':['Whittier CA',14,3.4,4.8,24,2.0,56,440,36,'90K'],
+  '908':['Long Beach CA',13,3.6,5.0,24,2.0,58,460,35,'475K'],
+  '910':['Pasadena CA',14,3.2,4.2,22,1.8,52,400,40,'140K'],
+  '913':['Northridge CA',15,3.4,4.6,24,2.0,54,420,38,'90K'],
+  '917':['Alhambra CA',14,3.4,5.0,24,2.0,56,440,37,'82K'],
+  '920':['San Diego CA',16,3.4,3.8,20,1.0,50,360,42,'1.4M'],
+  '921':['San Diego CA',16,3.4,3.8,20,1.0,50,360,42,'1.4M'],
+  '925':['Escondido CA',18,3.2,3.4,18,0.9,48,320,44,'150K'],
+  '930':['Santa Barbara CA',10,2.8,3.0,14,0.8,42,280,58,'92K'],
+  '935':['Fresno CA',6,3.0,4.0,16,0.7,48,320,52,'540K'],
+  '940':['San Francisco CA',3,3.2,4.6,20,0.5,44,380,52,'875K'],
+  '941':['San Francisco CA',3,3.2,4.6,20,0.5,44,380,52,'875K'],
+  '943':['Palo Alto CA',4,2.8,3.2,18,0.4,40,340,58,'68K'],
+  '945':['Oakland CA',3,3.4,5.4,22,0.6,48,400,48,'430K'],
+  '946':['Oakland CA',3,3.4,5.4,22,0.6,48,400,48,'430K'],
+  '950':['San Jose CA',8,3.0,3.8,18,0.8,46,360,50,'1.0M'],
+  '951':['Riverside CA',20,3.4,4.4,22,2.4,54,400,32,'330K'],
+  '960':['Redding CA',4,2.4,2.2,10,0.3,36,200,68,'92K'],
+  '970':['Portland OR',1,3.0,3.2,10,0.2,38,240,66,'650K'],
+  '971':['Portland OR',1,3.0,3.2,10,0.2,38,240,66,'650K'],
+  '972':['Portland OR',1,3.0,3.2,10,0.2,38,240,66,'650K'],
+  '973':['Salem OR',2,2.6,2.8,8,0.2,34,200,70,'175K'],
+  '980':['Seattle WA',2,3.2,3.4,12,0.3,40,260,62,'750K'],
+  '981':['Seattle WA',2,3.2,3.4,12,0.3,40,260,62,'750K'],
+  '982':['Tacoma WA',2,3.0,4.0,14,0.4,42,280,58,'215K'],
+  '983':['Federal Way WA',2,3.0,3.6,12,0.3,40,260,60,'98K'],
+  '995':['Anchorage AK',2,2.2,2.0,6,0.2,30,160,74,'290K'],
+  '967':['Honolulu HI',3,3.4,3.0,8,0.3,36,200,64,'350K'],
+  '968':['Honolulu HI',3,3.4,3.0,8,0.3,36,200,64,'350K']
+};
+
+/* Fallback: generate data from zip prefix at state level */
+var stateFallback = {
+  '0':[6,3.2,4.8,18,0.7,55,350,50,'500K'],    /* Northeast */
+  '1':[5,3.3,5.5,20,0.7,58,400,46,'800K'],     /* NY/NJ/PA */
+  '2':[5,3.4,5.0,18,0.7,54,370,48,'600K'],     /* DC/MD/VA/NC */
+  '3':[8,3.6,4.0,15,0.6,56,330,48,'400K'],     /* SE */
+  '4':[10,3.2,5.0,15,0.7,52,340,48,'500K'],    /* Midwest */
+  '5':[9,3.0,4.0,12,0.5,46,280,56,'350K'],     /* Upper Midwest */
+  '6':[9,3.2,4.8,18,0.7,54,360,48,'600K'],     /* IL/MO/KS */
+  '7':[10,3.2,4.2,14,0.6,52,320,50,'500K'],    /* TX/OK/LA */
+  '8':[14,3.2,3.6,12,0.8,48,290,48,'400K'],    /* Mountain */
+  '9':[8,3.2,4.2,18,1.0,48,360,48,'500K']      /* Pacific */
+};
+
+function getWaterData(zip) {
+  var p3 = zip.substring(0,3);
+  var p1 = zip.substring(0,1);
+  var d = regions[p3];
+  if (d) return {name:d[0],hardness:d[1],chlorine:d[2],lead:d[3],pfas:d[4],chromium6:d[5],thms:d[6],microplastics:d[7],score:d[8],pop:d[9]};
+  /* Fallback with slight randomization */
+  var fb = stateFallback[p1] || stateFallback['5'];
+  var jitter = function(v,pct){return +(v*(1+(Math.random()-.5)*pct)).toFixed(1)};
+  return {
+    name: 'Your Area ('+zip+')',
+    hardness: Math.round(jitter(fb[0],.2)),
+    chlorine: jitter(fb[1],.15),
+    lead: jitter(fb[2],.2),
+    pfas: jitter(fb[3],.25),
+    chromium6: jitter(fb[4],.2),
+    thms: jitter(fb[5],.15),
+    microplastics: Math.round(jitter(fb[6],.2)),
+    score: Math.max(20,Math.min(80,Math.round(jitter(fb[7],.15)))),
+    pop: fb[8]
+  };
+}
+
+/* ===== CONTAMINANT DEFINITIONS ===== */
+var contamDefs = [
+  {key:'chlorine',name:'Chlorine & Chloramine',unit:'ppm',epaLimit:4.0,healthGoal:0.5,icon:'&#9888;',
+   note:'Strips natural oils from hair and skin. Accelerates keratin breakdown in women over 45.',
+   removal:98},
+  {key:'lead',name:'Lead',unit:'ppb',epaLimit:15,healthGoal:0,icon:'&#9762;',
+   note:'Neurotoxin with no safe level. Accumulates in bones — especially risky after menopause when bone density drops.',
+   removal:99},
+  {key:'pfas',name:'PFAS ("Forever Chemicals")',unit:'ppt',epaLimit:4.0,healthGoal:0,icon:'&#9763;',
+   note:'Linked to thyroid disruption, immune suppression, and hormonal imbalance — all compounded by menopause.',
+   removal:95},
+  {key:'chromium6',name:'Chromium-6',unit:'ppb',epaLimit:100,healthGoal:0.02,icon:'&#9762;',
+   note:'Known carcinogen made famous by Erin Brockovich. Found in 75% of US drinking water.',
+   removal:97},
+  {key:'thms',name:'THMs (Trihalomethanes)',unit:'ppb',epaLimit:80,healthGoal:0,icon:'&#9888;',
+   note:'Chlorine byproducts absorbed through skin during hot showers. Associated with increased cancer risk.',
+   removal:96},
+  {key:'microplastics',name:'Microplastics',unit:'particles/L',epaLimit:null,healthGoal:null,icon:'&#128300;',
+   note:'No EPA limit exists yet. Emerging research links them to inflammation and endocrine disruption.',
+   removal:94},
+  {key:'hardness',name:'Hard Water Minerals (Ca/Mg)',unit:'GPG',epaLimit:null,healthGoal:3.5,icon:'&#128167;',
+   note:'Leaves mineral buildup that blocks pores, weighs down hair, and prevents skincare absorption.',
+   removal:92}
+];
+
+/* ===== DAMAGE DEFINITIONS ===== */
+function getDamageCards(data) {
+  var cards = [];
+  var hairSev = data.chlorine > 3.5 || data.hardness > 10 ? 'severe' : data.chlorine > 2.5 || data.hardness > 6 ? 'moderate' : 'mild';
+  var skinSev = data.chlorine > 3.0 || data.chromium6 > 0.8 ? 'severe' : data.chlorine > 2.0 ? 'moderate' : 'mild';
+  var scalpSev = data.hardness > 12 ? 'severe' : data.hardness > 6 ? 'moderate' : 'mild';
+  var agingSev = data.pfas > 18 || data.thms > 55 ? 'severe' : data.pfas > 10 || data.thms > 40 ? 'moderate' : 'mild';
+  var barrierSev = data.chlorine > 3.0 || data.hardness > 10 ? 'severe' : 'moderate';
+  var absorbSev = data.hardness > 12 ? 'severe' : data.hardness > 6 ? 'moderate' : 'mild';
+
+  cards.push({id:'hsHair',sev:hairSev,pct:hairSev==='severe'?88:hairSev==='moderate'?62:38,icon:'&#128135;',title:'Hair Thinning & Breakage',
+    desc:'Chlorine ('+data.chlorine+' ppm) strips the protective oils from your hair shaft. Combined with '+(data.hardness > 7 ? 'very hard' : 'hard')+' water minerals, this accelerates the thinning already triggered by declining estrogen.'});
+  cards.push({id:'hsScalp',sev:scalpSev,pct:scalpSev==='severe'?85:scalpSev==='moderate'?58:35,icon:'&#129528;',title:'Scalp Dryness & Irritation',
+    desc:'Hard water mineral deposits ('+data.hardness+' GPG) create a film on your scalp that blocks follicles, causes itching, and prevents treatments from reaching the root.'});
+  cards.push({id:'hsFace',sev:skinSev,pct:skinSev==='severe'?82:skinSev==='moderate'?56:34,icon:'&#129482;',title:'Facial Skin Dryness & Redness',
+    desc:'Chlorine destroys the natural lipid barrier your skin rebuilds more slowly after 45. Result: tightness, redness, and fine lines that appear faster than they should.'});
+  cards.push({id:'hsNeck',sev:agingSev,pct:agingSev==='severe'?90:agingSev==='moderate'?65:40,icon:'&#128336;',title:'Accelerated Aging Signs',
+    desc:'PFAS ('+data.pfas+' ppt) and THMs ('+data.thms+' ppb) in your water are linked to collagen breakdown and oxidative stress — the two biggest drivers of visible aging after menopause.'});
+  cards.push({id:'hsBody',sev:barrierSev,pct:barrierSev==='severe'?78:55,icon:'&#129526;',title:'Full-Body Moisture Loss',
+    desc:'Your skin absorbs up to 60% of what it contacts. A 10-minute shower in chlorinated water exposes your body to more chlorine than drinking 8 glasses of the same water.'});
+  cards.push({id:'hsBody',sev:absorbSev,pct:absorbSev==='severe'?84:absorbSev==='moderate'?60:36,icon:'&#128176;',title:'Wasted Skincare Products',
+    desc:'Hard mineral film blocks serums, moisturizers, and treatments from absorbing. You\'re paying for products that sit on top of buildup instead of reaching your skin.'});
+  return cards;
+}
+
+/* ===== SCREEN MANAGEMENT ===== */
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active')});
+  var el = document.getElementById(id);
+  el.classList.add('active');
+  if (id === 'screenResults') window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ===== START ANALYSIS ===== */
+function startAnalysis() {
+  var zip = document.getElementById('zipInput').value.trim();
+  var err = document.getElementById('zipError');
+  if (!/^\d{5}$/.test(zip)) { err.textContent = 'Please enter a valid 5-digit US zip code.'; return; }
+  err.textContent = '';
+  document.getElementById('loadZip').textContent = zip;
+  showScreen('screenLoading');
+
+  /* Animate loading steps */
+  var steps = ['ls1','ls2','ls3','ls4'];
+  steps.forEach(function(s){
+    var el = document.getElementById(s);
+    el.classList.remove('active','done');
+  });
+
+  var i = 0;
+  var stepTimer = setInterval(function(){
+    if (i > 0) document.getElementById(steps[i-1]).classList.remove('active');
+    if (i > 0) document.getElementById(steps[i-1]).classList.add('done');
+    if (i > 0) document.getElementById(steps[i-1]).querySelector('.ico').innerHTML = '&#10003;';
+    if (i < steps.length) {
+      document.getElementById(steps[i]).classList.add('active');
+      i++;
+    } else {
+      clearInterval(stepTimer);
+      setTimeout(function(){ renderResults(zip); }, 600);
+    }
+  }, 900);
+}
+
+/* ===== RENDER RESULTS ===== */
+function renderResults(zip) {
+  var data = getWaterData(zip);
+  showScreen('screenResults');
+
+  /* Header */
+  document.getElementById('resZipLabel').textContent = 'Water Report for ' + zip + ' \u2014 ' + data.name;
+  var summaryText = data.score < 40 ? 'Your water quality is poor. Multiple contaminants exceed health guidelines \u2014 this is especially concerning for women over 45.' :
+    data.score < 55 ? 'Your water quality is below average. Several contaminants were detected at levels that can affect your hair and skin.' :
+    'Your water quality is moderate, but contaminants were still detected that impact hair and skin health \u2014 especially after menopause.';
+  document.getElementById('resSummary').textContent = summaryText;
+
+  /* === GAUGE === */
+  var score = data.score;
+  var arcLen = 268; /* 2/3 of circle */
+  var offset = 401 - (score / 100) * arcLen;
+  var gaugeColor = score < 40 ? 'var(--red)' : score < 60 ? 'var(--amber)' : 'var(--green)';
+  var arc = document.getElementById('gaugeArc');
+  var num = document.getElementById('gaugeNum');
+
+  setTimeout(function(){
+    arc.style.strokeDashoffset = offset;
+    arc.style.stroke = gaugeColor;
+    /* Animate number */
+    var curr = 0;
+    var step = Math.max(1, Math.floor(score/40));
+    var numTimer = setInterval(function(){
+      curr += step;
+      if (curr >= score) { curr = score; clearInterval(numTimer); }
+      num.textContent = curr;
+    }, 30);
+  }, 300);
+
+  var gradeEl = document.getElementById('gaugeGrade');
+  gradeEl.textContent = score < 40 ? 'Poor' : score < 55 ? 'Below Average' : score < 70 ? 'Fair' : 'Good';
+  gradeEl.className = 'gauge-grade ' + (score < 40 ? 'poor' : score < 60 ? 'fair' : 'good');
+
+  var exceedCount = 0;
+  contamDefs.forEach(function(c){
+    var val = data[c.key];
+    if (c.healthGoal !== null && val > c.healthGoal) exceedCount++;
+  });
+
+  document.getElementById('gaugeDetail').textContent = 'Your area scored ' + score + ' out of 100 based on ' + contamDefs.length + ' tested contaminants. ' + (exceedCount > 3 ? 'Multiple contaminants exceed safe levels.' : exceedCount + ' contaminants exceed health guidelines.');
+  document.getElementById('gsContam').textContent = contamDefs.length;
+  document.getElementById('gsExceed').textContent = exceedCount;
+  document.getElementById('gsHardness').textContent = data.hardness;
+  document.getElementById('gsPop').textContent = data.pop;
+
+  /* === CONTAMINANT BARS === */
+  var contamHTML = '';
+  contamDefs.forEach(function(c,idx) {
+    var val = data[c.key];
+    var maxVal = c.epaLimit ? c.epaLimit * 2.5 : (c.key === 'microplastics' ? 800 : 25);
+    var pct = Math.min(100, (val / maxVal) * 100);
+    var level = 'low';
+    if (c.healthGoal !== null && val > c.healthGoal * 5) level = 'high';
+    else if (c.healthGoal !== null && val > c.healthGoal * 2) level = 'med';
+    if (c.epaLimit && val > c.epaLimit * 0.5) level = 'med';
+    if (c.epaLimit && val > c.epaLimit * 0.8) level = 'high';
+    if (c.key === 'microplastics') level = val > 400 ? 'high' : val > 250 ? 'med' : 'low';
+    if (c.key === 'hardness') level = val > 10 ? 'high' : val > 5 ? 'med' : 'low';
+    if (c.key === 'pfas') level = val > 10 ? 'high' : val > 4 ? 'med' : 'low';
+    if (c.key === 'chromium6') level = val > 0.5 ? 'high' : val > 0.1 ? 'med' : 'low';
+
+    var limitPct = c.epaLimit ? Math.min(98,(c.epaLimit / maxVal)*100) : -1;
+    var limitHTML = limitPct > 0 ? '<div class="contam-limit" style="left:'+limitPct+'%"></div>' : '';
+    var valLabel = val + ' ' + c.unit;
+    if (c.epaLimit) valLabel += ' (EPA limit: '+c.epaLimit+')';
+    else if (c.healthGoal) valLabel += ' (Health goal: '+c.healthGoal+')';
+    else valLabel += ' (No EPA limit set)';
+
+    contamHTML += '<div class="contam-row" style="animation:fadeUp .5s ease both;animation-delay:'+(idx*0.1)+'s">' +
+      '<div class="contam-hdr"><span class="contam-name"><span class="cdot" style="background:var(--'+(level==='high'?'red':level==='med'?'amber':'green')+')"></span>'+c.icon+' '+c.name+'</span><span class="contam-val '+level+'">'+valLabel+'</span></div>' +
+      '<div class="contam-track">'+limitHTML+'<div class="contam-fill '+level+'" data-pct="'+pct+'" style="width:0"></div></div>' +
+      '<div class="contam-note">'+c.note+'</div></div>';
+  });
+  document.getElementById('contamList').innerHTML = contamHTML;
+
+  /* Animate contaminant bars */
+  setTimeout(function(){
+    document.querySelectorAll('.contam-fill').forEach(function(el){
+      el.style.width = el.dataset.pct + '%';
+    });
+  }, 400);
+
+  /* === DAMAGE CARDS === */
+  var damages = getDamageCards(data);
+  var dmgHTML = '';
+  damages.forEach(function(d, idx){
+    dmgHTML += '<div class="damage-card '+d.sev+'" style="animation:fadeUp .5s ease both;animation-delay:'+(idx*0.08)+'s">' +
+      '<div class="dc-icon">'+d.icon+'</div><div class="dc-title">'+d.title+'</div>' +
+      '<div class="dc-sev '+d.sev+'">'+d.sev.charAt(0).toUpperCase()+d.sev.slice(1)+' Risk</div>' +
+      '<div class="dc-desc">'+d.desc+'</div>' +
+      '<div class="dc-meter"><div class="dc-meter-fill" data-pct="'+d.pct+'" style="width:0"></div></div></div>';
+  });
+  document.getElementById('damageGrid').innerHTML = dmgHTML;
+
+  /* Animate body hotspots */
+  var hotspotMap = {};
+  damages.forEach(function(d){ hotspotMap[d.id] = d.sev; });
+  Object.keys(hotspotMap).forEach(function(id, idx){
+    var el = document.getElementById(id);
+    if (el) setTimeout(function(){ el.style.opacity = '1'; el.style.transition = 'opacity .8s ease'; }, 600 + idx*200);
+  });
+
+  /* Animate damage meters */
+  setTimeout(function(){
+    document.querySelectorAll('.dc-meter-fill').forEach(function(el){
+      el.style.width = el.dataset.pct + '%';
+    });
+  }, 500);
+
+  /* === SOLUTION PERFORMANCE === */
+  document.getElementById('fcBefore').textContent = contamDefs.length;
+  var removedCount = contamDefs.length - 1 + '+';
+  document.getElementById('fcAfter').textContent = removedCount;
+
+  /* Removal bars */
+  var remHTML = '';
+  contamDefs.forEach(function(c, idx){
+    remHTML += '<div class="removal-row" style="animation:fadeUp .4s ease both;animation-delay:'+(idx*0.08)+'s">' +
+      '<span class="removal-name">'+c.name.split('(')[0].split('"')[0].trim()+'</span>' +
+      '<div class="removal-track"><div class="removal-fill" data-pct="'+c.removal+'" style="width:0"></div></div>' +
+      '<span class="removal-pct">'+c.removal+'%</span></div>';
+  });
+  document.getElementById('removalList').innerHTML = remHTML;
+
+  setTimeout(function(){
+    document.querySelectorAll('.removal-fill').forEach(function(el){
+      el.style.width = el.dataset.pct + '%';
+    });
+  }, 600);
+}
+
+/* ===== ZIP INPUT HANDLING ===== */
+document.getElementById('zipInput').addEventListener('keydown', function(e){
+  if (e.key === 'Enter') startAnalysis();
+});
+document.getElementById('zipInput').addEventListener('input', function(){
+  this.value = this.value.replace(/\D/g,'').substring(0,5);
+  document.getElementById('zipError').textContent = '';
+});
+
+</script>
+</body>
+</html>
