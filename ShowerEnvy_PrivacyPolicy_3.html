@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2714%27 fill=%27%235E8A6A%27/%3E%3Cpath d=%27M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3%27 stroke=%27%23fff%27 stroke-width=%272%27 stroke-linecap=%27round%27 fill=%27none%27/%3E%3Ccircle cx=%2716%27 cy=%2724%27 r=%271.2%27 fill=%27%23fff%27/%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — ShowerEnvy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1F1D1A;--ink-deep:#141210;--sage:#5E8A6A;--sage-light:#EBF2ED;--sage-mid:#C4D9CA;--saged:#4A7254;--cream:#FAF6F0;--warm:#FEFCF8;--gold:#B08642;--gold-light:#F5EDE3;--gold-dark:#8A6A34;--rose:#C25D4E;--ink2:#4A4743;--mut:#8A857D;--light:#A8A29E;--bdr:#E8E3DA;--success:#16A34A;--shadow-sm:0 2px 8px rgba(31,29,26,.06);--shadow-md:0 8px 32px rgba(31,29,26,.08)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'DM Sans',sans-serif;background:var(--warm);color:var(--ink2);font-size:16px;line-height:1.8}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;color:var(--ink);line-height:1.25}
+a{color:var(--sage);text-decoration:none;font-weight:500;transition:color .2s}
+a:hover{color:var(--saged)}
+button{font-family:'DM Sans',sans-serif;cursor:pointer;border:none}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.vis{opacity:1;transform:none}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* Layout */
+.page{max-width:1200px;margin:0 auto;padding:0 32px}
+.content{max-width:800px;margin:0 auto}
+
+/* Nav */
+.topnav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--bdr)}
+.logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:28px;font-weight:500;letter-spacing:-.01em;color:var(--ink)}
+.logo span{color:var(--sage);font-weight:700;font-style:italic}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:14px;color:var(--mut);font-weight:500}
+.nav-links a:hover{color:var(--sage)}
+.nav-links a.act{color:var(--sage);font-weight:700}
+.cart-btn{background:linear-gradient(135deg,var(--sage),var(--saged));color:#fff;padding:12px 24px;border-radius:10px;font-size:14px;font-weight:700;box-shadow:0 2px 12px rgba(94,138,106,.25);transition:transform .2s}
+.cart-btn:hover{transform:translateY(-2px)}
+
+/* Hero */
+.policy-hero{padding:64px 0 48px;text-align:center}
+.policy-hero .badge{display:inline-block;padding:6px 18px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);background:var(--sage-light);margin-bottom:20px}
+.policy-hero h1{font-size:44px;margin-bottom:16px}
+.policy-hero-sub{font-size:18px;color:var(--mut);max-width:600px;margin:0 auto 32px;line-height:1.7}
+.updated{font-size:14px;color:var(--light);font-weight:500}
+
+/* Quick Promise Box */
+.promise-box{background:linear-gradient(135deg,var(--sage-light),#D4E5D8);border-radius:20px;padding:36px 40px;margin-bottom:48px;border:1px solid rgba(94,138,106,.12)}
+.promise-box h3{font-size:22px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.promise-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.promise-item{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.6;color:var(--ink)}
+.promise-icon{width:24px;height:24px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:14px;box-shadow:var(--shadow-sm)}
+
+/* Section cards */
+.policy-section{background:#fff;border-radius:20px;padding:36px 40px;margin-bottom:24px;border:1px solid var(--bdr);box-shadow:var(--shadow-sm);transition:box-shadow .3s}
+.policy-section:hover{box-shadow:var(--shadow-md)}
+.section-header{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.section-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.section-header h2{font-size:24px}
+.section-header p{font-size:14px;color:var(--mut);margin-top:2px}
+
+/* Content styling */
+.policy-section p{font-size:15px;line-height:1.8;color:var(--ink2);margin-bottom:14px}
+.policy-section p:last-child{margin-bottom:0}
+.highlight-box{background:var(--cream);border-radius:12px;padding:20px 24px;margin:16px 0;border-left:4px solid var(--sage)}
+.highlight-box.gold{border-left-color:var(--gold);background:var(--gold-light)}
+.highlight-box p{margin-bottom:0;font-size:14px}
+.highlight-box strong{color:var(--ink)}
+
+.plain-list{list-style:none;padding:0;margin:12px 0}
+.plain-list li{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.7;margin-bottom:10px}
+.plain-list li::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--sage-mid);flex-shrink:0;margin-top:8px}
+
+.never-list li::before{background:#FECACA}
+.do-list li::before{background:#BBF7D0}
+
+/* Contact card */
+.contact-card{background:linear-gradient(135deg,var(--ink-deep),var(--ink),#2A2825);border-radius:24px;padding:48px;text-align:center;color:#fff;position:relative;overflow:hidden;margin-top:48px}
+.contact-card::before{content:'';position:absolute;inset:0;opacity:.04;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:48px 48px}
+.contact-card>*{position:relative;z-index:1}
+.contact-card h2{color:#fff;font-size:28px;margin-bottom:12px}
+.contact-card p{color:rgba(255,255,255,.65);font-size:16px;margin-bottom:28px}
+.contact-methods{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.contact-method{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:20px 28px;text-align:center;min-width:200px;transition:background .3s}
+.contact-method:hover{background:rgba(255,255,255,.12)}
+.contact-method .cm-icon{font-size:28px;margin-bottom:8px}
+.contact-method .cm-label{font-size:12px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:4px}
+.contact-method .cm-value{font-size:16px;color:#fff;font-weight:700}
+.contact-method .cm-note{font-size:12px;color:rgba(255,255,255,.4);margin-top:4px}
+
+/* TOC sidebar */
+.toc{position:sticky;top:100px}
+.toc-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--light);margin-bottom:12px}
+.toc a{display:block;font-size:14px;color:var(--mut);padding:6px 0;border-left:2px solid transparent;padding-left:14px;transition:all .2s;font-weight:500}
+.toc a:hover,.toc a.active{color:var(--sage);border-left-color:var(--sage)}
+
+/* Two-col layout */
+.policy-layout{display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:start}
+@media(max-width:900px){.policy-layout{grid-template-columns:1fr}.toc{display:none}}
+
+/* Footer */
+.footer{padding:40px 0 48px;border-top:1px solid var(--bdr);margin-top:48px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}
+.footer-links a{color:var(--mut)}
+.footer-links a:hover{color:var(--sage)}
+.footer-copy{font-size:12px;color:var(--light)}
+
+/* Scroll top */
+.scroll-top{position:fixed;bottom:32px;right:32px;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--sage),var(--saged));color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(94,138,106,.3);opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;z-index:200;font-size:20px}
+.scroll-top.show{opacity:1;transform:none}
+.scroll-top:hover{transform:translateY(-3px)}
+
+/* ═══ MOBILE RESPONSIVE ═══ */
+@media(max-width:768px){
+  .page{padding:0 18px}
+  .topnav{padding:16px 0}
+  .nav-links{display:none}
+  .ham{display:flex!important}
+  .policy-hero{padding:40px 0 32px}
+  .policy-hero h1{font-size:32px}
+  .policy-hero-sub{font-size:16px}
+  .promise-box{padding:24px 20px;border-radius:16px}
+  .promise-grid{grid-template-columns:1fr}
+  .policy-section{padding:24px 20px;border-radius:16px}
+  .section-header h2{font-size:20px}
+  .section-icon{width:40px;height:40px;border-radius:12px;font-size:20px}
+  .contact-card{padding:32px 20px;border-radius:18px}
+  .contact-card h2{font-size:22px}
+  .contact-methods{flex-direction:column;align-items:stretch}
+  .contact-method{min-width:auto}
+  .footer-inner{flex-direction:column;text-align:center;gap:14px}
+  .footer-links{flex-wrap:wrap;justify-content:center;gap:14px}
+  .scroll-top{bottom:20px;right:20px;width:44px;height:44px}
+  .highlight-box{padding:16px 18px}
+  .cart-btn{padding:10px 18px;font-size:14px}
+  .topnav>.cart-btn{display:none}
+}
+@media(max-width:480px){
+  .page{padding:0 14px}
+  .policy-hero h1{font-size:28px}
+  .policy-section{padding:20px 16px}
+  .promise-box{padding:20px 16px}
+  .contact-card{padding:28px 16px}
+}
+/* Hamburger */
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.ham span{display:block;width:22px;height:2px;background:var(--ink);border-radius:1px;transition:all .3s}
+
+/* Mobile nav overlay + drawer */
+.mob-overlay{position:fixed;inset:0;background:rgba(31,29,26,.4);z-index:998;opacity:0;pointer-events:none;transition:opacity .3s;-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.mob-overlay.open{opacity:1;pointer-events:auto}
+.mob-menu{position:fixed;top:0;right:-300px;width:280px;height:100%;background:var(--warm,#FEFCF8);z-index:999;padding:24px;box-shadow:-4px 0 24px rgba(31,29,26,.1);transition:right .35s cubic-bezier(.16,1,.3,1);overflow-y:auto;-webkit-overflow-scrolling:touch}
+.mob-menu.open{right:0}
+.mob-link{display:block;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:500;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--bdr);text-decoration:none;transition:color .2s}
+.mob-link:hover{color:var(--sage)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- NAV -->
+<nav class="topnav">
+  <div style="display:flex;align-items:center;gap:24px">
+    <div class="logo"><svg class="brand-mark" width="24" height="24" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:6px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">2.0 Handheld</a>
+      <a href="#">5.0 Stationary</a>
+      <a href="#">Science</a>
+      <a href="#">Reviews</a>
+    </div>
+  </div>
+  <button class="cart-btn">Shop Now</button>
+  <button class="ham" aria-label="Menu" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE NAV OVERLAY -->
+<div class="mob-overlay" id="mobOverlay" onclick="toggleMobileNav()"></div>
+<div class="mob-menu" id="mobMenu">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+    <div class="logo" style="font-size:22px"><svg width="20" height="20" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:5px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></div>
+    <button onclick="toggleMobileNav()" style="background:none;border:none;font-size:24px;color:var(--ink);cursor:pointer;padding:4px">✕</button>
+  </div>
+  <a href="#" class="mob-link">Home</a>
+  <a href="#" class="mob-link">2.0 Handheld</a>
+  <a href="#" class="mob-link">5.0 Stationary</a>
+  <a href="#" class="mob-link">Science</a>
+  <a href="#" class="mob-link">Reviews</a>
+  <a href="#" class="mob-link">Filters</a>
+  <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--bdr)">
+    <button class="cart-btn" style="width:100%;text-align:center;padding:14px 0;font-size:15px;border-radius:12px">Shop Now</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="policy-hero rv">
+  <div class="badge">YOUR PRIVACY MATTERS</div>
+  <h1>Privacy Policy</h1>
+  <p class="policy-hero-sub">We believe you deserve to know exactly what happens with your information — explained in plain English, not legal jargon.</p>
+  <div class="updated">Last updated: February 15, 2026 · Effective immediately</div>
+</section>
+
+<!-- PROMISE BOX -->
+<div class="promise-box rv rv-d1">
+  <h3>🛡️ Our Privacy Promise to You</h3>
+  <div class="promise-grid">
+    <div class="promise-item"><div class="promise-icon">✓</div> We never sell your personal information. Ever.</div>
+    <div class="promise-item"><div class="promise-icon">✓</div> We never share your data with advertisers.</div>
+    <div class="promise-item"><div class="promise-icon">✓</div> We use bank-level encryption (256-bit SSL).</div>
+    <div class="promise-item"><div class="promise-icon">✓</div> You can delete your data anytime — just ask.</div>
+    <div class="promise-item"><div class="promise-icon">✓</div> We only collect what we need to serve you.</div>
+    <div class="promise-item"><div class="promise-icon">✓</div> You'll never get surprise emails you didn't sign up for.</div>
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="policy-layout">
+
+<!-- TOC -->
+<aside>
+  <div class="toc">
+    <div class="toc-title">On this page</div>
+    <a href="#who">Who We Are</a>
+    <a href="#collect">What We Collect</a>
+    <a href="#why">Why We Collect It</a>
+    <a href="#never">What We Never Do</a>
+    <a href="#cookies">Cookies</a>
+    <a href="#sharing">Data Sharing</a>
+    <a href="#security">Security</a>
+    <a href="#rights">Your Rights</a>
+    <a href="#children">Children's Privacy</a>
+    <a href="#changes">Policy Changes</a>
+    <a href="#contact">Contact Us</a>
+  </div>
+</aside>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <!-- WHO WE ARE -->
+  <div class="policy-section rv" id="who">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">👋</div>
+      <div><h2>Who We Are</h2><p>The real people behind ShowerEnvy</p></div>
+    </div>
+    <p>ShowerEnvy Technologies LLC is a woman-founded company based in Cheyenne, Wyoming. We design filtered showerheads specifically for women experiencing hormonal hair and skin changes — because we've been through it ourselves.</p>
+    <p>When we say "ShowerEnvy," "we," "us," or "our" in this policy, we mean ShowerEnvy Technologies LLC and our website at showerenvy.com.</p>
+    <div class="highlight-box">
+      <p><strong>Our company details:</strong><br>ShowerEnvy Technologies LLC<br>Cheyenne, Wyoming 82001, USA<br>📧 <a href="mailto:hello@showerenvy.com">hello@showerenvy.com</a><br>📞 <a href="tel:+18339240099">+1 (833) 924-0099</a> · Mon–Fri 9 AM–5 PM EST</p>
+    </div>
+  </div>
+
+  <!-- WHAT WE COLLECT -->
+  <div class="policy-section rv" id="collect">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">📋</div>
+      <div><h2>What We Collect</h2><p>Only what we genuinely need</p></div>
+    </div>
+    <p>We keep our data collection minimal. Here's everything we may collect and exactly why:</p>
+
+    <p><strong>When you place an order:</strong></p>
+    <ul class="plain-list">
+      <li>Your name and email address (so we can confirm your order and reach you if there's an issue)</li>
+      <li>Shipping address (so your 2.0 Handheld or 5.0 Stationary arrives at your door)</li>
+      <li>Phone number (only if you provide it — for delivery notifications)</li>
+      <li>Payment information (processed securely by Stripe — we never see or store your full card number)</li>
+    </ul>
+
+    <p><strong>When you visit our website:</strong></p>
+    <ul class="plain-list">
+      <li>Basic browsing data (pages visited, time spent — helps us improve your experience)</li>
+      <li>Device type and browser (so our site looks great on your phone, tablet, or computer)</li>
+      <li>IP address (required for security and fraud prevention)</li>
+    </ul>
+
+    <p><strong>When you contact us:</strong></p>
+    <ul class="plain-list">
+      <li>Your email or phone number (so we can respond)</li>
+      <li>The content of your message (so we can actually help)</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p><strong>Plain-English summary:</strong> We collect your name, email, address, and payment info when you buy something. We see basic website activity. That's it. No health data, no invasive tracking, no social media snooping.</p>
+    </div>
+  </div>
+
+  <!-- WHY WE COLLECT IT -->
+  <div class="policy-section rv" id="why">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">💡</div>
+      <div><h2>Why We Collect It</h2><p>Every piece of data has a clear purpose</p></div>
+    </div>
+    <ul class="plain-list">
+      <li><strong>To fulfill your order</strong> — ship your showerhead, send tracking info, and process your payment</li>
+      <li><strong>To provide customer support</strong> — answer questions about installation, filter replacements, or your subscription</li>
+      <li><strong>To send order updates</strong> — shipping confirmations, delivery notifications, and subscription reminders (7 days before each filter shipment)</li>
+      <li><strong>To improve our products</strong> — understanding which features matter most helps us build better showerheads</li>
+      <li><strong>To prevent fraud</strong> — keeping transactions safe protects both you and us</li>
+      <li><strong>To send marketing emails</strong> — only if you explicitly opt in, and you can unsubscribe with one click anytime</li>
+    </ul>
+  </div>
+
+  <!-- WHAT WE NEVER DO -->
+  <div class="policy-section rv" id="never">
+    <div class="section-header">
+      <div class="section-icon" style="background:#FEF2F2">🚫</div>
+      <div><h2>What We Never Do</h2><p>Our firm commitments to you</p></div>
+    </div>
+    <p>This is the part we're most proud of. Here's what we will <strong>never</strong> do with your information:</p>
+    <ul class="plain-list never-list">
+      <li><strong>Sell your data to anyone.</strong> Not to advertisers, data brokers, or anyone else. Period.</li>
+      <li><strong>Share your email with other companies</strong> so they can market to you.</li>
+      <li><strong>Track your activity across other websites.</strong> What you do outside showerenvy.com is your business.</li>
+      <li><strong>Collect sensitive health information.</strong> We know our products help with hormonal changes, but we don't ask for or store medical details.</li>
+      <li><strong>Keep your data longer than necessary.</strong> If you ask us to delete it, we will — within 30 days.</li>
+      <li><strong>Make it hard to unsubscribe.</strong> Every email has a one-click unsubscribe link. No guilt trips, no "are you sure?" pages.</li>
+    </ul>
+  </div>
+
+  <!-- COOKIES -->
+  <div class="policy-section rv" id="cookies">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">🍪</div>
+      <div><h2>Cookies</h2><p>The digital kind (we wish they were chocolate)</p></div>
+    </div>
+    <p>Cookies are small files stored on your device that help our website work properly. Here's what we use:</p>
+
+    <p><strong>Essential cookies (required):</strong> These keep your shopping cart working, remember your login, and maintain security. The site can't function without them.</p>
+
+    <p><strong>Analytics cookies (optional):</strong> These help us understand how visitors use our site — like which pages are most popular or where people get stuck. We use this data in aggregate (not to identify individuals) to make the experience better for everyone.</p>
+
+    <p><strong>Marketing cookies (optional):</strong> If you've opted in to marketing, these help us show you relevant content. You can disable these in your browser settings at any time.</p>
+
+    <div class="highlight-box">
+      <p><strong>How to control cookies:</strong> Most browsers let you block or delete cookies through their settings. Blocking essential cookies may affect your shopping experience, but analytics and marketing cookies can be disabled without any impact.</p>
+    </div>
+  </div>
+
+  <!-- DATA SHARING -->
+  <div class="policy-section rv" id="sharing">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">🤝</div>
+      <div><h2>Who We Share Data With</h2><p>Only trusted partners who help us serve you</p></div>
+    </div>
+    <p>We work with a small number of carefully chosen partners. They only receive the minimum information needed to do their job:</p>
+    <ul class="plain-list do-list">
+      <li><strong>Stripe</strong> — Payment processing. They handle your card info under their own strict security standards. We never see your full card number.</li>
+      <li><strong>Shipping carriers</strong> (USPS, UPS, FedEx) — Your name and address so your order arrives safely.</li>
+      <li><strong>Email service provider</strong> — Your email address for order confirmations and (if you opted in) marketing emails.</li>
+      <li><strong>Customer support tools</strong> — Your name, email, and message content so our team can help you efficiently.</li>
+    </ul>
+    <p>Each of these partners is contractually required to protect your data and prohibited from using it for their own marketing.</p>
+
+    <div class="highlight-box gold">
+      <p><strong>We may also share data if legally required</strong> — for example, in response to a valid court order or subpoena. If this ever happens, we'll notify you unless we're legally prohibited from doing so.</p>
+    </div>
+  </div>
+
+  <!-- SECURITY -->
+  <div class="policy-section rv" id="security">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">🔒</div>
+      <div><h2>How We Protect Your Data</h2><p>Serious security, explained simply</p></div>
+    </div>
+    <ul class="plain-list do-list">
+      <li><strong>256-bit SSL encryption</strong> on every page of our website — the same standard used by major banks.</li>
+      <li><strong>PCI-compliant payment processing</strong> through Stripe — your card info never touches our servers.</li>
+      <li><strong>Secure data storage</strong> with encrypted databases and strict access controls.</li>
+      <li><strong>Regular security audits</strong> to identify and fix vulnerabilities.</li>
+      <li><strong>Employee access limits</strong> — only team members who need data to do their job can access it.</li>
+    </ul>
+    <p>While no system is 100% immune to threats, we take every reasonable step to keep your information safe. If a breach ever did occur, we would notify affected customers within 72 hours.</p>
+  </div>
+
+  <!-- YOUR RIGHTS -->
+  <div class="policy-section rv" id="rights">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-light)">⚖️</div>
+      <div><h2>Your Rights</h2><p>Your data, your control</p></div>
+    </div>
+    <p>Regardless of where you live, we believe you deserve these rights:</p>
+    <ul class="plain-list">
+      <li><strong>Right to know</strong> — Ask us what data we have about you, and we'll tell you within 30 days.</li>
+      <li><strong>Right to correct</strong> — If something's wrong, let us know and we'll fix it.</li>
+      <li><strong>Right to delete</strong> — Want us to erase your data? Just email us. Done within 30 days.</li>
+      <li><strong>Right to export</strong> — Want a copy of your data? We'll send it in a common format.</li>
+      <li><strong>Right to opt out</strong> — Unsubscribe from marketing anytime with one click.</li>
+      <li><strong>Right to complain</strong> — If you're unhappy with how we handle your data, contact us or your local data protection authority.</li>
+    </ul>
+    <p>To exercise any of these rights, email <a href="mailto:hello@showerenvy.com">hello@showerenvy.com</a> with the subject line "Privacy Request." We'll respond within 5 business days.</p>
+    <div class="highlight-box">
+      <p><strong>For California residents (CCPA):</strong> You have additional rights under the California Consumer Privacy Act. We do not sell personal information. You may request disclosure of data collected in the prior 12 months. We will never discriminate against you for exercising your privacy rights.</p>
+    </div>
+  </div>
+
+  <!-- CHILDREN -->
+  <div class="policy-section rv" id="children">
+    <div class="section-header">
+      <div class="section-icon" style="background:#FEF2F2">👶</div>
+      <div><h2>Children's Privacy</h2><p>Our site is for adults</p></div>
+    </div>
+    <p>ShowerEnvy products are designed for adults, and our website is not directed at children under 16. We do not knowingly collect personal information from children. If we learn that we have inadvertently collected data from a child, we will delete it promptly.</p>
+  </div>
+
+  <!-- CHANGES -->
+  <div class="policy-section rv" id="changes">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--sage-light)">📝</div>
+      <div><h2>Changes to This Policy</h2><p>We'll always let you know</p></div>
+    </div>
+    <p>If we make meaningful changes to this policy, we'll notify you by email at least 14 days before the changes take effect. Minor updates (like fixing a typo or clarifying language) won't require notification, but the "last updated" date at the top will always reflect the most current version.</p>
+    <p>We will never reduce your rights without your explicit consent.</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-card rv" id="contact">
+    <h2>Questions About Your Privacy?</h2>
+    <p>Our team is real, human, and happy to help. No bots, no runaround.</p>
+    <div class="contact-methods">
+      <div class="contact-method">
+        <div class="cm-icon">📧</div>
+        <div class="cm-label">Email</div>
+        <div class="cm-value"><a href="mailto:hello@showerenvy.com">hello@showerenvy.com</a></div>
+        <div class="cm-note">We respond within 24 hours</div>
+      </div>
+      <div class="contact-method">
+        <div class="cm-icon">📞</div>
+        <div class="cm-label">Phone</div>
+        <div class="cm-value">+1 (833) 924-0099</div>
+        <div class="cm-note">Mon–Fri, 9 AM–5 PM EST</div>
+      </div>
+      <div class="contact-method">
+        <div class="cm-icon">📮</div>
+        <div class="cm-label">Mail</div>
+        <div class="cm-value">ShowerEnvy Technologies LLC</div>
+        <div class="cm-note">Cheyenne, WY 82001</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- .content -->
+</div><!-- .policy-layout -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div style="margin-bottom:14px"><a href="#" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:500;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px"><svg width="24" height="24" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span style="color:var(--sage);font-weight:700;font-style:italic">Envy</span></a></div>
+    <div class="footer-links">
+      <a href="#">Home</a><a href="#">2.0 Handheld</a><a href="#">5.0 Stationary</a>
+      <a href="#">Reviews</a><a href="#" style="color:var(--sage);font-weight:700">Privacy Policy</a>
+      <a href="#">Refund Policy</a><a href="#">Terms & Conditions</a>
+    </div>
+    <div class="footer-copy">© 2026 ShowerEnvy Technologies LLC · Cheyenne, Wyoming</div>
+  </div>
+</footer>
+
+</div>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+/* Scroll reveal */
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vis");obs.unobserve(e.target)}})},{threshold:0.05,rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".rv").forEach(function(el){obs.observe(el)});
+setTimeout(function(){document.querySelectorAll(".rv:not(.vis)").forEach(function(el){el.classList.add("vis")})},2500);
+
+/* Scroll to top */
+window.addEventListener("scroll",function(){var b=document.getElementById("scrollTop");if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show")}},{passive:true});
+
+/* TOC active state */
+var sections=document.querySelectorAll(".policy-section[id]");
+var tocLinks=document.querySelectorAll(".toc a");
+if(sections.length&&tocLinks.length){
+  window.addEventListener("scroll",function(){
+    var scrollPos=window.scrollY+120;
+    sections.forEach(function(sec){
+      if(sec.offsetTop<=scrollPos&&sec.offsetTop+sec.offsetHeight>scrollPos){
+        tocLinks.forEach(function(a){a.classList.remove("active")});
+        var link=document.querySelector(".toc a[href=\"#"+sec.id+"\"]");
+        if(link)link.classList.add("active");
+      }
+    });
+  },{passive:true});
+}
+
+/* Mobile nav toggle */
+function toggleMobileNav(){
+  var o=document.getElementById('mobOverlay');
+  var m=document.getElementById('mobMenu');
+  var h=document.querySelector('.ham');
+  if(o&&m){
+    o.classList.toggle('open');
+    m.classList.toggle('open');
+    document.body.style.overflow=m.classList.contains('open')?'hidden':'';
+  }
+  if(h)h.classList.toggle('open');
+}
+/* Close mobile nav on link click */
+document.querySelectorAll('.mob-link').forEach(function(a){
+  a.addEventListener('click',function(){toggleMobileNav()});
+});
+</script>
+</body>
+</html>
