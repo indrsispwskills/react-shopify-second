@@ -45,6 +45,14 @@
       <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     {% endif %}
 
+    {% if template.suffix == 'refund-policy' %}
+      {{ 'refund-policy.css' | asset_url | stylesheet_tag }}
+      {{ 'refund-policy-responsive.css' | asset_url | stylesheet_tag }}
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    {% endif %}
+
     {% if template.suffix == 'privacy-policy' %}
       {{ 'privacy-policy.css' | asset_url | stylesheet_tag }}
       {{ 'privacy-policy-responsive.css' | asset_url | stylesheet_tag }}
@@ -75,5 +83,10 @@
     {% if template.suffix == 'privacy-policy' %}
       {{ 'privacy-policy.js' | asset_url | script_tag }}
     {% endif %}
+
+    {% if template.suffix == 'refund-policy' %}
+      {{ 'refund-policy.js' | asset_url | script_tag }}
+    {% endif %}
+
   </body>
 </html>
