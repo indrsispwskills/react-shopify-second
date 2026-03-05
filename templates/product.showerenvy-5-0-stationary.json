@@ -4,10 +4,6 @@
       "type": "se50-hero",
       "settings": {}
     },
-    "se50_purchase_box": {
-      "type": "se50-purchase-box",
-      "settings": {}
-    },
     "se50_proof": {
       "type": "se50-proof",
       "settings": {}
@@ -39,7 +35,6 @@
   },
   "order": [
     "se50_hero",
-    "se50_purchase_box",
     "se50_proof",
     "se50_stages",
     "se50_compare",
