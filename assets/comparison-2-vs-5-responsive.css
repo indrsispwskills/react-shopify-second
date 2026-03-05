@@ -22,7 +22,6 @@
   /* Nav */
   .nav-bar{padding:0 16px!important}
 
-  .nav-spacer{height:64px !important}
   .nav-inner{gap:12px;flex-wrap:wrap}
   .nav-links{gap:14px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;scrollbar-width:none}
   .nav-links::-webkit-scrollbar{display:none}
