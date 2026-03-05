@@ -90,7 +90,7 @@ section{padding:var(--section-pad) 0}
    NAVIGATION — Desktop: always visible, scroll spy
    ══════════════════════════════════════════════════════════ */
 .nav-bar{
-  position:sticky;top:0;z-index:100;
+  position:fixed;top:0;left:0;right:0;width:100%;z-index:100;
   background:rgba(254,252,249,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   border-bottom:1px solid var(--bdr);transition:box-shadow .3s;
 }
