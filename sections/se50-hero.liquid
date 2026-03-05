@@ -1,0 +1,66 @@
+<!-- STICKY MOBILE CART BAR -->
+<div class="mobile-cart-bar" id="mobileCartBar">
+<div class="mobile-cart-inner">
+<div class="mobile-cart-info">
+<div class="mci-title">ShowerEnvy 5.0 · $89</div>
+<div class="mci-sub">Free shipping · 90-day guarantee</div>
+</div>
+<button class="mobile-cart-btn" onclick="document.getElementById('offer').scrollIntoView({behavior:'smooth'})">Add to Cart</button>
+</div>
+</div>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav"><div class="sticky-nav-inner">
+<a href="#" class="logo"><svg class="brand-mark" width="24" height="24" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:6px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></a>
+<div class="nav-links">
+<a href="#stages">Filtration</a><a href="#pressure">Pressure</a><a href="#offer">Offer</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+<a href="#offer" class="nav-cart">🛒 Add to Cart — $89</a>
+</div><button class="ham" aria-label="Menu" onclick="toggleMobileNav()"><span></span><span></span><span></span></button></div></nav>
+
+<!-- MOBILE NAV -->
+<div class="mob-overlay" id="mobOverlay" onclick="toggleMobileNav()"></div>
+<div class="mob-menu" id="mobMenu">
+  <div class="mob-menu-header">
+    <div class="logo" style="font-size:22px"><svg class="brand-mark" width="22" height="22" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:6px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></div>
+    <button class="mob-menu-close" onclick="toggleMobileNav()">&times;</button>
+  </div>
+  <a href="#stages" class="mob-link" onclick="toggleMobileNav()">Filtration</a>
+  <a href="#pressure" class="mob-link" onclick="toggleMobileNav()">Pressure</a>
+  <a href="#offer" class="mob-link" onclick="toggleMobileNav()">Offer</a>
+  <a href="#reviews" class="mob-link" onclick="toggleMobileNav()">Reviews</a>
+  <a href="#faq" class="mob-link" onclick="toggleMobileNav()">FAQ</a>
+  <button class="mob-cta" onclick="toggleMobileNav();document.getElementById('offer').scrollIntoView({behavior:'smooth'})">🛒 Add to Cart — $89</button>
+</div>
+
+
+<!-- HERO -->
+<div class="container"><div class="hero-grid">
+<div class="hero-gallery reveal">
+<div class="hero-main-img" style="position:relative">
+  <div class="pp" style="opacity:.15">🚿</div>
+  <div style="position:absolute;inset:16px;border:2px dashed var(--gold);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:rgba(176,134,66,.04)">
+    <span style="font-size:40px;opacity:.5">📸</span>
+    <span style="font-size:14px;font-weight:700;color:var(--gold);opacity:.7;text-transform:uppercase;letter-spacing:.04em">5.0 Product Hero Shot</span>
+    <span style="font-size:14px;color:var(--gold);opacity:.4">Upload main product image</span>
+  </div>
+</div>
+<div class="hero-thumbs">
+<div class="hero-thumb active" style="position:relative;overflow:hidden"><span style="opacity:.2">🚿</span><span style="position:absolute;font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase">Front</span></div>
+<div class="hero-thumb" style="position:relative;overflow:hidden"><span style="opacity:.2">🔬</span><span style="position:absolute;font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase">Filter</span></div>
+<div class="hero-thumb" style="position:relative;overflow:hidden"><span style="opacity:.2">📐</span><span style="position:absolute;font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase">Side</span></div>
+<div class="hero-thumb" style="position:relative;overflow:hidden"><span style="opacity:.2">💧</span><span style="position:absolute;font-size:10px;font-weight:700;color:var(--gold);text-transform:uppercase">In Use</span></div>
+</div></div></div>
+<div class="hero-info">
+<div class="hero-badge reveal">🔬 NSF/ANSI 177 Certified · 15-Stage</div>
+<h1 class="hero-title reveal">ShowerEnvy 5.0<br>Stationary</h1>
+<p class="hero-subtitle reveal">15-stage vitamin-infused filtered showerhead — engineered for women navigating menopause, perimenopause &amp; hormonal hair changes.</p>
+<div class="hero-reviews reveal">
+<div class="hero-stars"><svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z" fill="#B08642"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z" fill="#B08642"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z" fill="#B08642"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z" fill="#B08642"/></svg><svg viewBox="0 0 16 16"><path d="M8 1l2.2 4.5 5 .7-3.6 3.5.9 5L8 12.4 3.5 14.7l.9-5L.8 6.2l5-.7z" fill="#B08642"/></svg></div>
+<span class="hero-review-text"><b>4.8</b> from 2,847 verified reviews</span>
+</div>
+</div></div>
+
+
+{% schema %}
+{"name":"se50 hero","settings":[],"presets":[{"name":"se50 hero"}]}
+{% endschema %}
