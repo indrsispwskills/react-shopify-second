@@ -95,6 +95,7 @@ section{padding:var(--section-pad) 0}
   border-bottom:1px solid var(--bdr);transition:box-shadow .3s;
 }
 .nav-bar.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.06)}
+.nav-spacer{height:68px}
 .nav-inner{
   display:flex;justify-content:space-between;align-items:center;
   max-width:var(--max-w);margin:0 auto;padding:0 48px;height:68px;

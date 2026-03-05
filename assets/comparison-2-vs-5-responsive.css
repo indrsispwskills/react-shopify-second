@@ -259,6 +259,7 @@
 
   /* Nav: logo + ham only */
   .nav-bar{padding:0 !important}
+  .nav-spacer{height:62px !important}
   .nav-inner{
     padding:10px 16px !important;
     gap:8px !important;
