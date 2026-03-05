@@ -1,4 +1,4 @@
-{% assign selected_product = section.settings.product %}
+{% assign selected_product = section.settings.product | default: product %}
 {% if selected_product != blank %}
 {% assign first_variant = selected_product.selected_or_first_available_variant %}
 <!-- PURCHASE BOX -->
