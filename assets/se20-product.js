@@ -139,3 +139,8 @@ function selectOpt(n){
   }
 })();
 
+
+function toggleMobileNav(){
+  var o=document.getElementById("mobOverlay"),m=document.getElementById("mobMenu");
+  if(o&&m){o.classList.toggle("open");m.classList.toggle("open");document.body.style.overflow=m.classList.contains("open")?"hidden":""}
+}

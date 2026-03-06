@@ -1,6 +1,12 @@
 {% assign selected_product = section.settings.product | default: product %}
 {% if selected_product != blank %}
 {% assign first_variant = selected_product.selected_or_first_available_variant %}
+<svg style="position:absolute;width:0;height:0"><defs>
+<linearGradient id="sageGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#5E8A6A"/><stop offset="100%" stop-color="#A8D5B5"/></linearGradient>
+<linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#B08642"/><stop offset="100%" stop-color="#D4AA7D"/></linearGradient>
+</defs></svg>
+
+<div class="w">
 <!-- ═══ NAV ═══ -->
 <nav class="topnav rv">
   <div class="logo"><svg class="brand-mark" width="24" height="24" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:6px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></div>
