@@ -1,0 +1,166 @@
+{% assign selected_product = section.settings.product | default: product %}
+{% if selected_product != blank %}
+{% assign first_variant = selected_product.selected_or_first_available_variant %}
+<svg style="position:absolute;width:0;height:0"><defs>
+<linearGradient id="sageGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#5E8A6A"/><stop offset="100%" stop-color="#A8D5B5"/></linearGradient>
+<linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#B08642"/><stop offset="100%" stop-color="#D4AA7D"/></linearGradient>
+</defs></svg>
+
+<div class="w">
+<!-- ═══ NAV ═══ -->
+<nav class="topnav rv">
+  <div class="logo"><svg class="brand-mark" width="24" height="24" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:6px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></div>
+  <div class="nav-links">
+    <a href="#">Home</a><a href="#">5.0 Stationary</a><a href="#">Science</a><a href="#">Reviews</a>
+    <button class="cart-btn">Add to Cart — {{ first_variant.price | money }}</button>
+  </div>
+  <button class="ham" aria-label="Menu" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mob-overlay" id="mobOverlay" onclick="toggleMobileNav()"></div>
+<div class="mob-menu" id="mobMenu">
+  <div class="mob-menu-header">
+    <div class="logo" style="font-size:22px"><svg class="brand-mark" width="22" height="22" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:6px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></div>
+    <button class="mob-menu-close" onclick="toggleMobileNav()">&times;</button>
+  </div>
+  <a href="#" class="mob-link" onclick="toggleMobileNav()">Home</a>
+  <a href="#" class="mob-link" onclick="toggleMobileNav()">5.0 Stationary</a>
+  <a href="#" class="mob-link" onclick="toggleMobileNav()">Science</a>
+  <a href="#" class="mob-link" onclick="toggleMobileNav()">Reviews</a>
+  <button class="mob-cta" onclick="toggleMobileNav()">{{ section.settings.cta_button_text }} — {{ first_variant.price | money }}</button>
+</div>
+
+<div class="tracker rv rv-d1" id="tracker">
+  <a href="#hero" class="act">Product</a><a href="#science">Science</a><a href="#pressure">Pressure</a><a href="#install">Install</a><a href="#spa">Spa Modes</a><a href="#filter">Filter</a><a href="#compare">Compare</a><a href="#timeline">Timeline</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+</div>
+
+<!-- ═══════════════════════════════════
+     HERO — Animated product showcase
+     ═══════════════════════════════════ -->
+<section id="hero" class="sec">
+  <div class="grid-hero">
+    <div class="rv-left">
+      <div class="hero-visual" id="heroVis">
+        <div class="bg-pattern"></div>
+        <div class="hero-drops">
+          <div class="hd" style="left:15%;width:3px;height:3px;--d:3s;--dl:0s"></div>
+          <div class="hd" style="left:30%;width:4px;height:4px;--d:2.5s;--dl:.5s"></div>
+          <div class="hd" style="left:50%;width:3px;height:3px;--d:3.2s;--dl:1s"></div>
+          <div class="hd" style="left:70%;width:4px;height:4px;--d:2.8s;--dl:.3s"></div>
+          <div class="hd" style="left:85%;width:3px;height:3px;--d:3.5s;--dl:.8s"></div>
+        </div>
+        <!-- Product Image Placeholder -->
+        <div style="position:absolute;inset:16px;border:2px dashed var(--sage);border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:rgba(94,138,106,.04);z-index:5">
+          <span style="font-size:40px;opacity:.5">📸</span>
+          <span style="font-size:14px;font-weight:700;color:var(--sage);opacity:.7;text-transform:uppercase;letter-spacing:.04em">2.0 Handheld — Hero Shot</span>
+          <span style="font-size:14px;color:var(--sage);opacity:.4">Upload main product image</span>
+        </div>
+        <!-- Animated SVG showerhead illustration -->
+        <svg width="180" height="200" viewBox="0 0 180 200" fill="none" style="position:relative;z-index:2;animation:float 4s ease-in-out infinite">
+          <ellipse cx="90" cy="190" rx="50" ry="6" fill="rgba(94,138,106,.06)"/>
+          <rect x="82" y="60" width="16" height="90" rx="8" fill="url(#sageGrad)" opacity=".3"/>
+          <rect x="85" y="65" width="10" height="80" rx="5" fill="var(--sage)" opacity=".5"/>
+          <ellipse cx="90" cy="50" rx="44" ry="20" fill="var(--sage)" opacity=".15"/>
+          <ellipse cx="90" cy="50" rx="36" ry="16" fill="var(--sage)" opacity=".25"/>
+          <ellipse cx="90" cy="50" rx="28" ry="12" fill="var(--sage)" opacity=".4"/>
+          <circle cx="90" cy="50" r="8" fill="var(--sage)" opacity=".6"/>
+          <!-- Water drops -->
+          <circle cx="72" cy="80" r="2.5" fill="var(--sage)" opacity=".4"><animate attributeName="cy" values="70;180" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.5;0" dur="2s" repeatCount="indefinite"/></circle>
+          <circle cx="90" cy="85" r="3" fill="var(--sage)" opacity=".5"><animate attributeName="cy" values="70;185" dur="1.8s" begin=".3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.6;0" dur="1.8s" begin=".3s" repeatCount="indefinite"/></circle>
+          <circle cx="108" cy="82" r="2.5" fill="var(--sage)" opacity=".4"><animate attributeName="cy" values="70;182" dur="2.2s" begin=".6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.5;0" dur="2.2s" begin=".6s" repeatCount="indefinite"/></circle>
+        </svg>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:14px;overflow-x:auto">
+        <div style="width:64px;height:64px;flex-shrink:0;border-radius:14px;background:linear-gradient(135deg,var(--cream),#fff);border:2px solid var(--sage);box-shadow:0 2px 8px rgba(94,138,106,.1);display:flex;align-items:center;justify-content:center"><span style="font-size:10px;font-weight:700;color:var(--sage);text-transform:uppercase">Front</span></div>
+        <div style="width:64px;height:64px;flex-shrink:0;border-radius:14px;background:var(--cream);border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center"><span style="font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase">Hose</span></div>
+        <div style="width:64px;height:64px;flex-shrink:0;border-radius:14px;background:var(--cream);border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center"><span style="font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase">Filter</span></div>
+        <div style="width:64px;height:64px;flex-shrink:0;border-radius:14px;background:var(--cream);border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center"><span style="font-size:10px;font-weight:700;color:var(--mut);text-transform:uppercase">In Use</span></div>
+      </div>
+    </div>
+
+    <div class="rv-right">
+      <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+        <span class="badge" style="color:var(--sage);background:var(--sage3)">BEST STARTER</span>
+        <span class="badge" style="color:var(--gold);background:var(--gold3)">5-STAGE FILTER</span>
+        <span class="badge" style="color:var(--mut);background:#f3f0eb">3 SPRAY MODES</span>
+      </div>
+      <h1 style="font-size:36px;margin-bottom:10px">{{ section.settings.hero_title | default: selected_product.title }}</h1>
+      <p style="color:var(--mut);margin-bottom:24px;line-height:1.7;font-size:17px;max-width:480px">{{ section.settings.hero_subtitle }}</p>
+
+      <!-- ═══ 2-TIER PURCHASE OPTIONS ═══ -->
+      <div style="margin-bottom:24px">
+        <label style="font-size:14px;font-weight:700;display:block;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)">Choose Finish</label>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          {% for variant in selected_product.variants %}<div data-se20-finish data-finish-name="{{ variant.option1 | escape }}" style="display:flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;border:2px solid {% if forloop.first %}var(--sage){% else %}var(--bdr){% endif %};background:{% if forloop.first %}var(--sage3){% else %}#fff{% endif %};font-size:14px;font-weight:{% if forloop.first %}600{% else %}500{% endif %};color:{% if forloop.first %}var(--ink){% else %}var(--mut){% endif %};cursor:pointer"><span style="width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#E0E0E0,#C0C0C0);border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.15);display:inline-block"></span>{{ variant.option1 }}</div>{% endfor %}
+        </div>
+      </div>
+
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin-bottom:12px">Choose Your Kit</div>
+
+      <!-- Option 1: Essential Kit -->
+      <div id="opt1" data-se20-purchase="one_time" onclick="selectOpt(1)" style="padding:20px 22px;border-radius:16px;border:2px solid var(--sage);background:var(--sage3);margin-bottom:12px;cursor:pointer;transition:all .3s var(--eo);position:relative">
+        <div style="position:absolute;top:-10px;right:16px"><span class="badge" style="color:#fff;background:linear-gradient(135deg,var(--sage),var(--saged));font-size:14px;padding:4px 12px">STARTER</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <div>
+            <div style="font-family:var(--fh);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px">2.0 Handheld Kit</div>
+            <div style="font-size:15px;color:var(--mut);line-height:1.6">Showerhead + 60" hose + bracket + pre-installed 5-stage filter</div>
+          </div>
+          <div style="text-align:right;flex-shrink:0">
+            <div style="font-family:var(--fh);font-size:28px;font-weight:700;color:var(--ink)">{{ first_variant.price | money }}</div>
+            <div style="font-size:14px;color:var(--light);text-decoration:line-through">{{ selected_product.compare_at_price | default: first_variant.compare_at_price | money }}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Option 2: Complete Protection Bundle -->
+      <div id="opt2" data-se20-purchase="subscription" onclick="selectOpt(2)" style="padding:20px 22px;border-radius:16px;border:2px solid var(--bdr);background:#fff;margin-bottom:20px;cursor:pointer;transition:all .3s var(--eo);position:relative">
+        <div style="position:absolute;top:-10px;right:16px"><span class="badge" style="color:#fff;background:linear-gradient(135deg,var(--gold),var(--goldd));font-size:14px;padding:4px 12px">BEST VALUE</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <div>
+            <div style="font-family:var(--fh);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px">2.0 + 15-Stage Deep Protection</div>
+            <div style="font-size:15px;color:var(--mut);line-height:1.6">Everything above <strong style="color:var(--gold)">+ 15-stage inline filter</strong> for advanced filtration</div>
+          </div>
+          <div style="text-align:right;flex-shrink:0">
+            <div style="font-family:var(--fh);font-size:28px;font-weight:700;color:var(--gold)">$79</div>
+            <div style="font-size:14px;color:var(--light);text-decoration:line-through">$108</div>
+          </div>
+        </div>
+        <div style="margin-top:14px;padding:14px 16px;border-radius:12px;background:linear-gradient(135deg,var(--gold3),#fff);border:1px solid rgba(176,134,66,.1)">
+          <div style="font-size:14px;font-weight:700;color:var(--gold);margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em">Why Women 45+ Choose This</div>
+          <div style="font-size:14px;color:var(--ink2);line-height:1.7">
+            <div style="display:flex;gap:8px;align-items:flex-start;margin-bottom:5px"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span> <span><strong>Vitamin C infusion</strong> — replaces the antioxidant defense your declining estrogen no longer provides</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;margin-bottom:5px"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span> <span><strong>5-Stage Filtration</strong> — Sediment, Calcium Sulfite, Vitamin C, KDF-55, and Catalytic Carbon target every threat to post-menopausal skin and hair</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;margin-bottom:5px"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span> <span><strong>Catalytic carbon</strong> — removes chloramines that strip the lipid barrier your body can no longer fully rebuild</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start"><span style="color:var(--gold);font-weight:700;flex-shrink:0">→</span> <span><strong>pH correction</strong> — rebalances water to skin-neutral, reducing transepidermal water loss</span></div>
+          </div>
+          <div style="margin-top:10px;padding:10px 14px;border-radius:10px;background:rgba(176,134,66,.06);font-size:14px;color:var(--gold);font-style:italic;line-height:1.5"><strong>The insight:</strong> Menopause reduced your body's defenses. The 5-stage filter handles chlorine, heavy metals, and PFAS — but the 15-stage handles everything else your body can no longer protect itself from.</div>
+        </div>
+      </div>
+
+      <button id="heroCta" class="btn btn--rose" style="margin-bottom:16px;font-size:18px">{{ section.settings.cta_button_text }} — {{ first_variant.price | money }}</button>
+
+      <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--mut);margin-bottom:8px">
+        <span style="display:flex;align-items:center;gap:5px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 60-Day Guarantee</span>
+        <span style="display:flex;align-items:center;gap:5px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5a2 2 0 01-2 2h-1M7 16h10"/></svg> Free Shipping</span>
+        <span style="display:flex;align-items:center;gap:5px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 5-Min Install</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "SE20 Hero",
+  "settings": [
+    {"type":"product","id":"product","label":"Select Product"},
+    {"type":"text","id":"cta_button_text","label":"CTA button text","default":"Add to Cart"},
+    {"type":"text","id":"hero_title","label":"Hero title","default":"The 2.0 Handheld Kit"},
+    {"type":"text","id":"hero_subtitle","label":"Hero subtitle","default":"Filtered water meets total flexibility."}
+  ],
+  "presets":[{"name":"SE20 Hero"}]
+}
+{% endschema %}
