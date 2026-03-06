@@ -1,0 +1,15 @@
+{% assign selected_product = section.settings.product | default: product %}
+{% if selected_product != blank %}
+<div data-se20-purchase data-product='{{ selected_product.variants | json | escape }}' data-checkout-base-url='{{ section.settings.checkoutchamp_base_url | escape }}' data-variant-key='variant' data-purchase-key='purchase' data-one-time='one_time' data-subscription='subscription' style='display:none'></div>
+{% endif %}
+{% schema %}
+{
+  "name": "SE20 Purchase",
+  "settings": [
+    {"type":"product","id":"product","label":"Select Product"},
+    {"type":"text","id":"checkoutchamp_base_url","label":"Checkout URL","default":"https://checkout.example.com/?product=se20"},
+    {"type":"text","id":"cta_text","label":"CTA button text","default":"Add to Cart"}
+  ],
+  "presets":[{"name":"SE20 Purchase"}]
+}
+{% endschema %}
