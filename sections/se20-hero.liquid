@@ -12,7 +12,7 @@
   <div class="logo"><svg class="brand-mark" width="24" height="24" viewBox="0 0 32 32" style="vertical-align:middle;margin-right:6px"><circle cx="16" cy="16" r="14" fill="var(--sage)" opacity=".12"/><path d="M16 8v5M12 16c0-2.2 1.8-4 4-4s4 1.8 4 4M13 19s1 3 3 3 3-3 3-3" stroke="var(--sage)" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="24" r="1.2" fill="var(--sage)"/></svg>Shower<span>Envy</span></div>
   <div class="nav-links">
     <a href="#">Home</a><a href="#">5.0 Stationary</a><a href="#">Science</a><a href="#">Reviews</a>
-    <button class="cart-btn">Add to Cart — {{ first_variant.price | money }}</button>
+    <button class="cart-btn">Add to Cart — {{ first_variant.price | money_without_trailing_zeros }}</button>
   </div>
   <button class="ham" aria-label="Menu" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
 </nav>
@@ -28,7 +28,7 @@
   <a href="#" class="mob-link" onclick="toggleMobileNav()">5.0 Stationary</a>
   <a href="#" class="mob-link" onclick="toggleMobileNav()">Science</a>
   <a href="#" class="mob-link" onclick="toggleMobileNav()">Reviews</a>
-  <button class="mob-cta" onclick="toggleMobileNav()">{{ section.settings.cta_button_text }} — {{ first_variant.price | money }}</button>
+  <button class="mob-cta" onclick="toggleMobileNav()">{{ section.settings.cta_button_text }} — {{ first_variant.price | money_without_trailing_zeros }}</button>
 </div>
 
 <div class="tracker rv rv-d1" id="tracker">
@@ -86,13 +86,13 @@
         <span class="badge" style="color:var(--mut);background:#f3f0eb">3 SPRAY MODES</span>
       </div>
       <h1 style="font-size:36px;margin-bottom:10px">{{ section.settings.hero_title | default: selected_product.title }}</h1>
-      <p style="color:var(--mut);margin-bottom:24px;line-height:1.7;font-size:17px;max-width:480px">{{ section.settings.hero_subtitle }}</p>
+      <p style="color:var(--mut);margin-bottom:24px;line-height:1.7;font-size:17px;max-width:480px">{{ section.settings.hero_subtitle | default: 'Filtered water meets total flexibility. 5-stage filtration, 3 spa-inspired spray modes, and a 60" hose that reaches everywhere you need it.' }}</p>
 
       <!-- ═══ 2-TIER PURCHASE OPTIONS ═══ -->
       <div style="margin-bottom:24px">
         <label style="font-size:14px;font-weight:700;display:block;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)">Choose Finish</label>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
-          {% for variant in selected_product.variants %}<div data-se20-finish data-finish-name="{{ variant.option1 | escape }}" style="display:flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;border:2px solid {% if forloop.first %}var(--sage){% else %}var(--bdr){% endif %};background:{% if forloop.first %}var(--sage3){% else %}#fff{% endif %};font-size:14px;font-weight:{% if forloop.first %}600{% else %}500{% endif %};color:{% if forloop.first %}var(--ink){% else %}var(--mut){% endif %};cursor:pointer"><span style="width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#E0E0E0,#C0C0C0);border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.15);display:inline-block"></span>{{ variant.option1 }}</div>{% endfor %}
+          {% for variant in selected_product.variants %}{% assign finish_handle = variant.option1 | handleize %}<div data-se20-finish data-finish-name="{{ variant.option1 | escape }}" style="display:flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;border:2px solid {% if forloop.first %}var(--sage){% else %}var(--bdr){% endif %};background:{% if forloop.first %}var(--sage3){% else %}#fff{% endif %};font-size:14px;font-weight:{% if forloop.first %}600{% else %}500{% endif %};color:{% if forloop.first %}var(--ink){% else %}var(--mut){% endif %};cursor:pointer"><span style="width:20px;height:20px;border-radius:50%;background:{% if finish_handle == 'chrome' %}linear-gradient(135deg,#E0E0E0,#C0C0C0){% elsif finish_handle == 'brushed-nickel' %}linear-gradient(135deg,#C8B8A0,#B8A88A){% elsif finish_handle == 'matte-black' %}linear-gradient(135deg,#444,#222){% else %}linear-gradient(135deg,#E0E0E0,#C0C0C0){% endif %};border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.15);display:inline-block"></span>{{ variant.option1 }}</div>{% endfor %}
         </div>
       </div>
 
@@ -107,8 +107,8 @@
             <div style="font-size:15px;color:var(--mut);line-height:1.6">Showerhead + 60" hose + bracket + pre-installed 5-stage filter</div>
           </div>
           <div style="text-align:right;flex-shrink:0">
-            <div style="font-family:var(--fh);font-size:28px;font-weight:700;color:var(--ink)">{{ first_variant.price | money }}</div>
-            <div style="font-size:14px;color:var(--light);text-decoration:line-through">{{ selected_product.compare_at_price | default: first_variant.compare_at_price | money }}</div>
+            <div style="font-family:var(--fh);font-size:28px;font-weight:700;color:var(--ink)">{{ first_variant.price | money_without_trailing_zeros }}</div>
+            <div style="font-size:14px;color:var(--light);text-decoration:line-through">{{ selected_product.compare_at_price | default: first_variant.compare_at_price | money_without_trailing_zeros }}</div>
           </div>
         </div>
       </div>
@@ -138,7 +138,7 @@
         </div>
       </div>
 
-      <button id="heroCta" class="btn btn--rose" style="margin-bottom:16px;font-size:18px">{{ section.settings.cta_button_text }} — {{ first_variant.price | money }}</button>
+      <button id="heroCta" class="btn btn--rose" style="margin-bottom:16px;font-size:18px">{{ section.settings.cta_button_text }} — {{ first_variant.price | money_without_trailing_zeros }}</button>
 
       <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--mut);margin-bottom:8px">
         <span style="display:flex;align-items:center;gap:5px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 60-Day Guarantee</span>
@@ -159,7 +159,7 @@
     {"type":"product","id":"product","label":"Select Product"},
     {"type":"text","id":"cta_button_text","label":"CTA button text","default":"Add to Cart"},
     {"type":"text","id":"hero_title","label":"Hero title","default":"The 2.0 Handheld Kit"},
-    {"type":"text","id":"hero_subtitle","label":"Hero subtitle","default":"Filtered water meets total flexibility."}
+    {"type":"text","id":"hero_subtitle","label":"Hero subtitle","default":"Filtered water meets total flexibility. 5-stage filtration, 3 spa-inspired spray modes, and a 60\" hose that reaches everywhere you need it."}
   ],
   "presets":[{"name":"SE20 Hero"}]
 }
