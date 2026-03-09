@@ -124,7 +124,7 @@
     "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": false,
-    "cart_drawer_collection": "",
+    "cart_drawer_collection": "automated-collection",
     "cart_color_scheme": "scheme-1",
     "content_for_index": [],
     "color_schemes": {
