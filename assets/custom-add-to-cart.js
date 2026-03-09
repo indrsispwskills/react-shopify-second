@@ -6,6 +6,24 @@
 
   const parseHTML = (htmlString) => new DOMParser().parseFromString(htmlString, 'text/html');
 
+  const ensureCustomDrawerShell = () => {
+    let drawer = document.querySelector(CUSTOM_DRAWER_SELECTOR);
+    if (drawer) return drawer;
+
+    drawer = document.createElement('div');
+    drawer.id = 'CustomCartDrawer';
+    drawer.setAttribute('aria-hidden', 'true');
+    drawer.innerHTML = `
+      <button class="custom-cart-drawer__overlay" type="button" aria-label="Close cart drawer"></button>
+      <div class="custom-cart-drawer__panel" role="dialog" aria-modal="true" aria-label="Cart drawer" tabindex="-1">
+        <div id="CustomCartDrawerContent"></div>
+      </div>
+    `;
+
+    document.body.appendChild(drawer);
+    return drawer;
+  };
+
   const setButtonLoading = (button, loading) => {
     button.dataset.loading = loading ? 'true' : 'false';
     button.toggleAttribute('disabled', loading);
@@ -13,9 +31,7 @@
   };
 
   const sanitizeDrawerMarkup = (drawerRoot) => {
-    drawerRoot.querySelectorAll('[onclick]').forEach((element) => {
-      element.removeAttribute('onclick');
-    });
+    drawerRoot.querySelectorAll('[onclick]').forEach((element) => element.removeAttribute('onclick'));
   };
 
   const fetchDrawerMarkup = async () => {
@@ -41,11 +57,12 @@
   };
 
   const refreshCustomDrawer = (incomingCartDrawer) => {
-    const customDrawerContent = document.querySelector(CUSTOM_DRAWER_CONTENT_SELECTOR);
+    const customDrawer = ensureCustomDrawerShell();
+    const customDrawerContent = customDrawer.querySelector(CUSTOM_DRAWER_CONTENT_SELECTOR);
     if (!customDrawerContent || !incomingCartDrawer) return null;
 
     customDrawerContent.innerHTML = incomingCartDrawer.outerHTML;
-    return document.querySelector(CUSTOM_DRAWER_SELECTOR);
+    return customDrawer;
   };
 
   const addVariantToCart = async (variantId, quantity) => {
@@ -56,18 +73,11 @@
         Accept: 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
       },
-      body: JSON.stringify({
-        id: Number(variantId),
-        quantity,
-      }),
+      body: JSON.stringify({ id: Number(variantId), quantity }),
     });
 
     const payload = await response.json();
-
-    if (!response.ok) {
-      throw new Error(payload?.description || payload?.message || 'Unable to add item to cart.');
-    }
-
+    if (!response.ok) throw new Error(payload?.description || payload?.message || 'Unable to add item to cart.');
     return payload;
   };
 
@@ -88,6 +98,9 @@
   };
 
   const bindCustomDrawerEvents = () => {
+    if (document.body.dataset.customDrawerBound === 'true') return;
+    document.body.dataset.customDrawerBound = 'true';
+
     document.addEventListener('click', (event) => {
       const closeTrigger = event.target.closest(
         `${CUSTOM_DRAWER_SELECTOR} .custom-cart-drawer__overlay, ${CUSTOM_DRAWER_SELECTOR} .drawer__close`
@@ -107,22 +120,18 @@
     if (!dawnDrawer || !incomingCartDrawer) return;
 
     const currentCartDrawer = dawnDrawer.querySelector('#CartDrawer');
-
-    if (currentCartDrawer) {
-      currentCartDrawer.replaceWith(incomingCartDrawer.cloneNode(true));
-    } else {
-      dawnDrawer.innerHTML = incomingCartDrawer.outerHTML;
-    }
+    if (currentCartDrawer) currentCartDrawer.replaceWith(incomingCartDrawer.cloneNode(true));
+    else dawnDrawer.innerHTML = incomingCartDrawer.outerHTML;
   };
 
   bindCustomDrawerEvents();
+  ensureCustomDrawerShell();
 
   document.addEventListener('click', async (event) => {
     const button = event.target.closest(CUSTOM_BUTTON_SELECTOR);
     if (!button) return;
 
     event.preventDefault();
-
     if (button.dataset.loading === 'true') return;
 
     const variantId = button.dataset.variantId;
@@ -142,14 +151,9 @@
       const customDrawer = refreshCustomDrawer(incomingCartDrawer.cloneNode(true));
       openCustomDrawer(customDrawer);
 
-      document.dispatchEvent(
-        new CustomEvent('cart:custom-add', {
-          detail: {
-            variantId: item.id,
-            quantity: item.quantity,
-          },
-        })
-      );
+      document.dispatchEvent(new CustomEvent('cart:custom-add', {
+        detail: { variantId: item.id, quantity: item.quantity },
+      }));
     } catch (error) {
       console.error('[custom-add-to-cart] Request failed:', error);
     } finally {
