@@ -98,7 +98,8 @@
       {{ content_for_layout }}
     </main>
    {%- if settings.cart_type == 'drawer' -%}
-      {%- render 'cart-drawer' -%}
+      {% comment %} {%- render 'cart-drawer' -%} {% endcomment %}
+       {% section 'cart-drawer' %}
     {%- endif -%}
     {{ 'theme.js' | asset_url | script_tag }}
     {{ 'custom-add-to-cart.js' | asset_url | script_tag }}
