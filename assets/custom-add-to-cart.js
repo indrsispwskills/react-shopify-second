@@ -1,54 +1,18 @@
 (() => {
   const CUSTOM_BUTTON_SELECTOR = '.custom-add-to-cart';
+  const CART_DRAWER_SECTION_URL = '/cart?section_id=cart-drawer';
 
-  const parseHTML = (htmlString) => {
-    const parser = new DOMParser();
-    return parser.parseFromString(htmlString, 'text/html');
+  const parseHTML = (htmlString) => new DOMParser().parseFromString(htmlString, 'text/html');
+
+  const getCartDrawer = () => document.querySelector('cart-drawer');
+
+  const setButtonLoading = (button, loading) => {
+    button.dataset.loading = loading ? 'true' : 'false';
+    button.toggleAttribute('disabled', loading);
+    button.setAttribute('aria-disabled', loading ? 'true' : 'false');
   };
 
-  const refreshCartDrawer = async () => {
-    const drawer = document.querySelector('cart-drawer');
-    if (!drawer) return null;
-
-    const response = await fetch('/cart?section_id=cart-drawer', {
-      method: 'GET',
-      headers: {
-        Accept: 'text/html',
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`Failed to fetch cart drawer section: ${response.status}`);
-    }
-
-    const html = await response.text();
-    const parsed = parseHTML(html);
-    const updatedDrawer = parsed.querySelector('cart-drawer');
-
-    if (!updatedDrawer) {
-      throw new Error('Updated <cart-drawer> markup was not found in section response.');
-    }
-
-    drawer.innerHTML = updatedDrawer.innerHTML;
-    drawer.className = updatedDrawer.className;
-
-    return drawer;
-  };
-
-  const openCartDrawer = (drawer) => {
-    if (!drawer) return;
-
-    if (typeof drawer.open === 'function') {
-      drawer.open();
-      return;
-    }
-
-    drawer.classList.add('active');
-    drawer.setAttribute('open', '');
-    document.body.classList.add('overflow-hidden');
-  };
-
-  const addVariantToCart = async (variantId, quantity = 1) => {
+  const addVariantToCart = async (variantId, quantity) => {
     const response = await fetch('/cart/add.js', {
       method: 'POST',
       headers: {
@@ -62,13 +26,62 @@
       }),
     });
 
-    const data = await response.json();
+    const payload = await response.json();
 
     if (!response.ok) {
-      throw new Error(data?.description || data?.message || 'Unable to add item to cart.');
+      throw new Error(payload?.description || payload?.message || 'Unable to add item to cart.');
     }
 
-    return data;
+    return payload;
+  };
+
+  const refreshCartDrawer = async () => {
+    const cartDrawer = getCartDrawer();
+    if (!cartDrawer) return null;
+
+    const response = await fetch(CART_DRAWER_SECTION_URL, {
+      method: 'GET',
+      headers: { Accept: 'text/html' },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Failed to refresh cart drawer: ${response.status}`);
+    }
+
+    const html = await response.text();
+    const documentFromResponse = parseHTML(html);
+    const incomingDrawer = documentFromResponse.querySelector('cart-drawer');
+
+    if (!incomingDrawer) {
+      throw new Error('No <cart-drawer> found in /cart?section_id=cart-drawer response.');
+    }
+
+    cartDrawer.className = incomingDrawer.className;
+
+    const currentDrawerContent = cartDrawer.querySelector('#CartDrawer');
+    const nextDrawerContent = incomingDrawer.querySelector('#CartDrawer');
+
+    if (currentDrawerContent && nextDrawerContent) {
+      currentDrawerContent.replaceWith(nextDrawerContent);
+    } else {
+      cartDrawer.innerHTML = incomingDrawer.innerHTML;
+    }
+
+    return cartDrawer;
+  };
+
+  const openCartDrawer = (cartDrawer) => {
+    if (!cartDrawer) return;
+
+    if (typeof cartDrawer.open === 'function') {
+      cartDrawer.open();
+      return;
+    }
+
+    cartDrawer.classList.add('active');
+    const drawer = cartDrawer.querySelector('.cart-drawer');
+    if (drawer) drawer.classList.add('active');
+    document.body.classList.add('overflow-hidden');
   };
 
   document.addEventListener('click', async (event) => {
@@ -77,29 +90,35 @@
 
     event.preventDefault();
 
+    if (button.dataset.loading === 'true') return;
+
     const variantId = button.dataset.variantId;
     const quantity = Number(button.dataset.quantity || 1);
 
     if (!variantId) {
-      console.warn('Custom add-to-cart button is missing data-variant-id.');
+      console.warn('[custom-add-to-cart] Missing data-variant-id on clicked button.');
       return;
     }
 
-    if (button.dataset.loading === 'true') return;
-
-    button.dataset.loading = 'true';
-    button.setAttribute('aria-disabled', 'true');
+    setButtonLoading(button, true);
 
     try {
-      await addVariantToCart(variantId, quantity);
-      const drawer = await refreshCartDrawer();
-      openCartDrawer(drawer);
-      document.dispatchEvent(new CustomEvent('cart:refresh'));
+      const item = await addVariantToCart(variantId, quantity);
+      const cartDrawer = await refreshCartDrawer();
+      openCartDrawer(cartDrawer);
+
+      document.dispatchEvent(
+        new CustomEvent('cart:custom-add', {
+          detail: {
+            variantId: item.id,
+            quantity: item.quantity,
+          },
+        })
+      );
     } catch (error) {
-      console.error('Custom add-to-cart failed:', error);
+      console.error('[custom-add-to-cart] Request failed:', error);
     } finally {
-      button.dataset.loading = 'false';
-      button.removeAttribute('aria-disabled');
+      setButtonLoading(button, false);
     }
   });
 })();
