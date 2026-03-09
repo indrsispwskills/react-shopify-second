@@ -91,10 +91,8 @@
     <main id="MainContent" class="content-for-layout" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
-    {% if settings.cart_type == 'drawer' %}
-      {% render 'cart-drawer' %}
-    {% endif %}
-    {% render 'custom-cart-drawer' %}
+   {% render 'cart-drawer' %}
+    {% comment %} {% render 'custom-cart-drawer' %} {% endcomment %}
     {{ 'theme.js' | asset_url | script_tag }}
     {{ 'custom-add-to-cart.js' | asset_url | script_tag }}
     {% if template.suffix == 'comparison' %}
