@@ -92,6 +92,7 @@
       {{ content_for_layout }}
     </main>
     {{ 'theme.js' | asset_url | script_tag }}
+    {{ 'custom-add-to-cart.js' | asset_url | script_tag }}
     {% if template.suffix == 'comparison' %}
       {{ 'comparison-2-vs-5.js' | asset_url | script_tag }}
     {% endif %}
