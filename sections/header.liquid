@@ -310,6 +310,8 @@
     color_scheme: section.settings.color_scheme,
     desktop_menu_type: section.settings.menu_type_desktop
   -%}
+{%- elsif settings.cart_type == 'drawer' -%}
+  {%- render 'cart-drawer' -%}
 {%- endif -%}
 
 {% javascript %}
